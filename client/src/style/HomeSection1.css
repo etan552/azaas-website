@@ -1,0 +1,33 @@
+.home .section-1 {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 0 0 100px 0;
+  min-width: 90%;
+}
+
+.home .section-1 > div {
+  max-width: 980px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.home .section-1 .header {
+  margin: 0;
+  font-size: 96px;
+  color: red;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.home .section-1 .context {
+  font-size: 48px;
+  margin: 35px 0;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  text-align: left;
+}
