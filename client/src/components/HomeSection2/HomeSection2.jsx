@@ -10,21 +10,43 @@ import Container4 from "./Container4";
 class HomeSection2 extends Component {
   section2Img = createRef();
 
-  componentDidMount() {
+  componentDidUpdate() {
+    const { viewType } = this.props;
+
     // animation for section 2's Ipad img
     TweenMax.fromTo(
       this.section2Img.current,
-      { width: "110vh", y: "70vh" },
       {
-        width: "500px",
-        bottom: "50%",
+        width:
+          viewType === "desktop"
+            ? "110vh"
+            : viewType === "tablet"
+            ? "600px"
+            : "500px",
+        y:
+          viewType === "desktop"
+            ? "70vh"
+            : viewType === "tablet"
+            ? 280 - window.innerHeight + 710
+            : "700px",
+        bottom: 0,
+      },
+
+      {
+        width:
+          viewType === "desktop"
+            ? "500px"
+            : viewType === "tablet"
+            ? "450px"
+            : "700px",
         y: "50%",
+        bottom: "50%",
         scrollTrigger: {
           trigger: this.props.homeRef,
-          start: "top+=3200px center",
-          end: "top+=4200px center",
-          // toggleActions: "play none none reverse",
-          scrub: true,
+          start: "top+=3400px center",
+          end: "top+=4400px center",
+          toggleActions: "play none none reverse",
+          scrub: 0.1,
         },
       }
     );
@@ -34,13 +56,24 @@ class HomeSection2 extends Component {
       { width: "100vw", y: "0px" },
       {
         duration: 1,
-        width: "110vh",
-        y: "70vh",
+        width:
+          viewType === "desktop"
+            ? "110vh"
+            : viewType === "tablet"
+            ? "600px"
+            : "500px",
+        y:
+          viewType === "desktop"
+            ? "70vh"
+            : viewType === "tablet"
+            ? 280 - window.innerHeight + 710
+            : "700px",
+
         scrollTrigger: {
           trigger: this.props.homeRef,
           start: "top+=2100px center",
           end: "top+=3200px center",
-          // toggleActions: "play none none reverse",
+          toggleActions: "play none none reverse",
 
           scrub: true,
         },
@@ -49,7 +82,12 @@ class HomeSection2 extends Component {
 
     TweenMax.to(this.section2Img.current, {
       duration: 0.5,
-      x: "230px",
+      x:
+        viewType === "desktop"
+          ? "230px"
+          : viewType === "tablet"
+          ? "225px"
+          : "700px",
       scrollTrigger: {
         trigger: this.props.homeRef,
         start: "top+=4400 center",
@@ -60,7 +98,21 @@ class HomeSection2 extends Component {
     });
   }
 
+  checkWindowType = () => {
+    if (window.innerWidth > this.state.desktop) {
+      this.setState({ viewType: "desktop" });
+    } else if (
+      window.innerWidth <= this.state.desktop &&
+      window.innerWidth > this.state.tablet
+    ) {
+      this.setState({ viewType: "tablet" });
+    } else {
+      this.setState({ viewType: "mobile" });
+    }
+  };
+
   render() {
+    const { viewType } = this.props;
     return (
       <section className="section-2">
         <img
@@ -69,10 +121,10 @@ class HomeSection2 extends Component {
           alt="shigImg"
           ref={this.section2Img}
         />
-        <Container1 homeRef={this.props.homeRef} />
-        <Container2 homeRef={this.props.homeRef} />
-        <Container3 homeRef={this.props.homeRef} />
-        <Container4 homeRef={this.props.homeRef} />
+        <Container1 homeRef={this.props.homeRef} viewType={viewType} />
+        <Container2 homeRef={this.props.homeRef} viewType={viewType} />
+        <Container3 homeRef={this.props.homeRef} viewType={viewType} />
+        <Container4 homeRef={this.props.homeRef} viewType={viewType} />
       </section>
     );
   }

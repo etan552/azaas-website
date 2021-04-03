@@ -1,5 +1,6 @@
 import React, { Component, createRef } from "react";
 import spinningRobot from "../assets/animation1.gif";
+import { Link } from "react-router-dom";
 import "../style/HomeSection1.css";
 
 class HomeSection1 extends Component {
@@ -7,8 +8,7 @@ class HomeSection1 extends Component {
     const { section1Ref } = this.props;
     return (
       <section className="section-1" ref={section1Ref}>
-        <img src={spinningRobot} alt="Robot" />
-
+        <img src={spinningRobot} alt="Robot" className="robot-img" />
         <div>
           <h1 className="header">Your next computer is not a computer.</h1>
           <div className="context">
@@ -21,6 +21,11 @@ class HomeSection1 extends Component {
             And you can use it with touch, pencil, keyboard and now trackpad.
             <br />
             It’s the new iPad Pro.
+          </div>
+          <div className="test">
+            <Link to="#" className="link">
+              Watch the film
+            </Link>
           </div>
         </div>
       </section>

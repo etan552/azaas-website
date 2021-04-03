@@ -27,8 +27,8 @@ class Container2 extends Component {
         opacity: 0,
         scrollTrigger: {
           trigger: this.props.homeRef,
-          start: "top+=3400px center",
-          end: "top+=3400px center",
+          start: "top+=3600px center",
+          end: "top+=3600px center",
           toggleActions: "play none none reverse",
         },
       }
