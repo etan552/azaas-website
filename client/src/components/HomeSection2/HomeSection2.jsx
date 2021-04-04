@@ -13,7 +13,8 @@ class HomeSection2 extends Component {
   componentDidUpdate() {
     const { viewType } = this.props;
 
-    // animation for section 2's Ipad img
+    // animation for section 2's Ipad img\
+
     TweenMax.fromTo(
       this.section2Img.current,
       {
@@ -52,31 +53,39 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.to(this.section2Img.current, {
-      duration: 0.5,
-      x: viewType === "desktop" ? "230px" : "210px",
-      scrollTrigger: {
-        trigger: this.props.homeRef,
-        start: "top+=4400 center",
-        end: "top+=5000 center",
-        toggleActions: "play none none reverse",
-        scrub: 0.5,
-      },
-    });
-  }
+    TweenMax.fromTo(
+      this.section2Img.current,
+      { x: viewType === "desktop" ? "230px" : "210px", y: "50%" },
+      {
+        x: viewType === "desktop" ? "700px" : "450px",
+        y: "75%",
 
-  checkWindowType = () => {
-    if (window.innerWidth > this.state.desktop) {
-      this.setState({ viewType: "desktop" });
-    } else if (
-      window.innerWidth <= this.state.desktop &&
-      window.innerWidth > this.state.tablet
-    ) {
-      this.setState({ viewType: "tablet" });
-    } else {
-      this.setState({ viewType: "mobile" });
-    }
-  };
+        width: viewType === "desktop" ? "1000px" : "700px",
+        scrollTrigger: {
+          trigger: this.props.homeRef,
+          start: "top+=5200 center",
+          end: "top+=5800 center",
+          toggleActions: "play none none reverse",
+          scrub: 0.1,
+        },
+      }
+    );
+
+    TweenMax.fromTo(
+      this.section2Img.current,
+      { x: "0px" },
+      {
+        x: viewType === "desktop" ? "230px" : "210px",
+        scrollTrigger: {
+          trigger: this.props.homeRef,
+          start: "top+=4400 center",
+          end: "top+=5000 center",
+          toggleActions: "play none none reverse",
+          scrub: 0.1,
+        },
+      }
+    );
+  }
 
   render() {
     const { viewType } = this.props;

@@ -22,7 +22,6 @@ class MobileHome extends Component {
   }
 
   render() {
-    // console.log(this.imgRef1.current);
     if (this.imgRef1.current) {
       this.imgRef1.current.src = this.gif1;
     }
@@ -83,16 +82,6 @@ class MobileHome extends Component {
             </div>
           </div>
           <div className="container-3">
-            {/* <div className="left">
-              <div className="header">Industry-leading colour accuracy</div>
-              <div className="header">ProMotion</div>
-              <div className="header">600 Nits brightness</div>
-            </div>
-            <div className="right">
-              <div className="header">Ultra-low reflectivity</div>
-              <div className="header">True tone</div>
-              <div className="header">P3 wide colour gamut</div>
-            </div> */}
             <div className="left">
               <div className="icon">
                 <img src={target} alt="target" className="icon-img" />
@@ -129,6 +118,18 @@ class MobileHome extends Component {
           <div className="container-4">
             <img src={officeImg} alt="office" />
             <img src={shipImg} alt="office" />
+          </div>
+        </section>
+        <section className="section-3">
+          <div className="container-1">
+            <div className="header">Cameras</div>
+            <div className="context">
+              Think you know
+              <br />
+              iPad cameras?
+              <br />
+              Think deeper.
+            </div>
           </div>
         </section>
       </div>

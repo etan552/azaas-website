@@ -36,11 +36,10 @@ class HomeSection1 extends Component {
             <br />
             It’s the new iPad Pro.
           </div>
-          <div className="test">
-            <Link to="#" className="link">
-              Watch the film
-            </Link>
-          </div>
+
+          <Link to="#" className="link">
+            Watch the film
+          </Link>
         </div>
       </section>
     );

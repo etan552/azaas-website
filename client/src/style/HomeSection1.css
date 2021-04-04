@@ -41,11 +41,6 @@
   margin: 35px 0;
 }
 
-.home .section-1 .test {
-  width: 100%;
-  padding-bottom: 1px;
-}
-
 .home .section-1 .link {
   font-size: 24px;
   color: black;
@@ -93,6 +88,7 @@
   .home .section-1 .header {
     font-size: 40px;
     letter-spacing: -1px;
+    line-height: 1.05;
   }
 
   .home .section-1 .context {

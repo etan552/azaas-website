@@ -78,15 +78,12 @@
 
 .home .section-2 .shipImg {
   position: absolute;
-  /* top: 10vh; */
   bottom: 0;
   right: 0;
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  /* width: 100vw; */
   height: auto;
-  /* object-fit: contain; */
   z-index: 5;
 }
 
@@ -208,9 +205,11 @@
 @media (max-width: 750px) {
   .home .section-2 {
     position: relative;
+    height: auto;
   }
 
   .home .section-2 .container-1 {
+    position: relative;
     height: auto;
   }
 
@@ -253,7 +252,8 @@
   }
 
   .home .section-2 .container-2 .context {
-    margin-top: 18px;
+    margin-top: 16px;
+    line-height: 1.5;
   }
 
   .home .section-2 .container-3 {
