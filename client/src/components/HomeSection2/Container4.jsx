@@ -13,12 +13,7 @@ class Container4 extends Component {
     TweenMax.to(this.section2Container4.current, {
       duration: 1,
       opacity: 1,
-      x:
-        viewType === "desktop"
-          ? "-280px"
-          : viewType === "tablet"
-          ? "-225px"
-          : "-700px",
+      x: viewType === "desktop" ? "-280px" : "-210px",
       scrollTrigger: {
         trigger: this.props.homeRef,
         start: "top+=4400 center",

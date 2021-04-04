@@ -1,5 +1,11 @@
 import React, { Component, createRef } from "react";
 import gsap, { TweenMax } from "gsap";
+import lighting from "../../assets/lighting.svg";
+import reflection from "../../assets/reflective-fabric.svg";
+import phone from "../../assets/smartphone.svg";
+import sun from "../../assets/sun.svg";
+import target from "../../assets/target.svg";
+import vennDiagram from "../../assets/venn-diagram.svg";
 
 import "../../style/HomeSection2.css";
 
@@ -43,29 +49,29 @@ class Container3 extends Component {
       <div className="container-3" ref={this.section2Container3}>
         <div className="left">
           <div className="icon">
-            <img src="" alt="" className="icon-img" />
+            <img src={target} alt="target" className="icon-img" />
             <h3 className="header">Industry-leading colour accuracy</h3>
           </div>
           <div className="icon">
-            <img src="" alt="" className="icon-img" />
+            <img src={lighting} alt="battery" className="icon-img" />
             <h3 className="header">ProMotion</h3>
           </div>
           <div className="icon">
-            <img src="" alt="" className="icon-img" />
+            <img src={sun} alt="sun" className="icon-img" />
             <h3 className="header">600 Nits brightness</h3>
           </div>
         </div>
         <div className="right">
           <div className="icon">
-            <img src="" alt="" className="icon-img" />
+            <img src={reflection} alt="reflection" className="icon-img" />
             <h3 className="header">Ultra-low reflectivity</h3>
           </div>
           <div className="icon">
-            <img src="" alt="" className="icon-img" />
+            <img src={phone} alt="phone" className="icon-img" />
             <h3 className="header">True tone</h3>
           </div>
           <div className="icon">
-            <img src="" alt="" className="icon-img" />
+            <img src={vennDiagram} alt="venn diagram" className="icon-img" />
             <h3 className="header">P3 wide colour gamut</h3>
           </div>
         </div>

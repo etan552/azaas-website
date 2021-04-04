@@ -1,5 +1,5 @@
 import React, { Component, createRef } from "react";
-import gsap, { TweenMax } from "gsap";
+import { TweenMax } from "gsap";
 import shipImg from "../../assets/shipImg.png";
 import "../../style/HomeSection2.css";
 import Container1 from "./Container1";
@@ -17,28 +17,12 @@ class HomeSection2 extends Component {
     TweenMax.fromTo(
       this.section2Img.current,
       {
-        width:
-          viewType === "desktop"
-            ? "110vh"
-            : viewType === "tablet"
-            ? "600px"
-            : "500px",
-        y:
-          viewType === "desktop"
-            ? "70vh"
-            : viewType === "tablet"
-            ? 280 - window.innerHeight + 710
-            : "700px",
+        width: viewType === "desktop" ? "110vh" : "600px",
+        y: viewType === "desktop" ? "70vh" : 280 - window.innerHeight + 710,
         bottom: 0,
       },
-
       {
-        width:
-          viewType === "desktop"
-            ? "500px"
-            : viewType === "tablet"
-            ? "450px"
-            : "700px",
+        width: viewType === "desktop" ? "500px" : "420px",
         y: "50%",
         bottom: "50%",
         scrollTrigger: {
@@ -56,25 +40,13 @@ class HomeSection2 extends Component {
       { width: "100vw", y: "0px" },
       {
         duration: 1,
-        width:
-          viewType === "desktop"
-            ? "110vh"
-            : viewType === "tablet"
-            ? "600px"
-            : "500px",
-        y:
-          viewType === "desktop"
-            ? "70vh"
-            : viewType === "tablet"
-            ? 280 - window.innerHeight + 710
-            : "700px",
-
+        width: viewType === "desktop" ? "110vh" : "600px",
+        y: viewType === "desktop" ? "70vh" : 280 - window.innerHeight + 710,
         scrollTrigger: {
           trigger: this.props.homeRef,
           start: "top+=2100px center",
           end: "top+=3200px center",
           toggleActions: "play none none reverse",
-
           scrub: true,
         },
       }
@@ -82,12 +54,7 @@ class HomeSection2 extends Component {
 
     TweenMax.to(this.section2Img.current, {
       duration: 0.5,
-      x:
-        viewType === "desktop"
-          ? "230px"
-          : viewType === "tablet"
-          ? "225px"
-          : "700px",
+      x: viewType === "desktop" ? "230px" : "210px",
       scrollTrigger: {
         trigger: this.props.homeRef,
         start: "top+=4400 center",

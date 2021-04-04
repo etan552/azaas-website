@@ -76,3 +76,33 @@
     font-size: 21px;
   }
 }
+
+/* mobile view */
+@media (max-width: 750px) {
+  .home .section-1 > div {
+    width: 87.5%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 70px;
+  }
+
+  .home .section-1 .robot-img {
+    width: 100vw;
+  }
+
+  .home .section-1 .header {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .home .section-1 .context {
+    font-size: 21px;
+    margin: 24px 0 20px 0;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+
+  .home .section-1 .link {
+    font-size: 17px;
+  }
+}

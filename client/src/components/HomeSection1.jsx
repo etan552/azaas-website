@@ -4,11 +4,25 @@ import { Link } from "react-router-dom";
 import "../style/HomeSection1.css";
 
 class HomeSection1 extends Component {
+  constructor(props) {
+    super(props);
+
+    this.gif = spinningRobot;
+    this.imgRef = createRef();
+  }
+
   render() {
-    const { section1Ref } = this.props;
+    console.log(this.imgRef.current);
+    if (this.imgRef.current) this.imgRef.current.src = this.gif;
+    // const { section1Ref } = this.props;
     return (
-      <section className="section-1" ref={section1Ref}>
-        <img src={spinningRobot} alt="Robot" className="robot-img" />
+      <section className="section-1">
+        <img
+          src={this.gif}
+          alt="Robot"
+          className="robot-img"
+          ref={this.imgRef}
+        />
         <div>
           <h1 className="header">Your next computer is not a computer.</h1>
           <div className="context">

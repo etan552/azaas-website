@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9c859a97.chunk.css",
+    "main.js": "/static/js/main.871799d0.chunk.js",
+    "main.js.map": "/static/js/main.871799d0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f491db21.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f491db21.js.map",
+    "static/js/2.82440019.chunk.js": "/static/js/2.82440019.chunk.js",
+    "static/js/2.82440019.chunk.js.map": "/static/js/2.82440019.chunk.js.map",
+    "static/js/3.fb77a5c9.chunk.js": "/static/js/3.fb77a5c9.chunk.js",
+    "static/js/3.fb77a5c9.chunk.js.map": "/static/js/3.fb77a5c9.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9c859a97.chunk.css.map": "/static/css/main.9c859a97.chunk.css.map",
+    "static/js/2.82440019.chunk.js.LICENSE.txt": "/static/js/2.82440019.chunk.js.LICENSE.txt",
+    "static/media/animation1.69a93fcb.gif": "/static/media/animation1.69a93fcb.gif",
+    "static/media/lighting.08150f44.svg": "/static/media/lighting.08150f44.svg",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/office.0b86968f.png": "/static/media/office.0b86968f.png",
+    "static/media/reflective-fabric.d5bf5615.svg": "/static/media/reflective-fabric.d5bf5615.svg",
+    "static/media/shipImg.2943227a.png": "/static/media/shipImg.2943227a.png",
+    "static/media/smartphone.e50691af.svg": "/static/media/smartphone.e50691af.svg",
+    "static/media/sun.f681ac14.svg": "/static/media/sun.f681ac14.svg",
+    "static/media/target.a882bd6a.svg": "/static/media/target.a882bd6a.svg",
+    "static/media/venn-diagram.57febb01.svg": "/static/media/venn-diagram.57febb01.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f491db21.js",
+    "static/js/2.82440019.chunk.js",
+    "static/css/main.9c859a97.chunk.css",
+    "static/js/main.871799d0.chunk.js"
+  ]
+}
