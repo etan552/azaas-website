@@ -3,5 +3,10 @@
 .home {
   position: relative;
   height: 5000px;
-  overflow-x: hidden;
+}
+
+@media (max-width: 750px) {
+  .home {
+    overflow-x: hidden;
+  }
 }

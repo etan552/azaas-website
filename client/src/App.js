@@ -22,22 +22,22 @@ class App extends Component {
     } else {
       this.setState({ viewType: "tablet" });
     }
-    if (window.innerWidth > 750) {
-      window.addEventListener("resize", this.checkWindowType);
-    }
+    window.addEventListener("resize", this.checkWindowType);
   }
 
   checkWindowType = () => {
-    clearTimeout(this.todo);
-    this.todo = setTimeout(() => {
-      if (window.innerWidth > this.state.desktop) {
-        this.setState({ viewType: "desktop" });
-      } else {
-        this.setState({ viewType: "tablet" });
-      }
-      window.scrollTo(0, 0);
-      window.location.reload();
-    }, 250);
+    if (window.innerWidth > 750) {
+      clearTimeout(this.todo);
+      this.todo = setTimeout(() => {
+        if (window.innerWidth > this.state.desktop) {
+          this.setState({ viewType: "desktop" });
+        } else {
+          this.setState({ viewType: "tablet" });
+        }
+        window.scrollTo(0, 0);
+        window.location.reload();
+      }, 250);
+    }
   };
   render() {
     const { viewType, tablet } = this.state;
