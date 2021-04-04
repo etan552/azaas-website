@@ -22,7 +22,9 @@ class App extends Component {
     } else {
       this.setState({ viewType: "tablet" });
     }
-    window.addEventListener("resize", this.checkWindowType);
+    if (window.innerWidth > 750) {
+      window.addEventListener("resize", this.checkWindowType);
+    }
   }
 
   checkWindowType = () => {
