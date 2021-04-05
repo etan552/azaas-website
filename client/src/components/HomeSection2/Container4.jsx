@@ -1,6 +1,6 @@
 import React, { Component, createRef } from "react";
 import gsap, { TweenMax } from "gsap";
-import officeImg from "../../assets/office.png";
+import officeImg from "../../assets/office.webp";
 import "../../style/HomeSection2.css";
 
 class Container4 extends Component {

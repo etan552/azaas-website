@@ -1,8 +1,8 @@
 import React, { Component, createRef } from "react";
 import { Link } from "react-router-dom";
 import robotImg from "../assets/animation1.gif";
-import shipImg from "../assets/shipImg.png";
-import officeImg from "../assets/office.png";
+import shipImg from "../assets/shipImg.webp";
+import officeImg from "../assets/office.webp";
 import lighting from "../assets/lighting.svg";
 import reflection from "../assets/reflective-fabric.svg";
 import phone from "../assets/smartphone.svg";
@@ -54,7 +54,7 @@ class MobileHome extends Component {
             <img
               className="shipImg"
               src={officeImg}
-              alt="shigImg"
+              alt="officeImg"
               ref={this.section2Img}
             />
             <div>
@@ -66,7 +66,7 @@ class MobileHome extends Component {
             <img
               className="shipImg"
               src={shipImg}
-              alt="shigImg"
+              alt="shipImg"
               ref={this.section2Img}
             />
           </div>
@@ -117,7 +117,7 @@ class MobileHome extends Component {
           </div>
           <div className="container-4">
             <img src={officeImg} alt="office" />
-            <img src={shipImg} alt="office" />
+            <img src={shipImg} alt="ship" />
           </div>
         </section>
         <section className="section-3">
