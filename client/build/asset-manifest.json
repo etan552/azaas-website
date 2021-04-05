@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ad0ca435.chunk.css",
-    "main.js": "/static/js/main.30c4cc4d.chunk.js",
-    "main.js.map": "/static/js/main.30c4cc4d.chunk.js.map",
+    "main.js": "/static/js/main.371d31fd.chunk.js",
+    "main.js.map": "/static/js/main.371d31fd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d269a146.js",
     "runtime-main.js.map": "/static/js/runtime-main.d269a146.js.map",
     "static/js/2.e5b62410.chunk.js": "/static/js/2.e5b62410.chunk.js",
@@ -15,9 +15,11 @@
     "static/media/animation1.69a93fcb.gif": "/static/media/animation1.69a93fcb.gif",
     "static/media/lighting.08150f44.svg": "/static/media/lighting.08150f44.svg",
     "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
-    "static/media/office.fe67997f.webp": "/static/media/office.fe67997f.webp",
+    "static/media/office-mobile.c581f2ec.webp": "/static/media/office-mobile.c581f2ec.webp",
+    "static/media/office.215b1da6.webp": "/static/media/office.215b1da6.webp",
     "static/media/reflective-fabric.d5bf5615.svg": "/static/media/reflective-fabric.d5bf5615.svg",
-    "static/media/shipImg.bbe82de7.webp": "/static/media/shipImg.bbe82de7.webp",
+    "static/media/shipImg-mobile.b4b4cf64.webp": "/static/media/shipImg-mobile.b4b4cf64.webp",
+    "static/media/shipImg.bc808167.webp": "/static/media/shipImg.bc808167.webp",
     "static/media/smartphone.e50691af.svg": "/static/media/smartphone.e50691af.svg",
     "static/media/sun.f681ac14.svg": "/static/media/sun.f681ac14.svg",
     "static/media/target.a882bd6a.svg": "/static/media/target.a882bd6a.svg",
@@ -27,6 +29,6 @@
     "static/js/runtime-main.d269a146.js",
     "static/js/2.e5b62410.chunk.js",
     "static/css/main.ad0ca435.chunk.css",
-    "static/js/main.30c4cc4d.chunk.js"
+    "static/js/main.371d31fd.chunk.js"
   ]
 }

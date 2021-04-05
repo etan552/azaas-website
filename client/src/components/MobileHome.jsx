@@ -1,8 +1,8 @@
 import React, { Component, createRef } from "react";
 import { Link } from "react-router-dom";
 import robotImg from "../assets/animation1.gif";
-import shipImg from "../assets/shipImg.webp";
-import officeImg from "../assets/office.webp";
+import shipImg from "../assets/shipImg-mobile.webp";
+import officeImg from "../assets/office-mobile.webp";
 import lighting from "../assets/lighting.svg";
 import reflection from "../assets/reflective-fabric.svg";
 import phone from "../assets/smartphone.svg";
