@@ -1,6 +1,6 @@
 import React, { Component, createRef } from "react";
 import { Link } from "react-router-dom";
-import robotImg from "../assets/animation1.gif";
+import robotImg from "../assets/animation1.webp";
 import shipImg from "../assets/shipImg-mobile.webp";
 import officeImg from "../assets/office-mobile.webp";
 import lighting from "../assets/lighting.svg";

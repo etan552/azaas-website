@@ -1,5 +1,5 @@
 import React, { Component, createRef } from "react";
-import spinningRobot from "../assets/animation1.gif";
+import spinningRobot from "../assets/animation1.webp";
 import { Link } from "react-router-dom";
 import "../style/HomeSection1.css";
 
