@@ -24,7 +24,7 @@ class HomeSection1 extends Component {
           ref={this.imgRef}
         />
         <div>
-          <h1 className="header">Your next computer is not a computer.</h1>
+          <h1 className="header">Don't make them think.</h1>
           <div className="context">
             It’s a magical piece of glass.
             <br />

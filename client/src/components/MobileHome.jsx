@@ -36,7 +36,7 @@ class MobileHome extends Component {
             ref={this.imgRef1}
           />
           <div>
-            <div className="header">Your next computer is not a computer.</div>
+            <div className="header">Don't make them think.</div>
             <div className="context">
               It’s a magical piece of glass. It’s so fast most PC laptops can’t
               catch up. It has pro cameras that can transform reality. And you
