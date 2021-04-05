@@ -29,8 +29,8 @@ class Container4 extends Component {
       y: "-120vh",
       scrollTrigger: {
         trigger: this.props.homeRef,
-        start: viewType === "desktop" ? "top+=5300 center" : "top+=5200 center",
-        end: "top+=6800 center",
+        start: "top+=5200 center",
+        end: "top+=6600 center",
         toggleActions: "play none none reverse",
         scrub: true,
       },
