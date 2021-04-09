@@ -14,6 +14,7 @@ class Home extends Component {
 
   render() {
     const { viewType } = this.props;
+
     return (
       <div className="home" ref={this.homeRef}>
         <HomeSection1 viewType={viewType} />

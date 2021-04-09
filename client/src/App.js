@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import MobileHome from "./components/MobileHome";
 import React, { Component } from "react";
+import RobotAnimation from "./components/RobotAnimation";
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
+            {/* <Route path="/test" component={RobotAnimation} /> */}
             <Route
               path="/"
               render={(props) =>

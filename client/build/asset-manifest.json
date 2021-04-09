@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.761f169e.chunk.css",
-    "main.js": "/static/js/main.e6ae9413.chunk.js",
-    "main.js.map": "/static/js/main.e6ae9413.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d269a146.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d269a146.js.map",
-    "static/js/2.e5b62410.chunk.js": "/static/js/2.e5b62410.chunk.js",
-    "static/js/2.e5b62410.chunk.js.map": "/static/js/2.e5b62410.chunk.js.map",
-    "static/js/3.7c47b30c.chunk.js": "/static/js/3.7c47b30c.chunk.js",
-    "static/js/3.7c47b30c.chunk.js.map": "/static/js/3.7c47b30c.chunk.js.map",
+    "main.css": "/static/css/main.ca6eb714.chunk.css",
+    "main.js": "/static/js/main.83fc1b36.chunk.js",
+    "main.js.map": "/static/js/main.83fc1b36.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c23f102e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c23f102e.js.map",
+    "static/js/2.455f17be.chunk.js": "/static/js/2.455f17be.chunk.js",
+    "static/js/2.455f17be.chunk.js.map": "/static/js/2.455f17be.chunk.js.map",
+    "static/js/3.b26318e3.chunk.js": "/static/js/3.b26318e3.chunk.js",
+    "static/js/3.b26318e3.chunk.js.map": "/static/js/3.b26318e3.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.761f169e.chunk.css.map": "/static/css/main.761f169e.chunk.css.map",
-    "static/js/2.e5b62410.chunk.js.LICENSE.txt": "/static/js/2.e5b62410.chunk.js.LICENSE.txt",
+    "static/css/main.ca6eb714.chunk.css.map": "/static/css/main.ca6eb714.chunk.css.map",
+    "static/js/2.455f17be.chunk.js.LICENSE.txt": "/static/js/2.455f17be.chunk.js.LICENSE.txt",
+    "static/media/RobotAnimation.css": "/static/media/9.e600f709.png",
     "static/media/animation1.9577b8c3.webp": "/static/media/animation1.9577b8c3.webp",
-    "static/media/lighting.08150f44.svg": "/static/media/lighting.08150f44.svg",
+    "static/media/lighting.svg": "/static/media/lighting.08150f44.svg",
     "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
     "static/media/office-mobile.c581f2ec.webp": "/static/media/office-mobile.c581f2ec.webp",
     "static/media/office.215b1da6.webp": "/static/media/office.215b1da6.webp",
@@ -26,9 +27,9 @@
     "static/media/venn-diagram.57febb01.svg": "/static/media/venn-diagram.57febb01.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d269a146.js",
-    "static/js/2.e5b62410.chunk.js",
-    "static/css/main.761f169e.chunk.css",
-    "static/js/main.e6ae9413.chunk.js"
+    "static/js/runtime-main.c23f102e.js",
+    "static/js/2.455f17be.chunk.js",
+    "static/css/main.ca6eb714.chunk.css",
+    "static/js/main.83fc1b36.chunk.js"
   ]
 }

@@ -12,9 +12,7 @@ class HomeSection1 extends Component {
   }
 
   render() {
-    console.log(this.imgRef.current);
     if (this.imgRef.current) this.imgRef.current.src = this.gif;
-    // const { section1Ref } = this.props;
     return (
       <section className="section-1">
         <img
