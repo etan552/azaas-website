@@ -1,0 +1,247 @@
+.home .section-4 {
+  position: relative;
+  height: calc(100vh + 1930px);
+  margin-top: 200px;
+  z-index: 2;
+  background-color: white;
+}
+
+.home .section-4 .office-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.home .section-4 .content {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  margin-top: 50px;
+}
+
+.home .section-4 .content > div:first-child {
+  width: 100%;
+  background-color: white;
+}
+
+.home .section-4 .content .item {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 980px;
+  margin: 0 auto;
+  padding-bottom: 200px;
+}
+
+.home .section-4 .content .header {
+  font-size: 64px;
+  font-weight: 500;
+  width: 42%;
+}
+
+.home .section-4 .content .context {
+  font-size: 17px;
+  width: 58%;
+  line-height: 1.4;
+  padding-top: 20px;
+}
+
+.home .section-4 .slideshow {
+  position: sticky;
+  top: 270px;
+  margin-top: 270px;
+  padding-bottom: 200px;
+  height: 754px;
+  z-index: 3;
+  background-color: white;
+}
+
+.home .section-4 .frame {
+  width: 980px;
+  height: auto;
+  z-index: 3;
+  padding-left: calc((100vw - 980px) / 2);
+  padding-right: calc((100vw - 980px) / 2);
+}
+
+.home .section-4 .slideshow .view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 940px;
+  height: 754px;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.home .section-4 .slideshow .view > div {
+  display: flex;
+  align-items: center;
+  height: 754px;
+}
+
+.home .section-4 .slideshow > div img {
+  position: relative;
+  height: 700px;
+  width: 960px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.home .section-4 .container-1 {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  margin-top: 1000px;
+  z-index: -2;
+}
+
+.home .section-4 .container-1 .img-1 {
+  width: 100vw;
+  object-fit: cover;
+}
+
+.home .section-4 .container-1 > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home .section-4 .container-1 .header,
+.home .section-4 .container-1 .context {
+  width: 653px;
+  font-weight: 500;
+}
+
+.home .section-4 .container-1 .header {
+  font-size: 28px;
+}
+
+.home .section-4 .container-1 .context {
+  font-size: 96px;
+  letter-spacing: -2px;
+  line-height: 1.12;
+}
+
+/* table view */
+@media (max-width: 1070px) {
+  .home .section-4 {
+    margin-top: 100px;
+    height: calc(100vh + 1800px);
+  }
+
+  .home .section-4 .content .item {
+    width: 580px;
+    flex-wrap: wrap;
+  }
+
+  .home .section-4 .content .item .header {
+    width: 100%;
+    font-size: 48px;
+  }
+
+  .home .section-4 .content .item .context {
+    width: 100%;
+  }
+
+  .home .section-4 .frame {
+    width: 660px;
+  }
+
+  .home .section-4 .slideshow {
+    height: 505px;
+  }
+
+  .home .section-4 .slideshow .view {
+    width: 643px;
+    height: 505px;
+  }
+
+  .home .section-4 .slideshow .view > div {
+    height: 505px;
+  }
+
+  .home .section-4 .slideshow > div img {
+    height: 481px;
+    width: 660px;
+  }
+
+  .home .section-4 .container-1 {
+    margin-top: 870px;
+  }
+}
+
+/* mobile view */
+@media (max-width: 750px) {
+  .home .section-4 {
+    height: auto;
+  }
+
+  .home .section-4 .office-img {
+    height: 400px;
+  }
+
+  .home .section-4 .content {
+    position: relative;
+    top: 0;
+    width: 87.5%;
+    margin: 40px auto 0;
+  }
+
+  .home .section-4 .content .item {
+    width: 100%;
+    padding-bottom: 60px;
+  }
+
+  .home .section-4 .content .item .header {
+    font-size: 28px;
+  }
+
+  .home .section-4 .content .item img {
+    width: 311px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .home .section-4 .container-1 {
+    position: relative;
+    top: 0;
+    margin-top: 40px;
+  }
+
+  .home .section-4 .container-1 .img-1 {
+    height: 333px;
+    width: 420px;
+  }
+
+  .home .section-4 .container-1 > div:last-child {
+    justify-content: flex-start;
+  }
+
+  .home .section-4 .container-1 > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    color: black;
+    padding-bottom: 60px;
+  }
+
+  .home .section-4 .container-1 > div .header {
+    font-size: 19px;
+  }
+
+  .home .section-4 .container-1 > div .context {
+    font-size: 40px;
+    letter-spacing: 0px;
+    padding-top: 16px;
+  }
+}

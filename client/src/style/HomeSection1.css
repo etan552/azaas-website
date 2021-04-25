@@ -1,9 +1,47 @@
 .home .section-1 {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   background-color: white;
   min-width: 90%;
-  padding-top: 30px;
+  height: 2500px;
+}
+
+.home .section-1 .canvas-container {
+  position: relative;
+  height: 2300px;
+  padding: 0;
+}
+
+.home .section-1 canvas {
+  position: absolute;
+  top: calc(100vh - 730px);
+  right: 50px;
+  width: 500px;
+  margin: auto;
+}
+
+.home .section-1 .canvas-container img {
+  position: absolute;
+  height: 170px;
+  left: 0;
+}
+
+.home .section-1 .canvas-container .imgs {
+  position: sticky;
+  top: calc(750px - 100vh + 400px);
+  height: 100vh;
+}
+
+.home .section-1 .canvas-container .dontImg {
+  top: calc(100vh - 510px);
+}
+
+.home .section-1 .canvas-container .makeThemImg {
+  top: calc(100vh - 510px + 170px);
+}
+
+.home .section-1 .canvas-container .thinkImg {
+  top: calc(100vh - 510px + 340px);
 }
 
 .home .section-1 > div {
@@ -11,6 +49,7 @@
   width: 90%;
   margin: 0 auto;
   padding: 30px 0 170px 0;
+  transform: translateY(-400px);
 }
 
 .home .section-1 .robot-img {
@@ -55,8 +94,12 @@
 
 /* tablet view */
 @media (max-width: 1070px) {
+  .home .section-1 {
+    height: 2300px;
+  }
   .home .section-1 > div {
     width: 630px;
+    padding-top: 0;
   }
 
   .home .section-1 .header {
@@ -65,20 +108,58 @@
 
   .home .section-1 .context {
     font-size: 32px;
+    margin-top: 0;
   }
 
   .home .section-1 .link {
     font-size: 21px;
   }
+
+  .home .section-1 canvas {
+    position: absolute;
+    top: calc(100vh - 590px);
+    right: -20px;
+    width: 370px;
+    margin: auto;
+  }
+
+  .home .section-1 .canvas-container img {
+    position: absolute;
+    height: 120px;
+    left: 0;
+  }
+
+  .home .section-1 .canvas-container .imgs {
+    position: sticky;
+    top: calc(750px - 100vh + 300px);
+    height: 100vh;
+  }
+
+  .home .section-1 .canvas-container .dontImg {
+    top: calc(100vh - 410px);
+  }
+
+  .home .section-1 .canvas-container .makeThemImg {
+    top: calc(100vh - 410px + 120px);
+  }
+
+  .home .section-1 .canvas-container .thinkImg {
+    top: calc(100vh - 410px + 240px);
+  }
 }
 
 /* mobile view */
 @media (max-width: 750px) {
+  .home .section-1 {
+    height: auto;
+  }
+
   .home .section-1 > div {
     width: 87.5%;
     display: flex;
     flex-wrap: wrap;
     padding: 0 0 70px;
+    transform: translateY(0px);
   }
 
   .home .section-1 .robot-img {

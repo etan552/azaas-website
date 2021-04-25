@@ -1,0 +1,141 @@
+.home .section-10 .container-1 {
+  width: 980px;
+  margin: 100px auto;
+}
+
+.home .section-10 .container-1 .notes {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto 40px;
+}
+
+.home .section-10 .container-1 .notes > p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.home .section-10 .container-1 .img {
+  width: 700px;
+}
+
+.home .section-10 .container-2 {
+  width: 980px;
+  display: flex;
+  margin: auto;
+  text-align: left;
+}
+
+.home .section-10 .container-2 > div {
+  width: 400px;
+  margin: 200px 110px 0 0;
+}
+
+.home .section-10 .container-2 .header {
+  font-size: 56px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.home .section-10 .container-2 .context {
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.home .section-10 .container-2 .phone-img {
+  width: 386px;
+}
+
+/* tablet view */
+@media (max-width: 1070px) {
+  .home .section-10 {
+    width: 690px;
+    margin: 20px auto 0;
+  }
+  .home .section-10 .container-1 {
+    width: 570px;
+    margin: 0 auto;
+  }
+
+  .home .section-10 .container-1 .img,
+  .home .section-10 .container-1 .notes {
+    width: 570px;
+  }
+
+  .home .section-10 .container-1 .notes {
+    margin-bottom: 20px;
+  }
+
+  .home .section-10 .container-2 {
+    width: 690px;
+    justify-content: space-between;
+    padding-top: 120px;
+  }
+
+  .home .section-10 .container-2 > div {
+    margin-right: 20px;
+    width: 290px;
+  }
+
+  .home .section-10 .container-2 > div .header {
+    font-size: 48px;
+  }
+
+  .home .section-10 .container-2 .phone-img {
+    width: 337px;
+  }
+}
+
+/* mobile view */
+@media (max-width: 750px) {
+  .home .section-10 {
+    width: 87.5%;
+    margin: 0 auto;
+  }
+
+  .home .section-10 .container-1 {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .home .section-10 .container-1 .notes {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .home .section-10 .container-1 .notes p {
+    font-size: 18px;
+  }
+
+  .home .section-10 .container-1 .img {
+    width: 100%;
+  }
+
+  .home .section-10 .container-2 {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .home .section-10 .container-2 > div {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .home .section-10 .container-2 > div .header {
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin: 15px;
+  }
+
+  .home .section-10 .container-2 .phone-img {
+    width: 100%;
+    max-width: 253px;
+    margin: 50px auto 0;
+  }
+}

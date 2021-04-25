@@ -6,16 +6,21 @@ class Container1 extends Component {
   section2Container1 = createRef();
 
   componentDidMount() {
+    const { homeRef, heights, viewType } = this.props;
+    const { section1 } = heights;
+    const newHeight = section1;
+    let isDesktop = viewType === "desktop" ? true : false;
+
     // animation for section 2's container-1
     TweenMax.to(this.section2Container1.current, {
-      duration: 0.2,
+      duration: 0.5,
       opacity: 0,
       scrollTrigger: {
-        trigger: this.props.homeRef,
-        start: "top+=2000px center",
-        end: "top+=2000px center",
+        trigger: homeRef,
+        start: isDesktop
+          ? `top+=${newHeight + 254} top`
+          : `top+=${newHeight + 54} top`, // 1146
         toggleActions: "play none none reverse",
-        // scrub: true,
       },
     });
   }

@@ -1,11 +1,23 @@
 .home .section-3 {
+  position: relative;
   width: 980px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   font-size: 100px;
   font-weight: 500;
-  padding-top: 4450px;
+  font-family: "Roboto", sans-serif;
+  height: 1200px;
+  z-index: 2;
+}
+
+.home .section-3 > div {
+  width: 980px;
+}
+
+.home .section-3 .container-1 {
+  padding-bottom: 270px;
 }
 
 .home .section-3 .container-1 > div {
@@ -22,6 +34,38 @@
   line-height: 1.05;
   letter-spacing: -4px;
   margin-top: 30px;
+  color: rgb(201, 21, 21);
+}
+
+.home .section-3 .container-2 {
+  padding-bottom: 400px;
+}
+
+.home .section-3 .container-2 > div,
+.home .section-3 .container-3 > div {
+  width: 350px;
+  text-align: left;
+}
+
+.home .section-3 .container-2 .header,
+.home .section-3 .container-3 .header {
+  font-size: 64px;
+  font-weight: 500;
+  width: 400px;
+  padding-bottom: 20px;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: rgb(201, 21, 21);
+}
+
+.home .section-3 .container-2 .context,
+.home .section-3 .container-3 .context {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.home .section-3 .container-3 {
 }
 
 /* tablet view */
@@ -33,14 +77,28 @@
   .home .section-3 .container-1 {
     margin-top: 40px;
   }
+
   .home .section-3 .container-1 > div {
     width: 450px;
   }
+
   .home .section-3 .container-1 .header {
     font-size: 24px;
   }
+
   .home .section-3 .container-1 .context {
     font-size: 64px;
+  }
+
+  .home .section-3 .container-2 > div,
+  .home .section-3 .container-3 > div {
+    width: 290px;
+  }
+
+  .home .section-3 .container-2 .header,
+  .home .section-3 .container-3 .header {
+    font-size: 48px;
+    letter-spacing: -2px;
   }
 }
 
@@ -52,10 +110,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: auto;
   }
 
   .home .section-3 .container-1 {
     text-align: center;
+    padding-bottom: 20px;
   }
 
   .home .section-3 .container-1 > div {
@@ -70,7 +130,32 @@
   .home .section-3 .container-1 .context {
     font-size: 40px;
     letter-spacing: -1px;
-    margin-top: 15px;
     width: 275px;
+    margin: 15px auto 0;
+  }
+
+  .home .section-3 img {
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .home .section-3 .container-2 {
+    padding-bottom: 20px;
+  }
+
+  .home .section-3 .container-2 > div,
+  .home .section-3 .container-3 > div {
+    width: 100%;
+  }
+
+  .home .section-3 .container-2 .header,
+  .home .section-3 .container-3 .header {
+    font-size: 28px;
+    letter-spacing: 0px;
+  }
+
+  .home .section-3 .container-2 .context {
+    line-height: 1.5;
+    padding-bottom: 20px;
   }
 }

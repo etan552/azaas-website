@@ -7,17 +7,24 @@ class Container4 extends Component {
   section2Container4 = createRef();
 
   componentDidUpdate() {
-    const { viewType } = this.props;
+    const { homeRef, heights, viewType } = this.props;
+    const { section1 } = heights;
+    const newHeight = section1;
+    let isDesktop = viewType === "desktop" ? true : false;
 
     // animation for container-4 horizontal movement
     TweenMax.to(this.section2Container4.current, {
       duration: 1,
       opacity: 1,
-      x: viewType === "desktop" ? "-280px" : "-210px",
+      x: isDesktop ? "-280px" : "-210px",
       scrollTrigger: {
-        trigger: this.props.homeRef,
-        start: "top+=4400 center",
-        end: "top+=5000 center",
+        trigger: homeRef,
+        start: isDesktop
+          ? `top+=${newHeight + 3254} center`
+          : `top+=${newHeight + 3254} center`,
+        end: isDesktop
+          ? `top+=${newHeight + 3854} center`
+          : `top+=${newHeight + 3854} center`,
         toggleActions: "play none none reverse",
         scrub: 0.1,
       },
@@ -28,9 +35,13 @@ class Container4 extends Component {
       duration: 0.5,
       y: "-120vh",
       scrollTrigger: {
-        trigger: this.props.homeRef,
-        start: "top+=5200 center",
-        end: "top+=6600 center",
+        trigger: homeRef,
+        start: isDesktop
+          ? `top+=${newHeight + 4054} center`
+          : `top+=${newHeight + 4054} center`,
+        end: isDesktop
+          ? `top+=${newHeight + 5454} center`
+          : `top+=${newHeight + 5454} center`,
         toggleActions: "play none none reverse",
         scrub: true,
       },

@@ -1,12 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
 .home {
   position: relative;
   height: 5000px;
-}
-
-@media (max-width: 750px) {
-  .home {
-    overflow-x: hidden;
-  }
 }

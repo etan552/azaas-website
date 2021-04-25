@@ -6,14 +6,20 @@ class Container2 extends Component {
   section2Container2 = createRef();
 
   componentDidMount() {
+    const { homeRef, heights, viewType } = this.props;
+    const { section1 } = heights;
+    const newHeight = section1;
+    let isDesktop = viewType === "desktop" ? true : false;
+
     //animation for section 2's container-2 fade in
     TweenMax.to(this.section2Container2.current, {
       duration: 0.3,
       opacity: 1,
       scrollTrigger: {
-        trigger: this.props.homeRef,
-        start: "top+=3000px center",
-        end: "top+=3000px center",
+        trigger: homeRef,
+        start: isDesktop
+          ? `top+=${newHeight + 350} top`
+          : `top+=${newHeight + 150} top`,
         toggleActions: "play none none reverse",
       },
     });
@@ -26,9 +32,10 @@ class Container2 extends Component {
         duration: 0.3,
         opacity: 0,
         scrollTrigger: {
-          trigger: this.props.homeRef,
-          start: "top+=3600px center",
-          end: "top+=3600px center",
+          trigger: homeRef,
+          start: isDesktop
+            ? `top+=${newHeight + 854} top`
+            : `top+=${newHeight + 654} top`,
           toggleActions: "play none none reverse",
         },
       }
