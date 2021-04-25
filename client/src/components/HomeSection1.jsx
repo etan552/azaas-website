@@ -63,6 +63,11 @@ class HomeSection1 extends Component {
     const html = document.documentElement;
     const context = this.canvas.current.getContext("2d");
 
+    for (let i = 1; i < frameCount; i++) {
+      const img = new Image();
+      img.src = this.getCurrentImg(i);
+    }
+
     // painting the first frame
     const img = new Image();
     img.src = this.getCurrentImg(1);
