@@ -131,7 +131,7 @@
   .home .section-5 {
     width: 87.5%;
     margin: 0 auto;
-    height: 2830px;
+    height: auto;
   }
 
   .home .section-5 .container-1 {
@@ -144,15 +144,20 @@
   }
 
   .home .section-5 .container-2 {
-    margin-top: 920px;
+    margin-top: 40px;
     max-width: 420px;
     width: 100%;
   }
 
   .home .section-5 .container-3 {
-    margin: 910px 0 0 0;
+    margin: 40px 0 0 0;
     max-width: 420px;
     width: 100%;
+  }
+
+  .home .section-5 img {
+    position: relative;
+    padding-top: 40px;
   }
 
   .home .section-5 .img-1,
@@ -160,6 +165,7 @@
   .home .section-5 .img-5 {
     width: 420px;
     height: 322px;
+    top: 0;
     left: 0;
   }
 
@@ -167,29 +173,25 @@
   .home .section-5 .img-4 {
     width: 322px;
     height: 420px;
+    top: 0;
     right: 0;
     left: 0;
     margin: 0 auto;
   }
 
   .home .section-5 .img-1 {
-    top: 730px;
   }
 
   .home .section-5 .img-2 {
-    top: 260px;
   }
 
   .home .section-5 .img-3 {
-    top: 1420px;
   }
 
   .home .section-5 .img-4 {
-    top: 1800px;
   }
 
   .home .section-5 .img-5 {
-    top: 2510px;
     right: 0;
     margin: 0;
   }

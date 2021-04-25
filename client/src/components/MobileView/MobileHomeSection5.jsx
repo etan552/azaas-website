@@ -17,6 +17,8 @@ class MobileHomeSection5 extends Component {
             for the apps and games where it matters most.
           </div>
         </div>
+        <img src={office1} alt="office" className="img-1" ref={this.img1} />
+        <img src={office2} alt="office" className="img-2" ref={this.img2} />
         <div className="container-2">
           <div className="header">Pro workflow</div>
           <div className="context">
@@ -29,6 +31,8 @@ class MobileHomeSection5 extends Component {
             pro apps.
           </div>
         </div>
+        <img src={office3} alt="office" className="img-3" ref={this.img3} />
+        <img src={office1} alt="office" className="img-4" ref={this.img4} />
         <div className="container-3">
           <div className="header">Multitasking</div>
           <div className="context">
@@ -39,10 +43,7 @@ class MobileHomeSection5 extends Component {
             and effortless.
           </div>
         </div>
-        <img src={office1} alt="office" className="img-1" ref={this.img1} />
-        <img src={office2} alt="office" className="img-2" ref={this.img2} />
-        <img src={office3} alt="office" className="img-3" ref={this.img3} />
-        <img src={office1} alt="office" className="img-4" ref={this.img4} />
+
         <img src={office3} alt="office" className="img-5" ref={this.img5} />
       </section>
     );

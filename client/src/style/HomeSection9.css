@@ -219,6 +219,7 @@
   .home .section-9 .container-2 {
     flex-wrap: wrap;
     padding-top: 50px;
+    width: 100%;
   }
 
   .home .section-9 .container-2 .header {

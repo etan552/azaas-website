@@ -141,14 +141,14 @@ class RobotAnimation extends Component {
     const { section1 } = heights;
     const newHeight = section1;
 
+    const frameCount = 115;
+    const html = document.documentElement;
+    const context = this.canvas.current.getContext("2d");
+
     for (let i = 1; i < frameCount; i++) {
       const img = new Image();
       img.src = this.getCurrentImg(i);
     }
-
-    const frameCount = 115;
-    const html = document.documentElement;
-    const context = this.canvas.current.getContext("2d");
 
     // painting the first frame
     const img = new Image();
