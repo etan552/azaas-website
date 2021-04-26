@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c76d4e9b.chunk.css",
-    "main.js": "/static/js/main.281848cd.chunk.js",
-    "main.js.map": "/static/js/main.281848cd.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.74b48814.js",
-    "runtime-main.js.map": "/static/js/runtime-main.74b48814.js.map",
-    "static/js/2.0a830f06.chunk.js": "/static/js/2.0a830f06.chunk.js",
-    "static/js/2.0a830f06.chunk.js.map": "/static/js/2.0a830f06.chunk.js.map",
-    "static/js/3.747d4aaf.chunk.js": "/static/js/3.747d4aaf.chunk.js",
-    "static/js/3.747d4aaf.chunk.js.map": "/static/js/3.747d4aaf.chunk.js.map",
+    "main.css": "/static/css/main.d7c92c57.chunk.css",
+    "main.js": "/static/js/main.9d18193f.chunk.js",
+    "main.js.map": "/static/js/main.9d18193f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4314c5a5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4314c5a5.js.map",
+    "static/js/2.3baf00e5.chunk.js": "/static/js/2.3baf00e5.chunk.js",
+    "static/js/2.3baf00e5.chunk.js.map": "/static/js/2.3baf00e5.chunk.js.map",
+    "static/js/3.a2715025.chunk.js": "/static/js/3.a2715025.chunk.js",
+    "static/js/3.a2715025.chunk.js.map": "/static/js/3.a2715025.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.c76d4e9b.chunk.css.map": "/static/css/main.c76d4e9b.chunk.css.map",
-    "static/js/2.0a830f06.chunk.js.LICENSE.txt": "/static/js/2.0a830f06.chunk.js.LICENSE.txt",
+    "static/css/main.d7c92c57.chunk.css.map": "/static/css/main.d7c92c57.chunk.css.map",
+    "static/js/2.3baf00e5.chunk.js.LICENSE.txt": "/static/js/2.3baf00e5.chunk.js.LICENSE.txt",
     "static/media/001.1f8b2b7c.webp": "/static/media/001.1f8b2b7c.webp",
     "static/media/002.d0cd635b.webp": "/static/media/002.d0cd635b.webp",
     "static/media/003.c14571d4.webp": "/static/media/003.c14571d4.webp",
@@ -191,7 +191,6 @@
     "static/media/hand.855d995d.webp": "/static/media/hand.855d995d.webp",
     "static/media/ipadPro-horizontal.a6451aad.webp": "/static/media/ipadPro-horizontal.a6451aad.webp",
     "static/media/lighting.08150f44.svg": "/static/media/lighting.08150f44.svg",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
     "static/media/makeThem.b5072e4a.webp": "/static/media/makeThem.b5072e4a.webp",
     "static/media/mobileOffice1.04042d21.webp": "/static/media/mobileOffice1.04042d21.webp",
     "static/media/mobileOffice2.0a7245ae.webp": "/static/media/mobileOffice2.0a7245ae.webp",
@@ -202,7 +201,6 @@
     "static/media/office2.bce37e5d.webp": "/static/media/office2.bce37e5d.webp",
     "static/media/office3.6e11764b.webp": "/static/media/office3.6e11764b.webp",
     "static/media/reflective-fabric.d5bf5615.svg": "/static/media/reflective-fabric.d5bf5615.svg",
-    "static/media/robot.dfba9571.mp4": "/static/media/robot.dfba9571.mp4",
     "static/media/shipImg-mobile.b4b4cf64.webp": "/static/media/shipImg-mobile.b4b4cf64.webp",
     "static/media/shipImg.bc808167.webp": "/static/media/shipImg.bc808167.webp",
     "static/media/smartphone.e50691af.svg": "/static/media/smartphone.e50691af.svg",
@@ -212,9 +210,9 @@
     "static/media/venn-diagram.57febb01.svg": "/static/media/venn-diagram.57febb01.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.74b48814.js",
-    "static/js/2.0a830f06.chunk.js",
-    "static/css/main.c76d4e9b.chunk.css",
-    "static/js/main.281848cd.chunk.js"
+    "static/js/runtime-main.4314c5a5.js",
+    "static/js/2.3baf00e5.chunk.js",
+    "static/css/main.d7c92c57.chunk.css",
+    "static/js/main.9d18193f.chunk.js"
   ]
 }
