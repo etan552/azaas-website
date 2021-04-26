@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import MobileHome from "./components/MobileView/MobileHome";
 import React, { Component } from "react";
 import RobotAnimation from "./components/RobotAnimation";
-import test from "./components/test";
 
 class App extends Component {
   constructor(props) {
@@ -48,8 +46,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/test" component={test} />
-            <Route path="/test1" component={RobotAnimation} />
+            {/* <Route path="/test1" component={RobotAnimation} /> */}
             <Route
               path="/"
               render={(props) =>
