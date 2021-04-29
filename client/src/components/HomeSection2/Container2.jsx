@@ -5,7 +5,7 @@ import "../../style/HomeSection2.css";
 class Container2 extends Component {
   section2Container2 = createRef();
 
-  componentDidMount() {
+  componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
     const { section1 } = heights;
     const newHeight = section1;

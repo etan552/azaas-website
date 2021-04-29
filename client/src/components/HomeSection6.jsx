@@ -38,7 +38,7 @@ class HomeSection6 extends Component {
           trigger: homeRef,
           start: isDesktop
             ? `top+=${newHeight + 200} top`
-            : `top+=${newMobileHeight - 200} top`,
+            : `top+=${newMobileHeight + 50} top`,
           toggleActions: "play none none reverse",
         },
       }

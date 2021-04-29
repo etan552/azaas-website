@@ -48,6 +48,7 @@ import robot42 from "../assets/robot/42.webp";
 import dont from "../assets/dont.webp";
 import makeThem from "../assets/makeThem.webp";
 import think from "../assets/think.webp";
+import mainImg from "../assets/Section1MainImg.svg";
 
 class HomeSection1 extends Component {
   constructor(props) {
@@ -238,9 +239,10 @@ class HomeSection1 extends Component {
         <div className="canvas-container">
           <div className="imgs">
             <canvas ref={this.canvas}></canvas>
-            <img src={dont} alt="" className="dontImg" />
+            <img src={mainImg} alt="main-img" className="main-img" />
+            {/* <img src={dont} alt="" className="dontImg" />
             <img src={makeThem} alt="" className="makeThemImg" />
-            <img src={think} alt="" className="thinkImg" />
+            <img src={think} alt="" className="thinkImg" /> */}
           </div>
         </div>
 

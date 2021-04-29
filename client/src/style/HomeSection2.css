@@ -22,7 +22,7 @@
 .home .section-2 .container-1 .header,
 .home .section-2 .container-1 .context {
   position: relative;
-  color: rgb(201, 21, 21);
+  color: var(--main-color);
 
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -182,15 +182,8 @@
   }
 
   .home .section-2 .container-3 {
-    max-width: 800px;
-    min-width: 720px;
-    width: calc(100vw - 40px);
-    /* height: 500px; */
+    width: 680px;
   }
-  /* .home .section-2 .container-3 .left,
-  .home .section-2 .container-3 .right {
-    width: 170px;
-  } */
 
   .home .section-2 .container-3 > div {
     /* background-color: red; */

@@ -34,7 +34,7 @@
   line-height: 1.05;
   letter-spacing: -4px;
   margin-top: 30px;
-  color: rgb(201, 21, 21);
+  color: var(--main-color);
 }
 
 .home .section-3 .container-2 {
@@ -55,7 +55,7 @@
   padding-bottom: 20px;
   letter-spacing: -2px;
   line-height: 1;
-  color: rgb(201, 21, 21);
+  color: var(--main-color);
 }
 
 .home .section-3 .container-2 .context,

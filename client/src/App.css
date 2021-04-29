@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  --main-color: rgb(8, 136, 168);
 }
 
 .App-logo {

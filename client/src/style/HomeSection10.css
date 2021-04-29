@@ -55,8 +55,9 @@
 @media (max-width: 1070px) {
   .home .section-10 {
     width: 690px;
-    margin: 20px auto 0;
+    margin: 60px auto 0;
   }
+
   .home .section-10 .container-1 {
     width: 570px;
     margin: 0 auto;

@@ -4,6 +4,7 @@ import ipadFrame from "../assets/ipadPro-horizontal.webp";
 import office1 from "../assets/office1.webp";
 import office2 from "../assets/office2.webp";
 import office3 from "../assets/office3.webp";
+import robotVideo from "../assets/animation3.webm";
 import gsap from "gsap";
 import "../style/HomeSection4.css";
 
@@ -19,11 +20,10 @@ class HomeSection4 extends Component {
     const { homeRef, heights, viewType } = this.props;
 
     const { section1, section2, section3 } = heights;
-    const newHeight = section1 + section2 + section3 + window.innerHeight;
+    const newHeight = section1 + section2 + section3 + 600;
 
     const { section1m, section2m, section3m } = heights.mobileHeights;
-    const newMobileHeight =
-      section1m + section2m + section3m + window.innerHeight;
+    const newMobileHeight = section1m + section2m + section3m + 440;
 
     let isDesktop = viewType === "desktop" ? true : false;
 
@@ -152,9 +152,20 @@ class HomeSection4 extends Component {
   }
 
   render() {
+    const { viewType } = this.props;
     return (
       <div className="section-4">
-        <img src={office} alt="office" className="office-img" />
+        <video
+          className="robot-video"
+          width={viewType === "desktop" ? "1100px" : "850px"}
+          height={viewType === "desktop" ? "600px" : "440px"}
+          autoPlay
+          muted
+          loop
+        >
+          <source src={robotVideo} type="video/webm" />
+        </video>
+        {viewType !== "desktop" && <div style={{ height: "440px" }}></div>}
         <div className="slideshow">
           <img src={ipadFrame} alt="ipad frame" className="frame" />
           <div className="view">

@@ -1,23 +1,16 @@
 .home .section-4 {
   position: relative;
-  height: calc(100vh + 1930px);
+  height: 2530px;
   margin-top: 200px;
   z-index: 2;
   background-color: white;
 }
 
-.home .section-4 .office-img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-
 .home .section-4 .content {
   position: absolute;
-  top: 100vh;
+  top: 650px;
   left: 0;
   right: 0;
-  margin-top: 50px;
 }
 
 .home .section-4 .content > div:first-child {
@@ -135,7 +128,18 @@
 @media (max-width: 1070px) {
   .home .section-4 {
     margin-top: 100px;
-    height: calc(100vh + 1800px);
+    height: 2210px;
+  }
+  .home .section-4 .robot-video {
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    margin: 0 auto;
+  }
+  .home .section-4 .content {
+    top: 470px;
+    left: 0;
+    right: 0;
   }
 
   .home .section-4 .content .item {

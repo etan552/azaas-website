@@ -32,16 +32,10 @@
   height: 100vh;
 }
 
-.home .section-1 .canvas-container .dontImg {
+.home .section-1 .canvas-container .imgs .main-img {
   top: calc(100vh - 510px);
-}
-
-.home .section-1 .canvas-container .makeThemImg {
-  top: calc(100vh - 510px + 170px);
-}
-
-.home .section-1 .canvas-container .thinkImg {
-  top: calc(100vh - 510px + 340px);
+  width: 940px;
+  height: 500px;
 }
 
 .home .section-1 > div {
@@ -97,6 +91,7 @@
   .home .section-1 {
     height: 2300px;
   }
+
   .home .section-1 > div {
     width: 630px;
     padding-top: 0;
@@ -123,28 +118,16 @@
     margin: auto;
   }
 
-  .home .section-1 .canvas-container img {
-    position: absolute;
-    height: 120px;
-    left: 0;
+  .home .section-1 .canvas-container .imgs .main-img {
+    top: calc(100vh - 420px);
+    width: 630px;
+    height: auto;
   }
 
   .home .section-1 .canvas-container .imgs {
     position: sticky;
     top: calc(750px - 100vh + 300px);
     height: 100vh;
-  }
-
-  .home .section-1 .canvas-container .dontImg {
-    top: calc(100vh - 410px);
-  }
-
-  .home .section-1 .canvas-container .makeThemImg {
-    top: calc(100vh - 410px + 120px);
-  }
-
-  .home .section-1 .canvas-container .thinkImg {
-    top: calc(100vh - 410px + 240px);
   }
 }
 
