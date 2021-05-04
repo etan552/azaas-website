@@ -1,133 +1,134 @@
 import React, { Component, createRef } from "react";
 import "../style/RobotAnimation.css";
 import gsap from "gsap";
-import robot1 from "../assets/robot1/001.webp";
-import robot2 from "../assets/robot1/002.webp";
-import robot3 from "../assets/robot1/003.webp";
-import robot4 from "../assets/robot1/004.webp";
-import robot5 from "../assets/robot1/005.webp";
-import robot6 from "../assets/robot1/006.webp";
-import robot7 from "../assets/robot1/007.webp";
-import robot8 from "../assets/robot1/008.webp";
-import robot9 from "../assets/robot1/009.webp";
-import robot10 from "../assets/robot1/010.webp";
-import robot11 from "../assets/robot1/011.webp";
-import robot12 from "../assets/robot1/012.webp";
-import robot13 from "../assets/robot1/013.webp";
-import robot14 from "../assets/robot1/014.webp";
-import robot15 from "../assets/robot1/015.webp";
-import robot16 from "../assets/robot1/016.webp";
-import robot17 from "../assets/robot1/017.webp";
-import robot18 from "../assets/robot1/018.webp";
-import robot19 from "../assets/robot1/019.webp";
-import robot20 from "../assets/robot1/020.webp";
-import robot21 from "../assets/robot1/021.webp";
-import robot22 from "../assets/robot1/022.webp";
-import robot23 from "../assets/robot1/023.webp";
-import robot24 from "../assets/robot1/024.webp";
-import robot25 from "../assets/robot1/025.webp";
-import robot26 from "../assets/robot1/026.webp";
-import robot27 from "../assets/robot1/027.webp";
-import robot28 from "../assets/robot1/028.webp";
-import robot29 from "../assets/robot1/029.webp";
-import robot30 from "../assets/robot1/030.webp";
-import robot31 from "../assets/robot1/031.webp";
-import robot32 from "../assets/robot1/032.webp";
-import robot33 from "../assets/robot1/033.webp";
-import robot34 from "../assets/robot1/034.webp";
-import robot35 from "../assets/robot1/035.webp";
-import robot36 from "../assets/robot1/036.webp";
-import robot37 from "../assets/robot1/037.webp";
-import robot38 from "../assets/robot1/038.webp";
-import robot39 from "../assets/robot1/039.webp";
-import robot40 from "../assets/robot1/040.webp";
-import robot41 from "../assets/robot1/041.webp";
-import robot42 from "../assets/robot1/042.webp";
-import robot43 from "../assets/robot1/043.webp";
-import robot44 from "../assets/robot1/044.webp";
-import robot45 from "../assets/robot1/045.webp";
-import robot46 from "../assets/robot1/046.webp";
-import robot47 from "../assets/robot1/047.webp";
-import robot48 from "../assets/robot1/048.webp";
-import robot49 from "../assets/robot1/049.webp";
-import robot50 from "../assets/robot1/050.webp";
-import robot51 from "../assets/robot1/051.webp";
-import robot52 from "../assets/robot1/052.webp";
-import robot53 from "../assets/robot1/053.webp";
-import robot54 from "../assets/robot1/054.webp";
-import robot55 from "../assets/robot1/055.webp";
-import robot56 from "../assets/robot1/056.webp";
-import robot57 from "../assets/robot1/057.webp";
-import robot58 from "../assets/robot1/058.webp";
-import robot59 from "../assets/robot1/059.webp";
-import robot60 from "../assets/robot1/060.webp";
-import robot61 from "../assets/robot1/061.webp";
-import robot62 from "../assets/robot1/062.webp";
-import robot63 from "../assets/robot1/063.webp";
-import robot64 from "../assets/robot1/064.webp";
-import robot65 from "../assets/robot1/065.webp";
-import robot66 from "../assets/robot1/066.webp";
-import robot67 from "../assets/robot1/067.webp";
-import robot68 from "../assets/robot1/068.webp";
-import robot69 from "../assets/robot1/069.webp";
-import robot70 from "../assets/robot1/070.webp";
-import robot71 from "../assets/robot1/071.webp";
-import robot72 from "../assets/robot1/072.webp";
-import robot73 from "../assets/robot1/073.webp";
-import robot74 from "../assets/robot1/074.webp";
-import robot75 from "../assets/robot1/075.webp";
-import robot76 from "../assets/robot1/076.webp";
-import robot77 from "../assets/robot1/077.webp";
-import robot78 from "../assets/robot1/078.webp";
-import robot79 from "../assets/robot1/079.webp";
-import robot80 from "../assets/robot1/080.webp";
-import robot81 from "../assets/robot1/081.webp";
-import robot82 from "../assets/robot1/082.webp";
-import robot83 from "../assets/robot1/083.webp";
-import robot84 from "../assets/robot1/084.webp";
-import robot85 from "../assets/robot1/085.webp";
-import robot86 from "../assets/robot1/086.webp";
-import robot87 from "../assets/robot1/087.webp";
-import robot88 from "../assets/robot1/088.webp";
-import robot89 from "../assets/robot1/089.webp";
-import robot90 from "../assets/robot1/090.webp";
-import robot91 from "../assets/robot1/091.webp";
-import robot92 from "../assets/robot1/092.webp";
-import robot93 from "../assets/robot1/093.webp";
-import robot94 from "../assets/robot1/094.webp";
-import robot95 from "../assets/robot1/095.webp";
-import robot96 from "../assets/robot1/096.webp";
-import robot97 from "../assets/robot1/097.webp";
-import robot98 from "../assets/robot1/098.webp";
-import robot99 from "../assets/robot1/099.webp";
-import robot100 from "../assets/robot1/100.webp";
-import robot101 from "../assets/robot1/101.webp";
-import robot102 from "../assets/robot1/102.webp";
-import robot103 from "../assets/robot1/103.webp";
-import robot104 from "../assets/robot1/104.webp";
-import robot105 from "../assets/robot1/105.webp";
-import robot106 from "../assets/robot1/106.webp";
-import robot107 from "../assets/robot1/107.webp";
-import robot108 from "../assets/robot1/108.webp";
-import robot109 from "../assets/robot1/109.webp";
-import robot110 from "../assets/robot1/110.webp";
-import robot111 from "../assets/robot1/111.webp";
-import robot112 from "../assets/robot1/112.webp";
-import robot113 from "../assets/robot1/113.webp";
-import robot114 from "../assets/robot1/114.webp";
-import robot115 from "../assets/robot1/115.webp";
-import robot116 from "../assets/robot1/116.webp";
-import robot117 from "../assets/robot1/117.webp";
-import robot118 from "../assets/robot1/118.webp";
-import robot119 from "../assets/robot1/119.webp";
-import robot120 from "../assets/robot1/120.webp";
-import robot121 from "../assets/robot1/121.webp";
-import robot122 from "../assets/robot1/122.webp";
-import robot123 from "../assets/robot1/123.webp";
-import robot124 from "../assets/robot1/124.webp";
-import robot125 from "../assets/robot1/125.webp";
-import robot126 from "../assets/robot1/126.webp";
-import robot127 from "../assets/robot1/127.webp";
+import robot1 from "../assets/robot4webp/000.webp";
+import robot2 from "../assets/robot4webp/000.webp";
+import robot3 from "../assets/robot4webp/000.webp";
+import robot4 from "../assets/robot4webp/000.webp";
+import robot5 from "../assets/robot4webp/000.webp";
+import robot6 from "../assets/robot4webp/000.webp";
+import robot7 from "../assets/robot4webp/000.webp";
+import robot8 from "../assets/robot4webp/000.webp";
+import robot9 from "../assets/robot4webp/000.webp";
+import robot10 from "../assets/robot4webp/000.webp";
+import robot11 from "../assets/robot4webp/000.webp";
+import robot12 from "../assets/robot4webp/000.webp";
+import robot13 from "../assets/robot4webp/000.webp";
+import robot14 from "../assets/robot4webp/000.webp";
+import robot15 from "../assets/robot4webp/000.webp";
+import robot16 from "../assets/robot4webp/000.webp";
+import robot17 from "../assets/robot4webp/000.webp";
+import robot18 from "../assets/robot4webp/000.webp";
+import robot19 from "../assets/robot4webp/000.webp";
+import robot20 from "../assets/robot4webp/000.webp";
+import robot21 from "../assets/robot4webp/000.webp";
+import robot22 from "../assets/robot4webp/000.webp";
+import robot23 from "../assets/robot4webp/000.webp";
+import robot24 from "../assets/robot4webp/000.webp";
+import robot25 from "../assets/robot4webp/000.webp";
+import robot26 from "../assets/robot4webp/000.webp";
+import robot27 from "../assets/robot4webp/000.webp";
+import robot28 from "../assets/robot4webp/000.webp";
+import robot29 from "../assets/robot4webp/000.webp";
+import robot30 from "../assets/robot4webp/000.webp";
+import robot31 from "../assets/robot4webp/000.webp";
+import robot32 from "../assets/robot4webp/000.webp";
+import robot33 from "../assets/robot4webp/000.webp";
+import robot34 from "../assets/robot4webp/000.webp";
+import robot35 from "../assets/robot4webp/000.webp";
+import robot36 from "../assets/robot4webp/000.webp";
+import robot37 from "../assets/robot4webp/000.webp";
+import robot38 from "../assets/robot4webp/000.webp";
+import robot39 from "../assets/robot4webp/000.webp";
+import robot40 from "../assets/robot4webp/000.webp";
+import robot41 from "../assets/robot4webp/000.webp";
+import robot42 from "../assets/robot4webp/000.webp";
+import robot43 from "../assets/robot4webp/000.webp";
+import robot44 from "../assets/robot4webp/000.webp";
+import robot45 from "../assets/robot4webp/000.webp";
+import robot46 from "../assets/robot4webp/000.webp";
+import robot47 from "../assets/robot4webp/000.webp";
+import robot48 from "../assets/robot4webp/000.webp";
+import robot49 from "../assets/robot4webp/000.webp";
+import robot50 from "../assets/robot4webp/050.webp";
+import robot51 from "../assets/robot4webp/051.webp";
+import robot52 from "../assets/robot4webp/052.webp";
+import robot53 from "../assets/robot4webp/053.webp";
+import robot54 from "../assets/robot4webp/054.webp";
+import robot55 from "../assets/robot4webp/055.webp";
+import robot56 from "../assets/robot4webp/056.webp";
+import robot57 from "../assets/robot4webp/057.webp";
+import robot58 from "../assets/robot4webp/058.webp";
+import robot59 from "../assets/robot4webp/059.webp";
+import robot60 from "../assets/robot4webp/060.webp";
+import robot61 from "../assets/robot4webp/061.webp";
+import robot62 from "../assets/robot4webp/062.webp";
+import robot63 from "../assets/robot4webp/063.webp";
+import robot64 from "../assets/robot4webp/064.webp";
+import robot65 from "../assets/robot4webp/065.webp";
+import robot66 from "../assets/robot4webp/066.webp";
+import robot67 from "../assets/robot4webp/067.webp";
+import robot68 from "../assets/robot4webp/068.webp";
+import robot69 from "../assets/robot4webp/069.webp";
+import robot70 from "../assets/robot4webp/070.webp";
+import robot71 from "../assets/robot4webp/071.webp";
+import robot72 from "../assets/robot4webp/072.webp";
+import robot73 from "../assets/robot4webp/073.webp";
+import robot74 from "../assets/robot4webp/074.webp";
+import robot75 from "../assets/robot4webp/075.webp";
+import robot76 from "../assets/robot4webp/076.webp";
+import robot77 from "../assets/robot4webp/077.webp";
+import robot78 from "../assets/robot4webp/078.webp";
+import robot79 from "../assets/robot4webp/079.webp";
+import robot80 from "../assets/robot4webp/080.webp";
+import robot81 from "../assets/robot4webp/081.webp";
+import robot82 from "../assets/robot4webp/082.webp";
+import robot83 from "../assets/robot4webp/083.webp";
+import robot84 from "../assets/robot4webp/084.webp";
+import robot85 from "../assets/robot4webp/000.webp";
+import robot86 from "../assets/robot4webp/000.webp";
+import robot87 from "../assets/robot4webp/000.webp";
+import robot88 from "../assets/robot4webp/000.webp";
+import robot89 from "../assets/robot4webp/000.webp";
+import robot90 from "../assets/robot4webp/000.webp";
+import robot91 from "../assets/robot4webp/000.webp";
+import robot92 from "../assets/robot4webp/000.webp";
+import robot93 from "../assets/robot4webp/000.webp";
+import robot94 from "../assets/robot4webp/000.webp";
+import robot95 from "../assets/robot4webp/000.webp";
+import robot96 from "../assets/robot4webp/000.webp";
+import robot97 from "../assets/robot4webp/000.webp";
+import robot98 from "../assets/robot4webp/000.webp";
+import robot99 from "../assets/robot4webp/000.webp";
+import robot100 from "../assets/robot4webp/000.webp";
+import robot101 from "../assets/robot4webp/000.webp";
+import robot102 from "../assets/robot4webp/000.webp";
+import robot103 from "../assets/robot4webp/000.webp";
+import robot104 from "../assets/robot4webp/000.webp";
+import robot105 from "../assets/robot4webp/000.webp";
+import robot106 from "../assets/robot4webp/000.webp";
+import robot107 from "../assets/robot4webp/000.webp";
+import robot108 from "../assets/robot4webp/000.webp";
+import robot109 from "../assets/robot4webp/000.webp";
+import robot110 from "../assets/robot4webp/000.webp";
+import robot111 from "../assets/robot4webp/000.webp";
+import robot112 from "../assets/robot4webp/000.webp";
+import robot113 from "../assets/robot4webp/000.webp";
+import robot114 from "../assets/robot4webp/000.webp";
+import robot115 from "../assets/robot4webp/000.webp";
+import robot116 from "../assets/robot4webp/000.webp";
+import robot117 from "../assets/robot4webp/000.webp";
+import robot118 from "../assets/robot4webp/000.webp";
+import robot119 from "../assets/robot4webp/000.webp";
+import robot120 from "../assets/robot4webp/000.webp";
+import robot121 from "../assets/robot4webp/000.webp";
+import robot122 from "../assets/robot4webp/000.webp";
+import robot123 from "../assets/robot4webp/000.webp";
+import robot124 from "../assets/robot4webp/000.webp";
+import robot125 from "../assets/robot4webp/000.webp";
+import robot126 from "../assets/robot4webp/000.webp";
+import robot127 from "../assets/robot4webp/000.webp";
+import RobotAnimation2 from "./RobotAnimation2";
 
 class RobotAnimation extends Component {
   constructor(props) {
@@ -136,42 +137,42 @@ class RobotAnimation extends Component {
     this.canvas = createRef();
   }
 
-  componentDidUpdate() {
-    const { heights, viewType } = this.props;
-    const { section1 } = heights;
-    const newHeight = section1;
+  // componentDidUpdate() {
+  //   const { heights, viewType } = this.props;
+  //   const { section1 } = heights;
+  //   const newHeight = section1;
 
-    const frameCount = 115;
-    const html = document.documentElement;
-    const context = this.canvas.current.getContext("2d");
+  //   const frameCount = 115;
+  //   const html = document.documentElement;
+  //   const context = this.canvas.current.getContext("2d");
 
-    for (let i = 1; i < frameCount; i++) {
-      const img = new Image();
-      img.src = this.getCurrentImg(i);
-    }
+  //   for (let i = 1; i < frameCount; i++) {
+  //     const img = new Image();
+  //     img.src = this.getCurrentImg(i);
+  //   }
 
-    // painting the first frame
-    const img = new Image();
-    img.src = this.getCurrentImg(1);
-    this.canvas.current.width = 600;
-    this.canvas.current.height = 1200;
-    img.onload = function () {
-      context.drawImage(img, 0, 0);
-    };
+  //   // painting the first frame
+  //   const img = new Image();
+  //   img.src = this.getCurrentImg(1);
+  //   this.canvas.current.width = 400;
+  //   this.canvas.current.height = 1200;
+  //   img.onload = function () {
+  //     context.drawImage(img, 0, 0);
+  //   };
 
-    // window.addEventListener("scroll  ", this.handleScrolling);
-    window.addEventListener("scroll", () => {
-      const scrollTop = html.scrollTop - (viewType === "desktop" ? 2700 : 2500);
-      const maxScrollTop = 5000 - window.innerHeight;
-      const scrollFraction = scrollTop / maxScrollTop;
-      const frameIndex = Math.min(
-        frameCount - 1,
-        Math.floor(scrollFraction < 0 ? 0 : scrollFraction * frameCount)
-      );
+  //   // window.addEventListener("scroll  ", this.handleScrolling);
+  //   window.addEventListener("scroll", () => {
+  //     const scrollTop = html.scrollTop - (viewType === "desktop" ? 2700 : 2500);
+  //     const maxScrollTop = 5000 - window.innerHeight;
+  //     const scrollFraction = scrollTop / maxScrollTop;
+  //     const frameIndex = Math.min(
+  //       frameCount - 1,
+  //       Math.floor(scrollFraction < 0 ? 0 : scrollFraction * frameCount)
+  //     );
 
-      requestAnimationFrame(() => this.updateImg(frameIndex + 1, context, img));
-    });
-  }
+  //     requestAnimationFrame(() => this.updateImg(frameIndex + 1, context, img));
+  //   });
+  // }
 
   updateImg = (index, context, img) => {
     img.src = this.getCurrentImg(index);
@@ -524,6 +525,9 @@ class RobotAnimation extends Component {
       case 113:
         return robot113;
 
+      case 114:
+        return robot114;
+
       case 115:
         return robot115;
 
@@ -536,32 +540,32 @@ class RobotAnimation extends Component {
       case 118:
         return robot118;
 
-      // case 119:
-      //   return robot119;
+      case 119:
+        return robot119;
 
-      // case 120:
-      //   return robot120;
+      case 120:
+        return robot120;
 
-      // case 121:
-      //   return robot121;
+      case 121:
+        return robot121;
 
-      // case 122:
-      //   return robot122;
+      case 122:
+        return robot122;
 
-      // case 123:
-      //   return robot123;
+      case 123:
+        return robot123;
 
-      // case 124:
-      //   return robot124;
+      case 124:
+        return robot124;
 
-      // case 125:
-      //   return robot125;
+      case 125:
+        return robot125;
 
-      // case 126:
-      //   return robot126;
+      case 126:
+        return robot126;
 
-      // case 127:
-      //   return robot127;
+      case 127:
+        return robot127;
 
       default:
         break;
@@ -569,11 +573,17 @@ class RobotAnimation extends Component {
   };
 
   render() {
+    const { viewType, heights, homeRef } = this.props;
     return (
       <React.Fragment>
         <div className="robot-2">
           {/* <div className="img-container"></div> */}
-          <canvas ref={this.canvas}></canvas>
+          {/* <canvas ref={this.canvas}></canvas> */}
+          <RobotAnimation2
+            viewType={viewType}
+            heights={heights}
+            homeRef={homeRef}
+          />
         </div>
       </React.Fragment>
     );

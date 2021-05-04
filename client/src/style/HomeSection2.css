@@ -5,6 +5,29 @@
   z-index: 1;
 }
 
+.home .section-2 .background {
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+}
+
+.home .section-2 .background .background-img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.home .section-2 .background .robot-img {
+  width: 1100px;
+  height: 600px;
+  position: absolute;
+  top: calc((100vh - 600px) / 2);
+  left: calc((100vw - 1100px) / 2);
+  opacity: 0;
+}
+
 .home .section-2 .container-1 {
   display: flex;
   flex-wrap: wrap;

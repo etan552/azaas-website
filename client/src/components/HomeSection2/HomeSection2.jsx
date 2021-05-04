@@ -1,5 +1,5 @@
 import React, { Component, createRef } from "react";
-import { TweenMax } from "gsap";
+import gsap, { TweenMax } from "gsap";
 import shipImg from "../../assets/shipImg.webp";
 import "../../style/HomeSection2.css";
 import Container1 from "./Container1";
@@ -7,9 +7,12 @@ import Container2 from "./Container2";
 import Container3 from "./Container3";
 import Container4 from "./Container4";
 import RobotAnimation from "../RobotAnimation";
+import robotVideo from "../../assets/animation3.gif";
 
 class HomeSection2 extends Component {
   section2Img = createRef();
+  backgroundRef = createRef();
+  gifRef = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
@@ -73,6 +76,7 @@ class HomeSection2 extends Component {
         },
       }
     );
+
     TweenMax.fromTo(
       this.section2Img.current,
       {
@@ -93,6 +97,7 @@ class HomeSection2 extends Component {
         },
       }
     );
+
     TweenMax.fromTo(
       this.section2Img.current,
       { width: "100vw", y: "0px", bottom: 0 },
@@ -109,6 +114,45 @@ class HomeSection2 extends Component {
         },
       }
     );
+
+    TweenMax.fromTo(
+      this.backgroundRef.current,
+      { backgroundColor: "black" },
+      {
+        ease: "none",
+        backgroundColor: "transparent",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 5300} top`,
+          end: `top+=${newHeight + 6000} top`,
+          scrub: true,
+        },
+      }
+    );
+
+    TweenMax.fromTo(
+      this.backgroundRef.current,
+      { backgroundColor: "transparent" },
+      {
+        backgroundColor: "black",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 4800} top`,
+          end: `top+=${newHeight + 5200} top`,
+          scrub: true,
+        },
+      }
+    );
+
+    TweenMax.to(this.gifRef.current, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: homeRef,
+        start: `top+=${newHeight + 5300} top`,
+        // end: `top+=${newHeight + 5200} top`,
+        scrub: true,
+      },
+    });
   }
 
   render() {
@@ -126,6 +170,17 @@ class HomeSection2 extends Component {
           alt="shigImg"
           ref={this.section2Img}
         /> */}
+        <div className="background">
+          <div className="background-img" ref={this.backgroundRef}></div>
+          <img
+            src={robotVideo}
+            alt=""
+            // style={{ width: "1100px", height: "600px" }}
+            className="robot-img"
+            ref={this.gifRef}
+          />
+        </div>
+
         <Container1 homeRef={homeRef} viewType={viewType} heights={heights} />
         <Container2 homeRef={homeRef} viewType={viewType} heights={heights} />
         <Container3 homeRef={homeRef} viewType={viewType} heights={heights} />

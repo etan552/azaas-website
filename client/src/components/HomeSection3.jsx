@@ -5,6 +5,7 @@ import "../style/HomeSection3.css";
 class HomeSection3 extends Component {
   container2 = createRef();
   container3 = createRef();
+  backgroundRef = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
