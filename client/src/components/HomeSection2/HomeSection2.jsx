@@ -8,7 +8,6 @@ import Container3 from "./Container3";
 import Container4 from "./Container4";
 import RobotAnimation from "../RobotAnimation";
 import robotVideo from "../../assets/animation4.webm";
-// import robot from "../../assets/robotimg2.webp";
 import robot from "../../assets/robotimg.webp";
 
 class HomeSection2 extends Component {
