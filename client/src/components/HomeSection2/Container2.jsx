@@ -18,7 +18,7 @@ class Container2 extends Component {
       scrollTrigger: {
         trigger: homeRef,
         start: isDesktop
-          ? `top+=${newHeight + 350} top`
+          ? `top+=${newHeight + 800} top`
           : `top+=${newHeight + 150} top`,
         toggleActions: "play none none reverse",
       },
@@ -34,7 +34,7 @@ class Container2 extends Component {
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 854} top`
+            ? `top+=${newHeight + 1100} top`
             : `top+=${newHeight + 654} top`,
           toggleActions: "play none none reverse",
         },

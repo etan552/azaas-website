@@ -7,20 +7,28 @@ import Container2 from "./Container2";
 import Container3 from "./Container3";
 import Container4 from "./Container4";
 import RobotAnimation from "../RobotAnimation";
-import robotVideo from "../../assets/animation3.gif";
+import robotVideo from "../../assets/animation4.webm";
+// import robot from "../../assets/robotimg2.webp";
+import robot from "../../assets/robotimg.webp";
 
 class HomeSection2 extends Component {
   section2Img = createRef();
   backgroundRef = createRef();
   gifRef = createRef();
+  robotImgRef = createRef();
+  robotImg2Ref = createRef();
 
   componentDidUpdate() {
+    // const img = new Image();
+    // img.src = robot;
+    // img.src = robotVideo;
+
     const { homeRef, heights, viewType } = this.props;
     const { section1 } = heights;
     const newHeight = section1;
     let isDesktop = viewType === "desktop" ? true : false;
     // animation for section 2's Ipad img
-    TweenMax.fromTo(
+    gsap.fromTo(
       this.section2Img.current,
       {
         x: isDesktop ? "700px" : "450px",
@@ -45,7 +53,7 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.fromTo(
+    gsap.fromTo(
       this.section2Img.current,
       { x: viewType === "desktop" ? "230px" : "210px", y: "50%" },
       {
@@ -62,7 +70,7 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.fromTo(
+    gsap.fromTo(
       this.section2Img.current,
       { x: "0px" },
       {
@@ -77,7 +85,7 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.fromTo(
+    gsap.fromTo(
       this.section2Img.current,
       {
         width: viewType === "desktop" ? "110vh" : "600px",
@@ -98,7 +106,7 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.fromTo(
+    gsap.fromTo(
       this.section2Img.current,
       { width: "100vw", y: "0px", bottom: 0 },
       {
@@ -115,7 +123,7 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.fromTo(
+    gsap.fromTo(
       this.backgroundRef.current,
       { backgroundColor: "black" },
       {
@@ -130,7 +138,7 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.fromTo(
+    gsap.fromTo(
       this.backgroundRef.current,
       { backgroundColor: "transparent" },
       {
@@ -144,7 +152,7 @@ class HomeSection2 extends Component {
       }
     );
 
-    TweenMax.to(this.gifRef.current, {
+    gsap.to(this.gifRef.current, {
       opacity: 1,
       scrollTrigger: {
         trigger: homeRef,
@@ -153,23 +161,111 @@ class HomeSection2 extends Component {
         scrub: true,
       },
     });
+
+    gsap.fromTo(
+      this.robotImg2Ref.current,
+      {
+        minWidth: "100vw",
+        height: "100vh",
+      },
+      {
+        minWidth: "20vw",
+        height: "20vh",
+        x: (0.8 * window.innerWidth) / 2,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 50} top`,
+          end: `top+=${newHeight + 700} top`,
+          scrub: 0.2,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      this.robotImgRef.current,
+      {
+        height: 64 * window.innerHeight,
+        top:
+          (5358 / 11768) * window.innerHeight * 64 * -1 +
+          0.5 * window.innerHeight,
+        // top: "calc((5358 / 11768) * 6400vh * -1 + 50vh)",
+        // left: "calc((2218 / 5438) * (5438 / 11768 * 6400vh) * -1 + 50vw)",
+        left: 12.0625 * window.innerHeight * -1 + 0.5 * window.innerWidth,
+      },
+      {
+        top: (window.innerHeight - 800) / 2 - 110,
+        height: (11768 / 5438) * 532,
+        left: 0.5 * window.innerWidth - 275,
+        ease: "none",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 200} top`,
+          end: `top+=${newHeight + 900} top`,
+          scrub: 0.2,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      this.robotImgRef.current,
+      { visibility: "visible" },
+      {
+        visibility: "hidden",
+        duration: 0.01,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 1000} top`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      this.robotImg2Ref.current,
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 50} top`,
+          end: `top+=${newHeight + 700} top`,
+          scrub: true,
+        },
+      }
+    );
   }
 
   render() {
     const { viewType, heights, homeRef } = this.props;
     return (
       <section className="section-2">
+        {/* <img
+          src={robot}
+          alt="robot gif"
+          className="robot-gif"
+          ref={this.robotImg2Ref}
+        /> */}
+
+        <video
+          // style={{ display: "none" }}
+          className="robot-gif"
+          ref={this.robotImg2Ref}
+          // rel="preload"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={robotVideo} type="video/webm" />
+        </video>
+        <img src={robot} alt="robot" className="robot" ref={this.robotImgRef} />
         <RobotAnimation
           heights={heights}
           homeRef={homeRef}
           viewType={viewType}
         />
-        {/* <img
-          className="shipImg"
-          src={shipImg}
-          alt="shigImg"
-          ref={this.section2Img}
-        /> */}
+
         <div className="background">
           <div className="background-img" ref={this.backgroundRef}></div>
           <img

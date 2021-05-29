@@ -145,7 +145,6 @@ class RobotAnimation2 extends Component {
     super(props);
 
     this.canvas = createRef();
-    this.canvas2 = createRef();
   }
 
   componentDidUpdate() {
@@ -156,7 +155,6 @@ class RobotAnimation2 extends Component {
     const frameCount = 135;
     const html = document.documentElement;
     const context = this.canvas.current.getContext("2d");
-    // const context2 = this.canvas2.current.getContext("2d");
 
     for (let i = 1; i < frameCount; i++) {
       const img = new Image();
@@ -165,15 +163,10 @@ class RobotAnimation2 extends Component {
 
     // painting the first frame
     const img = new Image();
-    // const img2 = new Image();
-
     img.src = this.getCurrentImg(1);
-    // img.src = this.getCurrentImg(110);
 
-    this.canvas.current.width = 585;
-    this.canvas.current.height = 1266;
-    // this.canvas2.current.width = 585;
-    // this.canvas2.current.height = 1266;
+    this.canvas.current.width = 800;
+    this.canvas.current.height = 1731;
 
     img.onload = function () {
       context.drawImage(img, 0, 0);
@@ -181,8 +174,8 @@ class RobotAnimation2 extends Component {
 
     // window.addEventListener("scroll  ", this.handleScrolling);
     window.addEventListener("scroll", () => {
-      const scrollTop = html.scrollTop - (viewType === "desktop" ? 2700 : 2500);
-      const maxScrollTop = 5600 - window.innerHeight;
+      const scrollTop = html.scrollTop - (viewType === "desktop" ? 2900 : 2500);
+      const maxScrollTop = 5800 - window.innerHeight;
       const scrollFraction = scrollTop / maxScrollTop;
       const frameIndex = Math.min(
         frameCount - 1,
@@ -193,6 +186,7 @@ class RobotAnimation2 extends Component {
     });
 
     // canvas animation
+    // canvas vertical movement between container-2 and container-3
     gsap.fromTo(
       this.canvas.current,
       {
@@ -212,25 +206,7 @@ class RobotAnimation2 extends Component {
       }
     );
 
-    gsap.fromTo(
-      this.canvas.current,
-      {
-        width: "800px",
-        y: "-600px",
-      },
-      {
-        width: "600px",
-        y: "-250px",
-
-        scrollTrigger: {
-          trigger: homeRef,
-          start: `top+=${newHeight + 500} center`,
-          end: `top+=${newHeight + 1000} center`,
-          scrub: true,
-        },
-      }
-    );
-
+    // canvas horizontal movement before section-3
     gsap.fromTo(
       this.canvas.current,
       {
@@ -240,13 +216,14 @@ class RobotAnimation2 extends Component {
         x: "200px",
         scrollTrigger: {
           trigger: homeRef,
-          start: `top+=${newHeight + 3000} center`,
-          end: `top+=${newHeight + 3800} center`,
+          start: `top+=${newHeight + 3200} center`,
+          end: `top+=${newHeight + 4000} center`,
           scrub: true,
         },
       }
     );
 
+    // canvas opacity equal 0 after section-3
     gsap.fromTo(
       this.canvas.current,
       {
@@ -261,6 +238,21 @@ class RobotAnimation2 extends Component {
         },
       }
     );
+
+    // canvas opacity 1 before container-1
+    gsap.fromTo(
+      this.canvas.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 0.01,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 1000} top`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
   }
 
   updateImg = (index, context, img) => {
@@ -268,17 +260,6 @@ class RobotAnimation2 extends Component {
     img.onload = function () {
       context.drawImage(img, 0, 0);
     };
-    // console.log(index);
-
-    // if (index > 110) {
-    //   console.log(index);
-
-    //   img2.src = this.getCurrentImg(index);
-    //   img2.onload = function () {
-    //     context2.drawImage(img2, 0, 0);
-    //   };
-    //   this.canvas2.current.remove(img2);
-    // }
   };
 
   getCurrentImg = (index) => {
@@ -709,9 +690,7 @@ class RobotAnimation2 extends Component {
     return (
       <React.Fragment>
         <div className="robot-3">
-          {/* <div className="img-container"></div> */}
           <canvas ref={this.canvas}></canvas>
-          {/* <canvas ref={this.canvas2} className="canvas2"></canvas> */}
         </div>
       </React.Fragment>
     );

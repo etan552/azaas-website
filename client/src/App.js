@@ -22,7 +22,13 @@ class App extends Component {
     } else {
       this.setState({ viewType: "tablet" });
     }
+    console.log("abc");
+
     window.addEventListener("resize", this.checkWindowType);
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
   }
 
   checkWindowType = () => {

@@ -12,7 +12,7 @@ import "../../style/HomeSection2.css";
 class Container3 extends Component {
   section2Container3 = createRef();
 
-  componentDidMount() {
+  componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
     const { section1 } = heights;
     const newHeight = section1;
@@ -26,7 +26,7 @@ class Container3 extends Component {
       scrollTrigger: {
         trigger: homeRef,
         start: isDesktop
-          ? `top+=${newHeight + 1154} top`
+          ? `top+=${newHeight + 1380} top`
           : `top+=${newHeight + 954} top`,
         // end: "top+=4200px top",
         toggleActions: "play none none reverse",
@@ -44,7 +44,7 @@ class Container3 extends Component {
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 2054} top`
+            ? `top+=${newHeight + 2350} top`
             : `top+=${newHeight + 1854} top`,
           toggleActions: "play none none reverse",
         },

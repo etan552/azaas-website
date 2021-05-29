@@ -21,7 +21,7 @@ class Home extends Component {
   state = {
     heights: {
       section1: 2500,
-      section2: window.innerHeight + 3400,
+      section2: window.innerHeight + 3600,
       section3: 1818 + 1000 - 200 + (670 - window.innerHeight) / 2,
       section4: 1950,
       section5: 4470,
@@ -31,7 +31,7 @@ class Home extends Component {
       section9: 1158 + 306 + window.innerHeight / 2,
       mobileHeights: {
         section1m: 2300,
-        section2m: window.innerHeight + 3400,
+        section2m: window.innerHeight + 3600,
         section3m: 1200,
         section4m: 2310,
         section5m: 3500,
@@ -52,14 +52,13 @@ class Home extends Component {
     return (
       <div className="home" ref={this.homeRef}>
         <HomeSection1 viewType={viewType} />
-        <div style={{ height: "3400px", width: "100%" }}></div>
+        <div style={{ height: "3600px", width: "100%" }}></div>
         <HomeSection3
           heights={heights}
           homeRef={this.homeRef.current}
           viewType={viewType}
         />
         <div style={{ height: "1000px" }}></div>
-
         <HomeSection2
           heights={heights}
           homeRef={this.homeRef.current}

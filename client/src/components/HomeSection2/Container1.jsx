@@ -5,7 +5,7 @@ import "../../style/HomeSection2.css";
 class Container1 extends Component {
   section2Container1 = createRef();
 
-  componentDidMount() {
+  componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
     const { section1 } = heights;
     const newHeight = section1;
@@ -18,7 +18,7 @@ class Container1 extends Component {
       scrollTrigger: {
         trigger: homeRef,
         start: isDesktop
-          ? `top+=${newHeight + 254} top`
+          ? `top+=${newHeight + 554} top`
           : `top+=${newHeight + 54} top`, // 1146
         toggleActions: "play none none reverse",
       },

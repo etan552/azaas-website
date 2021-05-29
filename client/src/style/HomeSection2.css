@@ -3,6 +3,35 @@
   bottom: 0;
   height: 100vh;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .section-2 .robot-gif {
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ */
+  min-width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.home .section-2 .robot {
+  position: absolute;
+  /* top: calc((5358 / 11768) * 6400vh * -1 + 50vh);
+  left: calc((2218 / 5438) * (5438 / 11768 * 6400vh) * -1 + 50vw); */
+  /* right: 0; */
+  /* margin: 0 auto; */
+  /* bottom: 0;
+  margin: auto; */
+
+  /* height: 6400vh; */
+  width: auto;
 }
 
 .home .section-2 .background {
