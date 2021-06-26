@@ -1,7 +1,7 @@
 .home .section-4 {
   position: relative;
   height: 1950px;
-  margin-top: calc((670px - 100vh) / 2);
+  /* margin-top: calc((670px - 100vh) / 2); */
   /* padding-top: 50px; */
   z-index: 2;
   background-color: white;
@@ -81,19 +81,31 @@
 }
 
 .home .section-4 .slideshow > div img {
+  height: 600px;
+  width: 600px;
+  padding: 0 180px;
+}
+/* .home .section-4 .slideshow > div img {
   position: relative;
   height: 700px;
   width: 960px;
   object-fit: cover;
   z-index: -1;
-}
+} */
 
 .home .section-4 .container-1 {
   position: sticky;
+  /* bottom: calc((100vh - 720px) / 2); */
   bottom: 0;
-  left: 0;
+  right: 0;
   margin-top: 1000px;
+  height: 100vh;
   z-index: -2;
+}
+
+.home .section-4 .container-1 canvas {
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .home .section-4 .container-1 .img-1 {
@@ -106,7 +118,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(59, 129, 161);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -126,6 +138,9 @@
   font-size: 96px;
   letter-spacing: -2px;
   line-height: 1.12;
+}
+
+.home .section-4 .blockchain {
 }
 
 /* table view */

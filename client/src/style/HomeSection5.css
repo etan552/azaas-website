@@ -3,6 +3,7 @@
   width: 980px;
   margin: 900px auto 0 auto;
   height: 3570px;
+  z-index: 2;
 }
 
 .home .section-5 .container-1,

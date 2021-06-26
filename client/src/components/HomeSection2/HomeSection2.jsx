@@ -8,7 +8,10 @@ import Container3 from "./Container3";
 import Container4 from "./Container4";
 import RobotAnimation from "../RobotAnimation";
 import robotVideo from "../../assets/animation4.webm";
-import robot from "../../assets/robotimg.webp";
+import robot from "../../assets/robotimg2.webp";
+import robot2 from "../../assets/robotimg8.webp";
+import algorithm from "../../assets/Algorithm.webm";
+import algorithm1 from "../../assets/Algorithm.gif";
 
 class HomeSection2 extends Component {
   section2Img = createRef();
@@ -16,6 +19,8 @@ class HomeSection2 extends Component {
   gifRef = createRef();
   robotImgRef = createRef();
   robotImg2Ref = createRef();
+  robotGifRef = createRef();
+  algorithmGif = createRef();
 
   componentDidUpdate() {
     // const img = new Image();
@@ -122,35 +127,6 @@ class HomeSection2 extends Component {
       }
     );
 
-    gsap.fromTo(
-      this.backgroundRef.current,
-      { backgroundColor: "black" },
-      {
-        ease: "none",
-        backgroundColor: "transparent",
-        scrollTrigger: {
-          trigger: homeRef,
-          start: `top+=${newHeight + 5300} top`,
-          end: `top+=${newHeight + 6000} top`,
-          scrub: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      this.backgroundRef.current,
-      { backgroundColor: "transparent" },
-      {
-        backgroundColor: "black",
-        scrollTrigger: {
-          trigger: homeRef,
-          start: `top+=${newHeight + 4800} top`,
-          end: `top+=${newHeight + 5200} top`,
-          scrub: true,
-        },
-      }
-    );
-
     gsap.to(this.gifRef.current, {
       opacity: 1,
       scrollTrigger: {
@@ -162,7 +138,7 @@ class HomeSection2 extends Component {
     });
 
     gsap.fromTo(
-      this.robotImg2Ref.current,
+      this.robotGifRef.current,
       {
         minWidth: "100vw",
         height: "100vh",
@@ -170,7 +146,6 @@ class HomeSection2 extends Component {
       {
         minWidth: "20vw",
         height: "20vh",
-        x: (0.8 * window.innerWidth) / 2,
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 50} top`,
@@ -180,6 +155,7 @@ class HomeSection2 extends Component {
       }
     );
 
+    // robot animations
     gsap.fromTo(
       this.robotImgRef.current,
       {
@@ -220,7 +196,7 @@ class HomeSection2 extends Component {
     );
 
     gsap.fromTo(
-      this.robotImg2Ref.current,
+      this.robotGifRef.current,
       {
         opacity: 1,
       },
@@ -234,6 +210,76 @@ class HomeSection2 extends Component {
         },
       }
     );
+
+    // robot 2 animations
+    gsap.fromTo(
+      this.robotImg2Ref.current,
+      {
+        top: (window.innerHeight - 800) / 2 - 599,
+        height: (11768 / 5438) * 800,
+        left: 0.5 * window.innerWidth - 209,
+      },
+      {
+        height: 70 * window.innerHeight,
+        top:
+          (5702.5 / 11768) * window.innerHeight * 70 * -1 +
+          0.5 * window.innerHeight,
+        left:
+          (2467 / 5438) * (5438 / 11768) * 70 * window.innerHeight * -1 +
+          0.5 * window.innerWidth,
+        ease: "power2.in",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 4900} top`,
+          end: `top+=${newHeight + 5900} top`,
+          scrub: 0.2,
+        },
+      }
+    );
+
+    gsap.to(this.robotImg2Ref.current, {
+      opacity: 1,
+      duration: 0.01,
+      scrollTrigger: {
+        trigger: homeRef,
+        start: `top+=${newHeight + 4900} top`,
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.fromTo(
+      this.robotImg2Ref.current,
+      { opacity: 1 },
+      {
+        opacity: 0,
+        duration: 0.01,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 7500} top`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    // algorithm .gif animation
+    gsap.fromTo(
+      this.algorithmGif.current,
+      {
+        opacity: 0,
+        height: 200,
+      },
+      {
+        opacity: 1,
+        height: "70vh",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 5900} top`,
+          end: `top+=${newHeight + 6500} top`,
+          toggleActions: "play none none reverse",
+          scrub: 0.2,
+        },
+      }
+    );
   }
 
   render() {
@@ -244,18 +290,10 @@ class HomeSection2 extends Component {
           src={robot}
           alt="robot gif"
           className="robot-gif"
-          ref={this.robotImg2Ref}
+          ref={this.robotGifRef}
         /> */}
 
-        <video
-          // style={{ display: "none" }}
-          className="robot-gif"
-          ref={this.robotImg2Ref}
-          // rel="preload"
-          autoPlay
-          loop
-          muted
-        >
+        <video className="robot-gif" ref={this.robotGifRef} autoPlay loop muted>
           <source src={robotVideo} type="video/webm" />
         </video>
         <img src={robot} alt="robot" className="robot" ref={this.robotImgRef} />
@@ -264,8 +302,29 @@ class HomeSection2 extends Component {
           homeRef={homeRef}
           viewType={viewType}
         />
+        <img
+          src={robot2}
+          alt="robot2"
+          className="robot2"
+          ref={this.robotImg2Ref}
+        />
+        <img
+          src={algorithm1}
+          alt=""
+          ref={this.algorithmGif}
+          className="algorithm"
+        />
+        {/* <video
+          className="algorithm"
+          ref={this.algorithmGif}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={algorithm} type="video/webm" />
+        </video> */}
 
-        <div className="background">
+        {/* <div className="background">
           <div className="background-img" ref={this.backgroundRef}></div>
           <img
             src={robotVideo}
@@ -274,11 +333,12 @@ class HomeSection2 extends Component {
             className="robot-img"
             ref={this.gifRef}
           />
-        </div>
+        </div> */}
 
-        <Container1 homeRef={homeRef} viewType={viewType} heights={heights} />
+        {/* <Container1 homeRef={homeRef} viewType={viewType} heights={heights} /> */}
         <Container2 homeRef={homeRef} viewType={viewType} heights={heights} />
         <Container3 homeRef={homeRef} viewType={viewType} heights={heights} />
+
         {/* <Container4 homeRef={homeRef} viewType={viewType} heights={heights} /> */}
       </section>
     );

@@ -17,12 +17,8 @@ class HomeSection5 extends Component {
     const { section1, section2, section3, section4 } = heights;
     const newHeight = section1 + section2 + section3 + section4;
 
-    const {
-      section1m,
-      section2m,
-      section3m,
-      section4m,
-    } = heights.mobileHeights;
+    const { section1m, section2m, section3m, section4m } =
+      heights.mobileHeights;
     const newMobileHeight = section1m + section2m + section3m + section4m;
 
     let isDesktop = viewType === "desktop" ? true : false;
@@ -141,7 +137,7 @@ class HomeSection5 extends Component {
     return (
       <section className="section-5">
         <div className="container-1">
-          <div className="header">A12Z Bionic</div>
+          <div className="header">Edge Computing</div>
           <div className="context">
             With the A12Z Bionic chip, iPad Pro is so fast it outpaces most PC
             laptops available today. It makes everything you do fast and fluid,

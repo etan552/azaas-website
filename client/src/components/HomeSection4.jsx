@@ -1,12 +1,11 @@
 import React, { Component, createRef } from "react";
-import office from "../assets/office.webp";
 import ipadFrame from "../assets/ipadPro-horizontal.webp";
-import office1 from "../assets/office1.webp";
-import office2 from "../assets/office2.webp";
-import office3 from "../assets/office3.webp";
-import robotVideo from "../assets/animation3.gif";
 import gsap from "gsap";
 import "../style/HomeSection4.css";
+import blockChain from "../assets/Blockchain.gif";
+import cloudComputing from "../assets/CloudComputing.gif";
+import dataIntelligence from "../assets/DataIntelligence.gif";
+import RobotAnimation3 from "./RobotAnimation3";
 
 class HomeSection4 extends Component {
   ref1 = createRef();
@@ -15,6 +14,7 @@ class HomeSection4 extends Component {
   imgContainer = createRef();
   headerRef = createRef();
   bottomImg = createRef();
+  blockChainGif = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
@@ -104,33 +104,6 @@ class HomeSection4 extends Component {
       }
     );
 
-    // bottom image animation
-    gsap.fromTo(
-      this.bottomImg.current,
-      {
-        x: "0px",
-        width: "100vw",
-        height: "100vh",
-      },
-      {
-        x: isDesktop ? "370px" : "280px",
-        width: isDesktop ? "960px" : "660px",
-        height: isDesktop ? "755px" : "490px",
-        y: isDesktop ? "0px" : "-100px",
-        scrollTrigger: {
-          trigger: homeRef,
-          start: isDesktop
-            ? `top+=${newHeight + 2250} top`
-            : `top+=${newMobileHeight + 2050} top`,
-          end: isDesktop
-            ? `top+=${newHeight + 2850} top`
-            : `top+=${newMobileHeight + 2350} top`,
-          toggleActions: "play none none reverse",
-          scrub: 0.3,
-        },
-      }
-    );
-
     // bottom header animation
     gsap.fromTo(
       this.headerRef.current,
@@ -152,40 +125,28 @@ class HomeSection4 extends Component {
   }
 
   render() {
-    const { viewType } = this.props;
+    const { viewType, homeRef, heights } = this.props;
     return (
       <div className="section-4">
-        {/* <video
-          className="robot-video"
-          width={viewType === "desktop" ? "1100px" : "850px"}
-          height={viewType === "desktop" ? "600px" : "440px"}
-          autoPlay
-          muted
-          loop
-        >
-          <source src={robotVideo} type="video/webm" />
-        </video> */}
-        {/* <img
-          src={robotVideo}
-          alt=""
-          style={{ width: "1100px", height: "600px" }}
-        /> */}
         <div style={{ height: "01px" }}></div>
         {viewType !== "desktop" && <div style={{ height: "440px" }}></div>}
         <div className="slideshow">
           <img src={ipadFrame} alt="ipad frame" className="frame" />
           <div className="view">
             <div ref={this.imgContainer}>
-              <img src={office1} alt="office" className="slide-1" />
+              <img src={blockChain} alt="" />
+              <img src={cloudComputing} alt="" />
+              <img src={dataIntelligence} alt="" />
+              {/* <img src={office1} alt="office" className="slide-1" />
               <img src={office2} alt="office" className="slide-2" />
-              <img src={office3} alt="office" className="slide-3" />
+              <img src={office3} alt="office" className="slide-3" /> */}
             </div>
           </div>
         </div>
         <div className="content">
           <div>
             <div className="item" ref={this.ref1}>
-              <div className="header">Augmented reality</div>
+              <div className="header">Blockchain</div>
               <div className="context">
                 On the new iPad Pro, AR apps become even more realistic. Placing
                 an AR object now happens instantly. Realistic object occlusion
@@ -196,7 +157,7 @@ class HomeSection4 extends Component {
               </div>
             </div>
             <div className="item" ref={this.ref2}>
-              <div className="header">Shoot and edit</div>
+              <div className="header">Cloud Computing</div>
               <div className="context">
                 The pro camera system makes iPad Pro incredibly versatile.
                 Shoot, edit and share a 4K video, all on the same device.
@@ -207,7 +168,7 @@ class HomeSection4 extends Component {
               </div>
             </div>
             <div className="item" ref={this.ref3}>
-              <div className="header">TrueDepth camera</div>
+              <div className="header">Data Intelligence</div>
               <div className="context">
                 The front-facing TrueDepth camera enables Face ID, the world’s
                 most secure facial authentication in a tablet — and in a
@@ -223,16 +184,16 @@ class HomeSection4 extends Component {
             }}
           ></div>
           <div className="container-1">
-            <img
-              src={office}
-              alt="office"
-              className="img-1"
-              ref={this.bottomImg}
+            <RobotAnimation3
+              homeRef={homeRef}
+              viewType={viewType}
+              heights={heights}
             />
-            <div ref={this.headerRef}>
+
+            {/* <div ref={this.headerRef}>
               <div className="header">Performance</div>
               <div className="context">Faster than you can say PC.</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

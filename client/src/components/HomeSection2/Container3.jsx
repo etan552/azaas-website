@@ -6,6 +6,11 @@ import phone from "../../assets/smartphone.svg";
 import sun from "../../assets/sun.svg";
 import target from "../../assets/target.svg";
 import vennDiagram from "../../assets/venn-diagram.svg";
+import algorithm from "../../assets/Algorithm.gif";
+import blockChain from "../../assets/Blockchain.gif";
+import cloudComputing from "../../assets/CloudComputing.gif";
+import dataIntelligence from "../../assets/DataIntelligence.gif";
+import edgeComputing from "../../assets/EdgeComputing.gif";
 
 import "../../style/HomeSection2.css";
 
@@ -57,30 +62,30 @@ class Container3 extends Component {
       <div className="container-3" ref={this.section2Container3}>
         <div className="left">
           <div className="icon">
-            <img src={target} alt="target" className="icon-img" />
-            <h3 className="header">Industry-leading colour accuracy</h3>
+            <img src={algorithm} alt="target" className="icon-img" />
+            <h3 className="header">Algorithm</h3>
           </div>
           <div className="icon">
-            <img src={lighting} alt="battery" className="icon-img" />
-            <h3 className="header">ProMotion</h3>
+            <img src={blockChain} alt="battery" className="icon-img" />
+            <h3 className="header">Blockchain</h3>
           </div>
           <div className="icon">
-            <img src={sun} alt="sun" className="icon-img" />
-            <h3 className="header">600 Nits brightness</h3>
+            <img src={cloudComputing} alt="sun" className="icon-img" />
+            <h3 className="header">Cloud Computing</h3>
           </div>
         </div>
         <div className="right">
           <div className="icon">
-            <img src={reflection} alt="reflection" className="icon-img" />
-            <h3 className="header">Ultra-low reflectivity</h3>
+            <img src={dataIntelligence} alt="reflection" className="icon-img" />
+            <h3 className="header">Data Intelligence</h3>
           </div>
           <div className="icon">
-            <img src={phone} alt="phone" className="icon-img" />
-            <h3 className="header">True tone</h3>
+            <img src={edgeComputing} alt="phone" className="icon-img" />
+            <h3 className="header">Edge Computing</h3>
           </div>
           <div className="icon">
-            <img src={vennDiagram} alt="venn diagram" className="icon-img" />
-            <h3 className="header">P3 wide colour gamut</h3>
+            {/* <img src={vennDiagram} alt="venn diagram" className="icon-img" />
+            <h3 className="header">P3 wide colour gamut</h3> */}
           </div>
         </div>
       </div>
