@@ -3,8 +3,7 @@ import Home from "./components/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import MobileHome from "./components/MobileView/MobileHome";
 import React, { Component } from "react";
-import RobotAnimation from "./components/RobotAnimation";
-import RobotAnimation3 from "./components/RobotAnimation3";
+import RobotAnimation4 from "./components/RobotAnimation4";
 
 class App extends Component {
   constructor(props) {
@@ -53,7 +52,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            {/* <Route path="/test1" component={RobotAnimation3} /> */}
+            <Route path="/test1" component={RobotAnimation4} />
             <Route
               path="/"
               render={(props) =>

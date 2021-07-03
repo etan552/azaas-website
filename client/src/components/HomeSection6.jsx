@@ -2,6 +2,7 @@ import React, { Component, createRef } from "react";
 import "../style/HomeSection6.css";
 import laptop from "../assets/floatingKeyboard.webp";
 import gsap from "gsap";
+import RobotAnimation4 from "./RobotAnimation4";
 
 class HomeSection6 extends Component {
   container1Ref = createRef();
@@ -14,13 +15,8 @@ class HomeSection6 extends Component {
     const { section1, section2, section3, section4, section5 } = heights;
     const newHeight = section1 + section2 + section3 + section4 + section5;
 
-    const {
-      section1m,
-      section2m,
-      section3m,
-      section4m,
-      section5m,
-    } = heights.mobileHeights;
+    const { section1m, section2m, section3m, section4m, section5m } =
+      heights.mobileHeights;
     const newMobileHeight =
       section1m + section2m + section3m + section4m + section5m;
 
@@ -100,6 +96,8 @@ class HomeSection6 extends Component {
   }
 
   render() {
+    const { homeRef, heights, viewType } = this.props;
+
     return (
       <section className="section-6">
         <div className="container-1" ref={this.container1Ref}>
@@ -117,8 +115,13 @@ class HomeSection6 extends Component {
             smoothly adjust it to the perfect viewing angle for you.
           </div>
         </div>
+        <RobotAnimation4
+          homeRef={homeRef}
+          heights={heights}
+          viewType={viewType}
+        />
 
-        <div className="img-container">
+        {/* <div className="img-container">
           <div
             style={{
               height: this.props.viewType === "desktop" ? "750px" : "500px",
@@ -134,7 +137,7 @@ class HomeSection6 extends Component {
               floating design
             </p>
           </div>
-        </div>
+        </div> */}
       </section>
     );
   }
