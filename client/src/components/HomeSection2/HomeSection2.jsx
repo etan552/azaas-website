@@ -10,7 +10,7 @@ import RobotAnimation from "../RobotAnimation";
 import robotVideo from "../../assets/animation4.webm";
 import robot from "../../assets/robotimg2.webp";
 import robot2 from "../../assets/robotimg8.webp";
-import algorithm from "../../assets/Algorithm.webm";
+import algorithm from "../../assets/algorithmAnimation.webm";
 import algorithm1 from "../../assets/Algorithm.gif";
 
 class HomeSection2 extends Component {
@@ -261,20 +261,39 @@ class HomeSection2 extends Component {
       }
     );
 
-    // algorithm .gif animation
+    // algorithm animation
+
+    // increasing width and opacity
     gsap.fromTo(
       this.algorithmGif.current,
       {
         opacity: 0,
-        height: 200,
+        width: "20vw",
       },
       {
         opacity: 1,
-        height: "70vh",
+        width: "100vw",
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 5900} top`,
           end: `top+=${newHeight + 6500} top`,
+          toggleActions: "play none none reverse",
+          scrub: 0.2,
+        },
+      }
+    );
+    // moving downwards
+    gsap.fromTo(
+      this.algorithmGif.current,
+      {
+        y: 0,
+      },
+      {
+        y: (window.innerHeight - (981 / 1920) * window.innerWidth) / 2,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 6400} top`,
+          end: `top+=${newHeight + 6700} top`,
           toggleActions: "play none none reverse",
           scrub: 0.2,
         },
@@ -308,12 +327,21 @@ class HomeSection2 extends Component {
           className="robot2"
           ref={this.robotImg2Ref}
         />
-        <img
-          src={algorithm1}
+        <video
+          className="algorithm"
+          ref={this.algorithmGif}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={algorithm} type="video/webm" />
+        </video>
+        {/* <img
+          src={algorithm}
           alt=""
           ref={this.algorithmGif}
           className="algorithm"
-        />
+        /> */}
         {/* <video
           className="algorithm"
           ref={this.algorithmGif}

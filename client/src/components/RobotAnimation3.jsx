@@ -39,6 +39,7 @@ import robot36 from "../assets/robot5webp/36.webp";
 
 class RobotAnimation3 extends Component {
   canvasRef = createRef();
+  robot4 = createRef();
 
   componentDidUpdate() {
     const { heights, viewType, homeRef } = this.props;
@@ -78,10 +79,11 @@ class RobotAnimation3 extends Component {
     });
 
     gsap.fromTo(
-      this.canvasRef.current,
+      this.robot4.current,
       { x: 0 },
       {
         x: 100,
+
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 100} top`,
