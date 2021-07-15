@@ -45,7 +45,7 @@
 .robot-4 {
   position: sticky !important;
   margin: 0 !important;
-  bottom: 0px;
+  top: 0px;
   min-width: 100vw !important;
   min-height: 100vh;
   object-fit: cover;

@@ -2,6 +2,7 @@
   margin-top: 70px;
   font-weight: 500;
   position: relative;
+  height: 3189px;
 }
 
 .home .section-6 > div {
@@ -87,6 +88,26 @@
   left: 0;
   right: 0;
   width: 980px;
+}
+
+.home .section-6 > .animation {
+  position: sticky !important;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.home .section-6 .cloud-computing {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20vw;
+  height: 20vh;
+  object-fit: cover;
 }
 
 /* tablet view */

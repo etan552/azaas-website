@@ -3,12 +3,14 @@ import "../style/HomeSection6.css";
 import laptop from "../assets/floatingKeyboard.webp";
 import gsap from "gsap";
 import RobotAnimation4 from "./RobotAnimation4";
+import cloudComputingAnimation from "../assets/cloudcomputingAnimation.webm";
 
 class HomeSection6 extends Component {
   container1Ref = createRef();
   container2Ref = createRef();
   note1 = createRef();
   note2 = createRef();
+  cloudComputing = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
@@ -93,6 +95,29 @@ class HomeSection6 extends Component {
         },
       }
     );
+
+    // cloud computing animation
+    // opacity from 1 to 0 & width/height from 100 to 20 vw/vh
+    gsap.fromTo(
+      this.cloudComputing.current,
+      {
+        opacity: 1,
+        minHeight: "100vh",
+        minWidth: "100vw",
+      },
+      {
+        opacity: 0,
+        minHeight: "20vh",
+        minWidth: "20vw",
+
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 400} top`,
+          end: `top+=${newHeight + 1100} top`,
+          scrub: true,
+        },
+      }
+    );
   }
 
   render() {
@@ -100,6 +125,23 @@ class HomeSection6 extends Component {
 
     return (
       <section className="section-6">
+        <RobotAnimation4
+          homeRef={homeRef}
+          heights={heights}
+          viewType={viewType}
+        />
+        <div className="animation">
+          <video
+            className="cloud-computing"
+            ref={this.cloudComputing}
+            autoPlay
+            loop
+            muted
+          >
+            <source src={cloudComputingAnimation} type="video/webm" />
+          </video>
+        </div>
+
         <div className="container-1" ref={this.container1Ref}>
           <div className="header">Magic Keyboard</div>
           <div className="context">Yes, it floats.</div>
@@ -115,11 +157,6 @@ class HomeSection6 extends Component {
             smoothly adjust it to the perfect viewing angle for you.
           </div>
         </div>
-        <RobotAnimation4
-          homeRef={homeRef}
-          heights={heights}
-          viewType={viewType}
-        />
 
         {/* <div className="img-container">
           <div

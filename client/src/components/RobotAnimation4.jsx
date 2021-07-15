@@ -44,7 +44,7 @@ class RobotAnimation4 extends Component {
     const { heights, viewType, homeRef } = this.props;
     const { section1, section2, section3, section4, section5 } = heights;
     const newHeight =
-      section1 + section2 + section3 + section4 + section5 + 400;
+      section1 + section2 + section3 + section4 + section5 + 900;
 
     const frameCount = 35;
     const html = document.documentElement;
