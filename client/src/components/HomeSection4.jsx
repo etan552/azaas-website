@@ -6,6 +6,7 @@ import blockChain from "../assets/Blockchain.gif";
 import cloudComputing from "../assets/CloudComputing.gif";
 import dataIntelligence from "../assets/DataIntelligence.gif";
 import RobotAnimation3 from "./RobotAnimation3";
+import blockchainAnimation from "../assets/blockchainAnimation.webm";
 
 class HomeSection4 extends Component {
   ref1 = createRef();
@@ -14,7 +15,7 @@ class HomeSection4 extends Component {
   imgContainer = createRef();
   headerRef = createRef();
   bottomImg = createRef();
-  blockChainGif = createRef();
+  blockchainGif = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
@@ -122,6 +123,29 @@ class HomeSection4 extends Component {
         },
       }
     );
+
+    // blockchain animation
+    // opacity from 1 to 0 & width/height from 100 to 20 vw/vh
+    gsap.fromTo(
+      this.blockchainGif.current,
+      {
+        opacity: 1,
+        minHeight: "100vh",
+        minWidth: "100vw",
+      },
+      {
+        opacity: 0,
+        minHeight: "20vh",
+        minWidth: "20vw",
+
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 2300} top`,
+          end: `top+=${newHeight + 3000} top`,
+          scrub: true,
+        },
+      }
+    );
   }
 
   render() {
@@ -180,10 +204,19 @@ class HomeSection4 extends Component {
           </div>
           <div
             style={{
-              height: this.props.viewType === "desktop" ? "700px" : "700px",
+              height: this.props.viewType === "desktop" ? "1500px" : "700px",
             }}
           ></div>
           <div className="container-1">
+            <video
+              className="blockchain"
+              ref={this.blockchainGif}
+              autoPlay
+              loop
+              muted
+            >
+              <source src={blockchainAnimation} type="video/webm" />
+            </video>
             <RobotAnimation3
               homeRef={homeRef}
               viewType={viewType}

@@ -44,7 +44,7 @@ class RobotAnimation3 extends Component {
   componentDidUpdate() {
     const { heights, viewType, homeRef } = this.props;
     const { section1, section2, section3 } = heights;
-    const newHeight = section1 + section2 + section3 + 2200;
+    const newHeight = section1 + section2 + section3 + 2700;
 
     const frameCount = 36;
     const html = document.documentElement;
@@ -68,7 +68,7 @@ class RobotAnimation3 extends Component {
 
     window.addEventListener("scroll", () => {
       const scrollTop = html.scrollTop - newHeight;
-      const maxScrollTop = 600;
+      const maxScrollTop = 1100;
       const scrollFraction = scrollTop / maxScrollTop;
       const frameIndex = Math.min(
         frameCount - 1,
@@ -79,10 +79,10 @@ class RobotAnimation3 extends Component {
     });
 
     gsap.fromTo(
-      this.robot4.current,
+      this.canvasRef.current,
       { x: 0 },
       {
-        x: 100,
+        x: 150,
 
         scrollTrigger: {
           trigger: homeRef,

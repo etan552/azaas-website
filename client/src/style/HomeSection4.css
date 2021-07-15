@@ -98,7 +98,7 @@
   /* bottom: calc((100vh - 720px) / 2); */
   bottom: 0;
   right: 0;
-  margin-top: 1000px;
+  margin-top: 800px;
   height: 100vh;
   z-index: -2;
 }
@@ -140,7 +140,18 @@
   line-height: 1.12;
 }
 
-.home .section-4 .blockchain {
+.home .section-4 .container-1 .blockchain {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20vw;
+  height: 20vh;
+
+  object-fit: cover;
 }
 
 /* table view */
