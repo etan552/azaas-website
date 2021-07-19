@@ -1,11 +1,10 @@
 .home .section-7 {
   position: relative;
-  margin-top: 200px;
 }
 
 .home .section-7 .top {
   position: relative;
-  height: 1090px;
+  height: 1100px !important;
   padding-bottom: 320px;
   z-index: 3;
   background-color: rgb(24, 24, 24);
@@ -44,6 +43,12 @@
 .home .section-7 .top .container-1 {
   padding-top: 50px;
   color: white;
+  margin-top: 150px;
+  position: absolute;
+  bottom: 70px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 .home .section-7 .top .container-2 {
@@ -55,6 +60,18 @@
   bottom: 0;
   z-index: 1;
   overflow: hidden;
+}
+
+.home .section-7 .bottom .data-intelligence {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: -20vw;
+  right: -20vw;
+  width: 20vw;
+  height: 20vh;
+  margin: auto;
+  object-fit: cover;
 }
 
 .home .section-7 .bottom .img-2 {
@@ -76,7 +93,7 @@
   height: 100vh;
   width: 100vw;
   font-weight: 500;
-  color: white;
+  color: rgb(24, 24, 24);
 }
 
 .home .section-7 .bottom .container-3 > div {
@@ -105,6 +122,7 @@
   text-align: left;
   color: black;
   z-index: -1;
+  opacity: 0;
   /* margin-top: ; */
 }
 

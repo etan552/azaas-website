@@ -144,11 +144,11 @@
   position: absolute;
   top: 0;
   z-index: 5;
-  left: 0;
-  right: 0;
+  left: -50vw;
+  right: -50vw;
   bottom: 0;
   margin: auto;
-  width: 20vw;
+  min-width: 20vw;
   height: 20vh;
   object-fit: cover;
 }

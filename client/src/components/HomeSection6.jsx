@@ -102,19 +102,19 @@ class HomeSection6 extends Component {
       this.cloudComputing.current,
       {
         opacity: 1,
-        minHeight: "100vh",
+        height: "100vh",
         minWidth: "100vw",
       },
       {
         opacity: 0,
-        minHeight: "20vh",
+        height: "20vh",
         minWidth: "20vw",
 
         scrollTrigger: {
           trigger: homeRef,
-          start: `top+=${newHeight + 400} top`,
+          start: `top+=${newHeight + 500} top`,
           end: `top+=${newHeight + 1100} top`,
-          scrub: true,
+          scrub: 0.1,
         },
       }
     );
@@ -130,17 +130,7 @@ class HomeSection6 extends Component {
           heights={heights}
           viewType={viewType}
         />
-        <div className="animation">
-          <video
-            className="cloud-computing"
-            ref={this.cloudComputing}
-            autoPlay
-            loop
-            muted
-          >
-            <source src={cloudComputingAnimation} type="video/webm" />
-          </video>
-        </div>
+        <div style={{ height: (950 - window.innerHeight) * 1.5 }}></div>
 
         <div className="container-1" ref={this.container1Ref}>
           <div className="header">Magic Keyboard</div>
@@ -157,7 +147,17 @@ class HomeSection6 extends Component {
             smoothly adjust it to the perfect viewing angle for you.
           </div>
         </div>
-
+        <div className="animation">
+          <video
+            className="cloud-computing"
+            ref={this.cloudComputing}
+            autoPlay
+            loop
+            muted
+          >
+            <source src={cloudComputingAnimation} type="video/webm" />
+          </video>
+        </div>
         {/* <div className="img-container">
           <div
             style={{

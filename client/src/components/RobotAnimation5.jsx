@@ -1,52 +1,92 @@
 import React, { Component, createRef } from "react";
-import robot1 from "../assets/robot7webp/1.webp";
-import robot2 from "../assets/robot7webp/2.webp";
-import robot3 from "../assets/robot7webp/3.webp";
-import robot4 from "../assets/robot7webp/4.webp";
-import robot5 from "../assets/robot7webp/5.webp";
-import robot6 from "../assets/robot7webp/6.webp";
-import robot7 from "../assets/robot7webp/7.webp";
-import robot8 from "../assets/robot7webp/8.webp";
-import robot9 from "../assets/robot7webp/9.webp";
-import robot10 from "../assets/robot7webp/10.webp";
-import robot11 from "../assets/robot7webp/11.webp";
-import robot12 from "../assets/robot7webp/12.webp";
-import robot13 from "../assets/robot7webp/13.webp";
-import robot14 from "../assets/robot7webp/14.webp";
-import robot15 from "../assets/robot7webp/15.webp";
-import robot16 from "../assets/robot7webp/16.webp";
-import robot17 from "../assets/robot7webp/17.webp";
-import robot18 from "../assets/robot7webp/18.webp";
-import robot19 from "../assets/robot7webp/19.webp";
-import robot20 from "../assets/robot7webp/20.webp";
-import robot21 from "../assets/robot7webp/21.webp";
-import robot22 from "../assets/robot7webp/22.webp";
-import robot23 from "../assets/robot7webp/23.webp";
-import robot24 from "../assets/robot7webp/24.webp";
-import robot25 from "../assets/robot7webp/25.webp";
-import robot26 from "../assets/robot7webp/26.webp";
-import robot27 from "../assets/robot7webp/27.webp";
-import robot28 from "../assets/robot7webp/28.webp";
-import robot29 from "../assets/robot7webp/29.webp";
-import robot30 from "../assets/robot7webp/30.webp";
-import robot31 from "../assets/robot7webp/31.webp";
-import robot32 from "../assets/robot7webp/32.webp";
-import robot33 from "../assets/robot7webp/33.webp";
-import robot34 from "../assets/robot7webp/34.webp";
-import robot35 from "../assets/robot7webp/35.webp";
-import robot36 from "../assets/robot7webp/36.webp";
-import robot37 from "../assets/robot7webp/37.webp";
-import robot38 from "../assets/robot7webp/38.webp";
+import "../style/RobotAnimation.css";
+import gsap from "gsap";
+// import robot1 from "../assets/robot7webp/1.webp";
+// import robot2 from "../assets/robot7webp/2.webp";
+// import robot3 from "../assets/robot7webp/3.webp";
+// import robot4 from "../assets/robot7webp/4.webp";
+// import robot5 from "../assets/robot7webp/5.webp";
+// import robot6 from "../assets/robot7webp/6.webp";
+// import robot7 from "../assets/robot7webp/7.webp";
+// import robot8 from "../assets/robot7webp/8.webp";
+// import robot9 from "../assets/robot7webp/9.webp";
+// import robot10 from "../assets/robot7webp/10.webp";
+// import robot11 from "../assets/robot7webp/11.webp";
+// import robot12 from "../assets/robot7webp/12.webp";
+// import robot13 from "../assets/robot7webp/13.webp";
+// import robot14 from "../assets/robot7webp/14.webp";
+// import robot15 from "../assets/robot7webp/15.webp";
+// import robot16 from "../assets/robot7webp/16.webp";
+// import robot17 from "../assets/robot7webp/17.webp";
+// import robot18 from "../assets/robot7webp/18.webp";
+// import robot19 from "../assets/robot7webp/19.webp";
+// import robot20 from "../assets/robot7webp/20.webp";
+// import robot21 from "../assets/robot7webp/21.webp";
+// import robot22 from "../assets/robot7webp/22.webp";
+// import robot23 from "../assets/robot7webp/23.webp";
+// import robot24 from "../assets/robot7webp/24.webp";
+// import robot25 from "../assets/robot7webp/25.webp";
+// import robot26 from "../assets/robot7webp/26.webp";
+// import robot27 from "../assets/robot7webp/27.webp";
+// import robot28 from "../assets/robot7webp/28.webp";
+// import robot29 from "../assets/robot7webp/29.webp";
+// import robot30 from "../assets/robot7webp/30.webp";
+// import robot31 from "../assets/robot7webp/31.webp";
+// import robot32 from "../assets/robot7webp/32.webp";
+// import robot33 from "../assets/robot7webp/33.webp";
+// import robot34 from "../assets/robot7webp/34.webp";
+// import robot35 from "../assets/robot7webp/35.webp";
+// import robot36 from "../assets/robot7webp/36.webp";
+// import robot37 from "../assets/robot7webp/37.webp";
+// import robot38 from "../assets/robot7webp/38.webp";
+import robot1 from "../assets/robot7webp-png/1.webp";
+import robot2 from "../assets/robot7webp-png/2.webp";
+import robot3 from "../assets/robot7webp-png/3.webp";
+import robot4 from "../assets/robot7webp-png/4.webp";
+import robot5 from "../assets/robot7webp-png/5.webp";
+import robot6 from "../assets/robot7webp-png/6.webp";
+import robot7 from "../assets/robot7webp-png/7.webp";
+import robot8 from "../assets/robot7webp-png/8.webp";
+import robot9 from "../assets/robot7webp-png/9.webp";
+import robot10 from "../assets/robot7webp-png/10.webp";
+import robot11 from "../assets/robot7webp-png/11.webp";
+import robot12 from "../assets/robot7webp-png/12.webp";
+import robot13 from "../assets/robot7webp-png/13.webp";
+import robot14 from "../assets/robot7webp-png/14.webp";
+import robot15 from "../assets/robot7webp-png/15.webp";
+import robot16 from "../assets/robot7webp-png/16.webp";
+import robot17 from "../assets/robot7webp-png/17.webp";
+import robot18 from "../assets/robot7webp-png/18.webp";
+import robot19 from "../assets/robot7webp-png/19.webp";
+import robot20 from "../assets/robot7webp-png/20.webp";
+import robot21 from "../assets/robot7webp-png/21.webp";
+import robot22 from "../assets/robot7webp-png/22.webp";
+import robot23 from "../assets/robot7webp-png/23.webp";
+import robot24 from "../assets/robot7webp-png/24.webp";
+import robot25 from "../assets/robot7webp-png/25.webp";
+import robot26 from "../assets/robot7webp-png/26.webp";
+import robot27 from "../assets/robot7webp-png/27.webp";
+import robot28 from "../assets/robot7webp-png/28.webp";
+import robot29 from "../assets/robot7webp-png/29.webp";
+import robot30 from "../assets/robot7webp-png/30.webp";
+import robot31 from "../assets/robot7webp-png/31.webp";
+import robot32 from "../assets/robot7webp-png/32.webp";
+import robot33 from "../assets/robot7webp-png/33.webp";
+import robot34 from "../assets/robot7webp-png/34.webp";
+import robot35 from "../assets/robot7webp-png/35.webp";
+import robot36 from "../assets/robot7webp-png/36.webp";
+import robot37 from "../assets/robot7webp-png/37.webp";
 
 class RobotAnimation5 extends Component {
   canvasRef = createRef();
+  container = createRef();
 
   componentDidUpdate() {
     const { heights, viewType, homeRef } = this.props;
     const { section1, section2, section3, section4, section5, section6 } =
       heights;
     const newHeight =
-      section1 + section2 + section3 + section4 + section5 + section6 + 400;
+      section1 + section2 + section3 + section4 + section5 + section6;
 
     const frameCount = 35;
     const html = document.documentElement;
@@ -61,16 +101,16 @@ class RobotAnimation5 extends Component {
     const img = new Image();
     img.src = this.getCurrentImg(1);
 
-    this.canvasRef.current.width = 1280;
-    this.canvasRef.current.height = 720;
+    this.canvasRef.current.width = 500;
+    this.canvasRef.current.height = 500;
 
     img.onload = function () {
       context.drawImage(img, 0, 0);
     };
 
     window.addEventListener("scroll", () => {
-      const scrollTop = html.scrollTop - newHeight;
-      const maxScrollTop = 1000;
+      const scrollTop = html.scrollTop - newHeight + 350;
+      const maxScrollTop = 600;
       const scrollFraction = scrollTop / maxScrollTop;
       const frameIndex = Math.min(
         frameCount - 1,
@@ -79,11 +119,29 @@ class RobotAnimation5 extends Component {
 
       requestAnimationFrame(() => this.updateImg(frameIndex + 1, context, img));
     });
+
+    gsap.fromTo(
+      this.container.current,
+      {
+        background: "rgb(233, 233, 233)",
+      },
+      {
+        background: "rgb(46, 46, 46)",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight} top`,
+          end: `top+=${newHeight + 150} top`,
+          scrub: 0.1,
+        },
+      }
+    );
   }
 
   updateImg = (index, context, img) => {
     img.src = this.getCurrentImg(index);
     img.onload = function () {
+      context.clearRect(0, 0, 500, 500);
+
       context.drawImage(img, 0, 0);
     };
   };
@@ -201,8 +259,8 @@ class RobotAnimation5 extends Component {
       case 37:
         return robot37;
 
-      case 38:
-        return robot38;
+      // case 38:
+      //   return robot38;
 
       default:
         return robot1;
@@ -212,10 +270,9 @@ class RobotAnimation5 extends Component {
   render() {
     return (
       <React.Fragment>
-        <canvas
-          ref={this.canvasRef}
-          style={{ position: "sticky", top: "0px" }}
-        ></canvas>
+        <div className="robot-5" ref={this.container}>
+          <canvas ref={this.canvasRef}></canvas>
+        </div>
       </React.Fragment>
     );
   }

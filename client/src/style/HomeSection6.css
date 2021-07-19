@@ -2,7 +2,7 @@
   margin-top: 70px;
   font-weight: 500;
   position: relative;
-  height: 3189px;
+  height: 2589px;
 }
 
 .home .section-6 > div {
@@ -16,6 +16,10 @@
   font-size: 28px;
   width: 600px;
   padding-top: 250px;
+}
+
+.home .section-6 .container-1 {
+  padding-left: 250px;
 }
 
 .home .section-6 .container-1 .context {
@@ -101,11 +105,11 @@
   position: absolute;
   top: 0;
   z-index: 2;
-  left: 0;
-  right: 0;
+  left: -50vw;
+  right: -50vw;
   bottom: 0;
   margin: auto;
-  width: 20vw;
+  min-width: 20vw;
   height: 20vh;
   object-fit: cover;
 }

@@ -130,14 +130,13 @@ class HomeSection4 extends Component {
       this.blockchainGif.current,
       {
         opacity: 1,
-        minHeight: "100vh",
+        height: "100vh",
         minWidth: "100vw",
       },
       {
         opacity: 0,
-        minHeight: "20vh",
+        height: "20vh",
         minWidth: "20vw",
-
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 2300} top`,

@@ -3,6 +3,8 @@ import office from "../assets/office3.webp";
 import "../style/HomeSection7.css";
 import gsap from "gsap";
 import backgroundImg from "../assets/abstract.webp";
+import RobotAnimation5 from "./RobotAnimation5";
+import dataIntelligence from "../assets/dataintelligenceAnimation.webm";
 
 class HomeSection7 extends Component {
   sectionRef = createRef();
@@ -13,29 +15,17 @@ class HomeSection7 extends Component {
   container6Ref = createRef();
   container7Ref = createRef();
   imgRef = createRef();
-  imgRef2 = createRef();
+  dataIntelligenceRef = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
-    const {
-      section1,
-      section2,
-      section3,
-      section4,
-      section5,
-      section6,
-    } = heights;
+    const { section1, section2, section3, section4, section5, section6 } =
+      heights;
     const newHeight =
-      section1 + section2 + section3 + section4 + section5 + section6;
+      section1 + section2 + section3 + section4 + section5 + section6 - 900;
 
-    const {
-      section1m,
-      section2m,
-      section3m,
-      section4m,
-      section5m,
-      section6m,
-    } = heights.mobileHeights;
+    const { section1m, section2m, section3m, section4m, section5m, section6m } =
+      heights.mobileHeights;
     const newMobileHeight =
       section1m + section2m + section3m + section4m + section5m + section6m;
 
@@ -45,15 +35,15 @@ class HomeSection7 extends Component {
     gsap.fromTo(
       this.sectionRef.current,
       {
-        backgroundColor: "rgb(24, 24, 24)",
+        backgroundColor: "rgb(255, 255, 255)",
       },
       {
-        backgroundColor: "rgb(255, 255, 255)",
+        backgroundColor: "rgb(24, 24, 24)",
         duration: 0.5,
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 700 + 940 - window.innerHeight} top`
+            ? `top+=${newHeight + 900} top`
             : `top+=${newMobileHeight + 500 + 940 - window.innerHeight} top`,
           toggleActions: "play none none reverse",
         },
@@ -81,12 +71,14 @@ class HomeSection7 extends Component {
 
     // abstract img animation
     gsap.fromTo(
-      this.imgRef2.current,
+      this.dataIntelligenceRef.current,
       {
-        x: "-400px",
+        x: -0.3134 * window.innerWidth,
+        y: isDesktop ? "50px" : "220px",
       },
       {
-        x: "400px",
+        x: 0.3284 * window.innerWidth,
+        y: isDesktop ? "50px" : "220px",
         ease: "power1.in",
         scrollTrigger: {
           trigger: homeRef,
@@ -104,18 +96,18 @@ class HomeSection7 extends Component {
 
     // abstract img animation
     gsap.fromTo(
-      this.imgRef2.current,
+      this.dataIntelligenceRef.current,
       {
-        width: isDesktop ? "980px" : "690px",
-        height: isDesktop ? "720px" : "507px",
-        y: isDesktop ? "280px" : "310px",
-        x: "0px",
+        minWidth: isDesktop ? "90vw" : "690px",
+        minHeight: isDesktop ? "90vh" : "507px",
+        y: isDesktop ? 220 : "310px",
+        x: 0,
       },
       {
-        width: isDesktop ? "1200px" : "845px",
-        height: isDesktop ? "885px" : "623px",
-        y: isDesktop ? "190px" : "220px",
-        x: "-400px",
+        minWidth: isDesktop ? "100vw" : "845px",
+        minHeight: isDesktop ? "100vh" : "623px",
+        y: isDesktop ? "50px" : "220px",
+        x: -0.3134 * window.innerWidth,
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
@@ -132,16 +124,17 @@ class HomeSection7 extends Component {
 
     // abstract img animation
     gsap.fromTo(
-      this.imgRef2.current,
+      this.dataIntelligenceRef.current,
       {
-        width: "110vw",
-        height: "110vh",
+        minWidth: "110vw",
+        minHeight: "110vh",
         y: "0px",
       },
       {
-        width: isDesktop ? "980px" : "690px",
-        height: isDesktop ? "720px" : "507px",
-        y: isDesktop ? "280px" : "310px",
+        minWidth: isDesktop ? "90vw" : "690px",
+        minHeight: isDesktop ? "90vh" : "507px",
+        y: isDesktop ? 220 : "310px",
+
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
@@ -160,6 +153,24 @@ class HomeSection7 extends Component {
     gsap.fromTo(
       this.container4Ref.current,
       {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: isDesktop
+            ? `top+=${newHeight + 2350} top`
+            : `top+=${newMobileHeight + 2050} top`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      this.container4Ref.current,
+      {
         opacity: 1,
       },
       {
@@ -174,22 +185,21 @@ class HomeSection7 extends Component {
         },
       }
     );
-
     // container 4 fade in
+
     gsap.fromTo(
       this.container4Ref.current,
       {
         opacity: 0,
       },
       {
-        opacity: 1,
+        opacity: 0,
         duration: 0.5,
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 2350} top`
-            : `top+=${newMobileHeight + 2050} top`,
-          toggleActions: "play none none reverse",
+            ? `top+=${newHeight} top`
+            : `top+=${newMobileHeight + 2400} top`,
         },
       }
     );
@@ -280,21 +290,16 @@ class HomeSection7 extends Component {
   }
 
   render() {
+    const { homeRef, heights, viewType } = this.props;
     return (
       <section className="section-7">
         <div className="top" ref={this.sectionRef}>
-          <img src={office} alt="office" className="img-1" ref={this.imgRef} />
-          <div className="container-1" ref={this.container1Ref}>
-            <div className="header">Full‑sized keyboard</div>
-            <div className="context">
-              A full-sized keyboard designed for iPad Pro brings individual hard
-              key caps and a scissor mechanism with 1 millimetre of travel for a
-              responsive, comfortable and quiet typing experience. So go ahead;
-              write your novel, knock out a business plan or rip through your
-              inbox. And with backlit keys, you can get things done day or
-              night.
-            </div>
-          </div>
+          <RobotAnimation5
+            homeRef={homeRef}
+            heights={heights}
+            viewType={viewType}
+          />
+          {/* <img src={office} alt="office" className="img-1" ref={this.imgRef} /> */}
           <div className="container-2">
             <div className="header">Trackpad reimagined</div>
             <div className="context">
@@ -306,15 +311,30 @@ class HomeSection7 extends Component {
               to go Home and switching between spaces.
             </div>
           </div>
+          <div className="container-1" ref={this.container1Ref}>
+            <div className="header">Full‑sized keyboard</div>
+            <div className="context">
+              A full-sized keyboard designed for iPad Pro brings individual hard
+              key caps and a scissor mechanism with 1 millimetre of travel for a
+              responsive, comfortable and quiet typing experience. So go ahead;
+              write your novel, knock out a business plan or rip through your
+              inbox. And with backlit keys, you can get things done day or
+              night.
+            </div>
+          </div>
         </div>
         <div style={{ height: "4000px" }}></div>
         <div className="bottom">
-          <img
-            src={backgroundImg}
-            alt="abstract art"
-            className="img-2"
-            ref={this.imgRef2}
-          />
+          <video
+            className="data-intelligence"
+            ref={this.dataIntelligenceRef}
+            autoPlay
+            loop
+            muted
+          >
+            <source src={dataIntelligence} type="video/webm" />
+          </video>
+
           <div className="container-3" ref={this.container3Ref}>
             <div className="header">Cursor for iPadOS</div>
             <div className="context">

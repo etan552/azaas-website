@@ -44,7 +44,7 @@ class RobotAnimation4 extends Component {
     const { heights, viewType, homeRef } = this.props;
     const { section1, section2, section3, section4, section5 } = heights;
     const newHeight =
-      section1 + section2 + section3 + section4 + section5 + 900;
+      section1 + section2 + section3 + section4 + section5 + 1400;
 
     const frameCount = 35;
     const html = document.documentElement;
@@ -67,7 +67,7 @@ class RobotAnimation4 extends Component {
     };
 
     window.addEventListener("scroll", () => {
-      const scrollTop = html.scrollTop - newHeight;
+      const scrollTop = html.scrollTop - newHeight + 500;
       const maxScrollTop = 1000;
       const scrollFraction = scrollTop / maxScrollTop;
       const frameIndex = Math.min(
@@ -91,8 +91,8 @@ class RobotAnimation4 extends Component {
         minHeight: "80vh",
         scrollTrigger: {
           trigger: homeRef,
-          start: `top+=${newHeight + 100} top`,
-          end: `top+=${newHeight + 450} top`,
+          start: `top+=${newHeight - 400} top`,
+          end: `top+=${newHeight} top`,
           scrub: 0.1,
         },
       }
