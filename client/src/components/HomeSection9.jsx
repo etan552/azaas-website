@@ -2,6 +2,7 @@ import React, { Component, createRef } from "react";
 import "../style/HomeSection9.css";
 import hand from "../assets/hand.webp";
 import gsap from "gsap";
+import edgeComputingGif from "../assets/edgeComputingGif.gif";
 
 class HomeSection9 extends Component {
   container1Ref = createRef();
@@ -10,6 +11,7 @@ class HomeSection9 extends Component {
   context1 = createRef();
   notes1 = createRef();
   notes2 = createRef();
+  edgeComputingRef = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
@@ -44,6 +46,7 @@ class HomeSection9 extends Component {
       section7m,
       section8m,
     } = heights.mobileHeights;
+
     const newMobileHeight =
       section1m +
       section2m +
@@ -187,17 +190,43 @@ class HomeSection9 extends Component {
         },
       }
     );
+
+    gsap.fromTo(
+      this.edgeComputingRef.current,
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
+        duration: 0.3,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 200}px top`,
+          toggleActions: "play none none reverse",
+          markers: true,
+        },
+      }
+    );
   }
   render() {
     return (
       <section className="section-9">
+        <div className="video-container" ref={this.edgeComputingRef}>
+          <div>
+            <img
+              className="edge-computing"
+              src={edgeComputingGif}
+              alt="edge computing gif"
+            />
+          </div>
+        </div>
         <div className="container-1">
           <div className="inner-1" ref={this.container1Ref}>
-            <div className="header">Portability</div>
+            {/* <div className="header">Portability</div>
             <div className="context">
               Goes where no <br />
               laptop would dare.
-            </div>
+            </div> */}
           </div>
           <img
             src={hand}

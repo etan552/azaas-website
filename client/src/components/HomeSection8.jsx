@@ -2,13 +2,17 @@ import React, { Component } from "react";
 import "../style/HomeSection8.css";
 import shipImg from "../assets/shipImg.webp";
 import officeImg from "../assets/office2.webp";
+import gifH from "../assets/web gif webm/H.webm";
+import gifI from "../assets/web gif webm/I.webm";
 
 class HomeSection8 extends Component {
   render() {
     return (
       <section className="section-8">
         <div className="container-1">
-          <img src={shipImg} alt="ship" className="img" />
+          <video className="gif-H" autoPlay loop muted>
+            <source src={gifH} type="video/webm" />
+          </video>
           <div>
             <div className="header">Take notes</div>
             <div className="context">
@@ -22,7 +26,9 @@ class HomeSection8 extends Component {
           </div>
         </div>
         <div className="container-2">
-          <img src={officeImg} alt="office" className="img" />
+          <video className="gif-I" autoPlay loop muted>
+            <source src={gifI} type="video/webm" />
+          </video>
           <div>
             <div className="header">Markup</div>
             <div className="context">

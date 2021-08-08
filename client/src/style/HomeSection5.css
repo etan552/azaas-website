@@ -2,7 +2,7 @@
   position: relative;
   width: 980px;
   margin: 1600px auto 0 auto;
-  height: 3570px;
+  height: 2900px;
   z-index: 2;
 }
 
@@ -26,42 +26,46 @@
 }
 
 .home .section-5 .container-2 {
-  margin-top: 1070px;
+  margin-top: 870px;
 }
 
 .home .section-5 .container-3 {
-  margin: 600px 0 0 360px;
+  margin: 260px 0 0 520px;
   width: 450px;
   text-align: left;
 }
 
-.home .section-5 img {
-  object-fit: cover;
+.home .section-5 video {
   position: absolute;
+  box-shadow: 0 0 20px 3px rgb(212, 212, 212);
 }
 
-.home .section-5 .img-1 {
-  width: 1100px;
-  top: 750px;
-  left: -800px;
+.home .section-5 .gif-A {
+  width: 950px;
+  top: 650px;
+  left: -20vw;
+  right: -20vw;
+  margin: 0 auto;
 }
 
-.home .section-5 .img-2 {
-  width: 1400px;
-  top: 900px;
-  right: -830px;
+.home .section-5 .gif-B {
+  width: 500px;
+  top: 1230px;
+  right: 100px;
 }
 
-.home .section-5 .img-3 {
-  width: 1200px;
-  top: 2100px;
-  left: -900px;
+.home .section-5 .gif-C {
+  width: 500px;
+  top: 1780px;
+  left: -20px;
 }
 
-.home .section-5 .img-4 {
-  width: 1000px;
-  top: 1900px;
-  right: -360px;
+.home .section-5 .gif-D {
+  width: 950px;
+  top: 2320px;
+  right: -20vw;
+  left: -20vw;
+  margin: 0 auto;
 }
 
 .home .section-5 .img-5 {

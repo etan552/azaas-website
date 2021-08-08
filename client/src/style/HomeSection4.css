@@ -44,13 +44,14 @@
 
 .home .section-4 .slideshow {
   position: sticky;
-  top: 270px;
-  margin-top: 270px;
+  top: 230px;
+  margin-top: 230px;
   /* padding-top: 270px; */
   padding-bottom: 200px;
   height: 754px;
   z-index: 3;
   background-color: white;
+  box-shadow: -2px 0 20px -5px grey;
 }
 
 .home .section-4 .frame {
@@ -71,19 +72,18 @@
   height: 754px;
   z-index: -2;
   overflow: hidden;
-  /* padding-top: 270px; */
 }
 
 .home .section-4 .slideshow .view > div {
   display: flex;
   align-items: center;
-  height: 754px;
+  height: 500px;
 }
 
-.home .section-4 .slideshow > div img {
-  height: 600px;
-  width: 600px;
-  padding: 0 180px;
+.home .section-4 .slideshow > div video {
+  height: 500px;
+  width: 500px;
+  padding: 0 220px;
 }
 /* .home .section-4 .slideshow > div img {
   position: relative;

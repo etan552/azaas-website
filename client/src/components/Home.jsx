@@ -24,10 +24,10 @@ class Home extends Component {
       section2: window.innerHeight + 3600,
       section3: 1818 + 1000 - 200 + (670 - window.innerHeight) / 2,
       section4: 1950,
-      section5: 5170,
+      section5: 4500,
       section6: 3259,
       section7: window.innerHeight + 5410,
-      section8: 2045,
+      section8: 980,
       section9: 1158 + 306 + window.innerHeight / 2,
       mobileHeights: {
         section1m: 2300,

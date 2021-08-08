@@ -19,14 +19,13 @@
 .home .section-8 .container-1 {
   display: flex;
   position: relative;
-  margin: 120px 0;
+  margin: 120px 0 60px 0;
 }
 
 .home .section-8 .container-1 > div {
   width: 320px;
-  padding-top: 650px;
-  padding-bottom: 50px;
-  margin-left: auto;
+  padding-top: 100px;
+  padding-left: 50px;
 }
 
 .home .section-8 .container-1 .img {
@@ -51,12 +50,15 @@
 }
 
 .home .section-8 .container-2 > div {
-  width: 250px;
-  padding-top: 470px;
-  padding-bottom: 50px;
+  width: 320px;
+  padding-top: 100px;
+  padding-left: 50px;
   margin-right: auto;
 }
 
+.home .section-8 video {
+  box-shadow: -2px 0 20px -5px grey;
+}
 /* tablet view */
 @media (max-width: 1070px) {
   .home .section-8 {

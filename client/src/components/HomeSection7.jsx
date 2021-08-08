@@ -334,13 +334,7 @@ class HomeSection7 extends Component {
           >
             <source src={dataIntelligence} type="video/webm" />
           </video>
-
-          <div className="container-3" ref={this.container3Ref}>
-            <div className="header">Cursor for iPadOS</div>
-            <div className="context">
-              The biggest thing to happen to the cursor since point and click.
-            </div>
-          </div>
+          <div className="container-3" ref={this.container3Ref}></div>
           <div className="container-4" ref={this.container4Ref}>
             <div className="header">Trackpad for iPadOS</div>
             <div className="context">

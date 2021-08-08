@@ -7,6 +7,9 @@ import cloudComputing from "../assets/CloudComputing.gif";
 import dataIntelligence from "../assets/DataIntelligence.gif";
 import RobotAnimation3 from "./RobotAnimation3";
 import blockchainAnimation from "../assets/blockchainAnimation.webm";
+import gifF from "../assets/web gif webm/F.webm";
+import gifJ from "../assets/web gif webm/J.webm";
+import gifG from "../assets/web gif webm/G.webm";
 
 class HomeSection4 extends Component {
   ref1 = createRef();
@@ -151,18 +154,20 @@ class HomeSection4 extends Component {
     const { viewType, homeRef, heights } = this.props;
     return (
       <div className="section-4">
-        <div style={{ height: "01px" }}></div>
+        <div style={{ height: "1px" }}></div>
         {viewType !== "desktop" && <div style={{ height: "440px" }}></div>}
         <div className="slideshow">
-          <img src={ipadFrame} alt="ipad frame" className="frame" />
           <div className="view">
             <div ref={this.imgContainer}>
-              <img src={blockChain} alt="" />
-              <img src={cloudComputing} alt="" />
-              <img src={dataIntelligence} alt="" />
-              {/* <img src={office1} alt="office" className="slide-1" />
-              <img src={office2} alt="office" className="slide-2" />
-              <img src={office3} alt="office" className="slide-3" /> */}
+              <video className="gif-F" autoPlay loop muted>
+                <source src={gifF} type="video/webm" />
+              </video>
+              <video className="gif-J" autoPlay loop muted>
+                <source src={gifJ} type="video/webm" />
+              </video>
+              <video className="gif-G" autoPlay loop muted>
+                <source src={gifG} type="video/webm" />
+              </video>
             </div>
           </div>
         </div>
@@ -221,11 +226,6 @@ class HomeSection4 extends Component {
               viewType={viewType}
               heights={heights}
             />
-
-            {/* <div ref={this.headerRef}>
-              <div className="header">Performance</div>
-              <div className="context">Faster than you can say PC.</div>
-            </div> */}
           </div>
         </div>
       </div>

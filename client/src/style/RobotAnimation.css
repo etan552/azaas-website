@@ -2,41 +2,27 @@
   position: sticky;
   top: 0;
   visibility: hidden;
-  /* padding-bottom: 2000px; */
 }
-
-/* .section-2 .robot-2 {
-  position: relative;
-  height: 4450px;
-} */
 
 .section-2 .robot-2 canvas {
   position: absolute;
-  /* top: 50%; */
   top: calc((100vh - 800px) / 2);
-  /* top: 0; */
   left: 0;
   right: 0;
   margin: 0 auto;
-  /* transform: translateY(-50%); */
   width: 400px;
   height: auto;
-  /* visibility: hidden; */
 }
 
 .section-2 .robot-2 .robot-3 canvas {
   position: absolute;
-  /* top: 50%; */
-  top: calc((100vh - 800px) / 2);
-  /* top: 0; */
+  top: calc((100vh - 970px) / 2);
   left: 0;
   right: 0;
   margin: 0 auto;
-  /* transform: translateY(-50%); */
   width: 600px;
   height: auto;
   z-index: -1;
-  /*  */
 }
 
 .section-2 .robot-2 .robot-3 .canvas2 {

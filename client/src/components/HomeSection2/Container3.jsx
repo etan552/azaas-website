@@ -60,32 +60,36 @@ class Container3 extends Component {
   render() {
     return (
       <div className="container-3" ref={this.section2Container3}>
-        <div className="left">
-          <div className="icon">
-            <img src={algorithm} alt="target" className="icon-img" />
-            <h3 className="header">Algorithm</h3>
+        <div className="top">
+          <div className="left">
+            <div className="icon">
+              <img src={algorithm} alt="target" className="icon-img" />
+              <h3 className="header">Algorithm</h3>
+            </div>
+            <div className="icon">
+              <img src={blockChain} alt="battery" className="icon-img" />
+              <h3 className="header">Blockchain</h3>
+            </div>
           </div>
-          <div className="icon">
-            <img src={blockChain} alt="battery" className="icon-img" />
-            <h3 className="header">Blockchain</h3>
+          <div className="right">
+            <div className="icon">
+              <img
+                src={dataIntelligence}
+                alt="reflection"
+                className="icon-img"
+              />
+              <h3 className="header">Data Intelligence</h3>
+            </div>
+            <div className="icon">
+              <img src={edgeComputing} alt="phone" className="icon-img" />
+              <h3 className="header">Edge Computing</h3>
+            </div>
           </div>
+        </div>
+        <div className="bottom">
           <div className="icon">
             <img src={cloudComputing} alt="sun" className="icon-img" />
             <h3 className="header">Cloud Computing</h3>
-          </div>
-        </div>
-        <div className="right">
-          <div className="icon">
-            <img src={dataIntelligence} alt="reflection" className="icon-img" />
-            <h3 className="header">Data Intelligence</h3>
-          </div>
-          <div className="icon">
-            <img src={edgeComputing} alt="phone" className="icon-img" />
-            <h3 className="header">Edge Computing</h3>
-          </div>
-          <div className="icon">
-            {/* <img src={vennDiagram} alt="venn diagram" className="icon-img" />
-            <h3 className="header">P3 wide colour gamut</h3> */}
           </div>
         </div>
       </div>

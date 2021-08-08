@@ -1,9 +1,10 @@
 import React, { Component, createRef } from "react";
 import "../style/HomeSection5.css";
 import gsap from "gsap";
-import office1 from "../assets/office1.webp";
-import office2 from "../assets/office2.webp";
-import office3 from "../assets/office3.webp";
+import gifA from "../assets/web gif webm/A.webm";
+import gifB from "../assets/web gif webm/B.webm";
+import gifC from "../assets/web gif webm/C.webm";
+import gifD from "../assets/web gif webm/D.webm";
 
 class HomeSection5 extends Component {
   img1 = createRef();
@@ -168,11 +169,23 @@ class HomeSection5 extends Component {
             and effortless.
           </div>
         </div>
-        <img src={office1} alt="office" className="img-1" ref={this.img1} />
-        <img src={office2} alt="office" className="img-2" ref={this.img2} />
+        <video className="gif-A" autoPlay loop muted>
+          <source src={gifA} type="video/webm" />
+        </video>
+        <video className="gif-B" autoPlay loop muted>
+          <source src={gifB} type="video/webm" />
+        </video>
+        <video className="gif-C" autoPlay loop muted>
+          <source src={gifC} type="video/webm" />
+        </video>
+        <video className="gif-D" autoPlay loop muted>
+          <source src={gifD} type="video/webm" />
+        </video>
+        {/* <img src={office1} alt="office" className="img-1" ref={this.img1} /> */}
+        {/* <img src={office2} alt="office" className="img-2" ref={this.img2} />
         <img src={office3} alt="office" className="img-3" ref={this.img3} />
         <img src={office1} alt="office" className="img-4" ref={this.img4} />
-        <img src={office3} alt="office" className="img-5" ref={this.img5} />
+        <img src={office3} alt="office" className="img-5" ref={this.img5} /> */}
       </section>
     );
   }

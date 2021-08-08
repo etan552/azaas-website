@@ -215,7 +215,7 @@ class HomeSection2 extends Component {
     gsap.fromTo(
       this.robotImg2Ref.current,
       {
-        top: (window.innerHeight - 800) / 2 - 599,
+        top: (window.innerHeight - 970) / 2 - 599,
         height: (11768 / 5438) * 800,
         left: 0.5 * window.innerWidth - 209,
       },
