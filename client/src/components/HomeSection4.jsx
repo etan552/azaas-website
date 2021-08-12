@@ -6,7 +6,8 @@ import blockChain from "../assets/Blockchain.gif";
 import cloudComputing from "../assets/CloudComputing.gif";
 import dataIntelligence from "../assets/DataIntelligence.gif";
 import RobotAnimation3 from "./RobotAnimation3";
-import blockchainAnimation from "../assets/blockchainAnimation.webm";
+// import blockchainAnimation from "../assets/blockchainAnimation.webm";
+import blockchainAnimation from "../assets/bc.webm";
 import gifF from "../assets/web gif webm/F.webm";
 import gifJ from "../assets/web gif webm/J.webm";
 import gifG from "../assets/web gif webm/G.webm";
@@ -19,12 +20,13 @@ class HomeSection4 extends Component {
   headerRef = createRef();
   bottomImg = createRef();
   blockchainGif = createRef();
+  blockchainContainerGif = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
 
     const { section1, section2, section3 } = heights;
-    const newHeight = section1 + section2 + section3;
+    const newHeight = section1 + section2 + section3 + 100;
 
     const { section1m, section2m, section3m } = heights.mobileHeights;
     const newMobileHeight = section1m + section2m + section3m + 440;
@@ -132,14 +134,30 @@ class HomeSection4 extends Component {
     gsap.fromTo(
       this.blockchainGif.current,
       {
+        width: "99vw",
+      },
+      {
+        width: "20vw",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 2300} top`,
+          end: `top+=${newHeight + 3000} top`,
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      this.blockchainContainerGif.current,
+      {
         opacity: 1,
         height: "100vh",
-        minWidth: "100vw",
+        width: "100vw",
       },
       {
         opacity: 0,
         height: "20vh",
-        minWidth: "20vw",
+        width: "20vw",
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 2300} top`,
@@ -212,15 +230,20 @@ class HomeSection4 extends Component {
             }}
           ></div>
           <div className="container-1">
-            <video
-              className="blockchain"
-              ref={this.blockchainGif}
-              autoPlay
-              loop
-              muted
+            <div
+              className="blockchain-container"
+              ref={this.blockchainContainerGif}
             >
-              <source src={blockchainAnimation} type="video/webm" />
-            </video>
+              <video
+                className="blockchain"
+                autoPlay
+                loop
+                muted
+                ref={this.blockchainGif}
+              >
+                <source src={blockchainAnimation} type="video/webm" />
+              </video>
+            </div>
             <RobotAnimation3
               homeRef={homeRef}
               viewType={viewType}

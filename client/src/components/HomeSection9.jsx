@@ -203,7 +203,6 @@ class HomeSection9 extends Component {
           trigger: homeRef,
           start: `top+=${newHeight + 200}px top`,
           toggleActions: "play none none reverse",
-          markers: true,
         },
       }
     );

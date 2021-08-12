@@ -44,7 +44,7 @@ class RobotAnimation3 extends Component {
   componentDidUpdate() {
     const { heights, viewType, homeRef } = this.props;
     const { section1, section2, section3 } = heights;
-    const newHeight = section1 + section2 + section3 + 2700;
+    const newHeight = section1 + section2 + section3 + 2800;
 
     const frameCount = 36;
     const html = document.documentElement;
@@ -83,7 +83,6 @@ class RobotAnimation3 extends Component {
       { x: 0 },
       {
         x: 150,
-
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 100} top`,
