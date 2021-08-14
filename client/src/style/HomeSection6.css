@@ -97,21 +97,24 @@
 .home .section-6 > .animation {
   position: sticky !important;
   bottom: 0;
-  width: 100vw;
   height: 100vh;
 }
 
-.home .section-6 .cloud-computing {
+.home .section-6 > .animation .cloud-computing-container {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
-  z-index: 2;
+  bottom: 0;
   left: -50vw;
   right: -50vw;
-  bottom: 0;
+  z-index: 2;
   margin: auto;
-  min-width: 20vw;
-  height: 20vh;
-  object-fit: cover;
+  background-color: #a2c6f3;
+}
+
+.home .section-6 .cloud-computing {
+  object-fit: contain;
 }
 
 /* tablet view */

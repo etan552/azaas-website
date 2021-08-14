@@ -3,7 +3,7 @@ import "../style/HomeSection6.css";
 import laptop from "../assets/floatingKeyboard.webp";
 import gsap from "gsap";
 import RobotAnimation4 from "./RobotAnimation4";
-import cloudComputingAnimation from "../assets/cloudcomputingAnimation.webm";
+import cloudComputingAnimation from "../assets/CloudComputing.webm";
 
 class HomeSection6 extends Component {
   container1Ref = createRef();
@@ -11,6 +11,7 @@ class HomeSection6 extends Component {
   note1 = createRef();
   note2 = createRef();
   cloudComputing = createRef();
+  cloudComputingContainer = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
@@ -101,15 +102,30 @@ class HomeSection6 extends Component {
     gsap.fromTo(
       this.cloudComputing.current,
       {
+        width: "100vw",
+      },
+      {
+        width: "20vw",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 500} top`,
+          end: `top+=${newHeight + 1100} top`,
+          scrub: 0.1,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      this.cloudComputingContainer.current,
+      {
         opacity: 1,
         height: "100vh",
-        minWidth: "100vw",
+        width: "100vw",
       },
       {
         opacity: 0,
         height: "20vh",
-        minWidth: "20vw",
-
+        width: "20vw",
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 500} top`,
@@ -148,16 +164,22 @@ class HomeSection6 extends Component {
           </div>
         </div>
         <div className="animation">
-          <video
-            className="cloud-computing"
-            ref={this.cloudComputing}
-            autoPlay
-            loop
-            muted
+          <div
+            className="cloud-computing-container"
+            ref={this.cloudComputingContainer}
           >
-            <source src={cloudComputingAnimation} type="video/webm" />
-          </video>
+            <video
+              className="cloud-computing"
+              ref={this.cloudComputing}
+              autoPlay
+              loop
+              muted
+            >
+              <source src={cloudComputingAnimation} type="video/webm" />
+            </video>
+          </div>
         </div>
+        {/* <div style={{ height: "500px" }}></div> */}
         {/* <div className="img-container">
           <div
             style={{

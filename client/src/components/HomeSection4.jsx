@@ -226,7 +226,10 @@ class HomeSection4 extends Component {
           </div>
           <div
             style={{
-              height: this.props.viewType === "desktop" ? "1500px" : "700px",
+              height:
+                this.props.viewType === "desktop"
+                  ? `${2300 - window.innerHeight}px`
+                  : "700px",
             }}
           ></div>
           <div className="container-1">
