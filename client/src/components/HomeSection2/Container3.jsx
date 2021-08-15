@@ -1,11 +1,5 @@
 import React, { Component, createRef } from "react";
 import gsap, { TweenMax } from "gsap";
-import lighting from "../../assets/lighting.svg";
-import reflection from "../../assets/reflective-fabric.svg";
-import phone from "../../assets/smartphone.svg";
-import sun from "../../assets/sun.svg";
-import target from "../../assets/target.svg";
-import vennDiagram from "../../assets/venn-diagram.svg";
 import algorithm from "../../assets/Algorithm.gif";
 import blockChain from "../../assets/Blockchain.gif";
 import cloudComputing from "../../assets/CloudComputing.gif";

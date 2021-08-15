@@ -4,7 +4,7 @@ import "../style/HomeSection7.css";
 import gsap from "gsap";
 import backgroundImg from "../assets/abstract.webp";
 import RobotAnimation5 from "./RobotAnimation5";
-import dataIntelligence from "../assets/dataintelligenceAnimation.webm";
+import dataIntelligence from "../assets/dataintelligenceAnimation.gif";
 
 class HomeSection7 extends Component {
   sectionRef = createRef();
@@ -126,8 +126,8 @@ class HomeSection7 extends Component {
     gsap.fromTo(
       this.dataIntelligenceRef.current,
       {
-        minWidth: "110vw",
-        minHeight: "110vh",
+        minWidth: "100vw",
+        minHeight: "100vh",
         y: "0px",
       },
       {
@@ -325,15 +325,13 @@ class HomeSection7 extends Component {
         </div>
         <div style={{ height: "4000px" }}></div>
         <div className="bottom">
-          <video
-            className="data-intelligence"
-            ref={this.dataIntelligenceRef}
-            autoPlay
-            loop
-            muted
-          >
-            <source src={dataIntelligence} type="video/webm" />
-          </video>
+          <div className="data-intelligence" ref={this.dataIntelligenceRef}>
+            <img src={dataIntelligence} alt="data intelligence" />
+            {/* <video autoPlay loop muted>
+              <source src={dataIntelligence} type="video/webm" />
+            </video> */}
+          </div>
+
           <div className="container-3" ref={this.container3Ref}></div>
           <div className="container-4" ref={this.container4Ref}>
             <div className="header">Trackpad for iPadOS</div>

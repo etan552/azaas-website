@@ -63,6 +63,8 @@
 }
 
 .home .section-7 .bottom .data-intelligence {
+  display: flex;
+  align-items: center;
   position: absolute !important;
   top: 0;
   bottom: 0;
@@ -71,7 +73,12 @@
   width: 20vw;
   height: 20vh;
   margin: auto;
-  object-fit: cover;
+  background-color: #f6dd86;
+}
+
+.home .section-7 .bottom .data-intelligence img {
+  object-fit: contain;
+  width: 100%;
 }
 
 .home .section-7 .bottom .img-2 {
