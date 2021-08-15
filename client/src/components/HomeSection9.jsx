@@ -3,15 +3,21 @@ import "../style/HomeSection9.css";
 import hand from "../assets/hand.webp";
 import gsap from "gsap";
 import edgeComputingGif from "../assets/edgeComputingGif.gif";
+import robot from "../assets/section9robot.jpg";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 class HomeSection9 extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   container1Ref = createRef();
-  handImgRef = createRef();
   header1 = createRef();
   context1 = createRef();
   notes1 = createRef();
   notes2 = createRef();
   edgeComputingRef = createRef();
+  robotRef = createRef();
 
   componentDidUpdate() {
     const { homeRef, heights, viewType } = this.props;
@@ -59,65 +65,61 @@ class HomeSection9 extends Component {
 
     let isDesktop = viewType === "desktop" ? true : false;
 
+    // first section text
     gsap.fromTo(
       this.container1Ref.current,
-      { y: "0px" },
       {
-        y: "-30px",
-        ease: "none",
-        scrollTrigger: {
-          trigger: homeRef,
-          start: isDesktop
-            ? `top+=${newHeight} top`
-            : `top+=${newMobileHeight - 300} top`,
-          end: isDesktop
-            ? `top+=${newHeight + 300} top`
-            : `top+=${newMobileHeight} top`,
-          scrub: 0.1,
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-
-    gsap.fromTo(
-      this.container1Ref.current,
-      { opacity: 1 },
+        opacity: 1,
+        y: 0,
+      },
       {
-        duration: 0.2,
         opacity: 0,
-        ease: "none",
+        y: -30,
+        duration: 0.5,
         scrollTrigger: {
           trigger: homeRef,
-          start: isDesktop
-            ? `top+=${newHeight + 300} top`
-            : `top+=${newMobileHeight} top`,
+          start: `top+=${newHeight + 1000}px top`,
           toggleActions: "play none none reverse",
         },
       }
     );
 
     gsap.fromTo(
-      this.handImgRef.current,
-      { y: "0px", width: isDesktop ? "1233px" : "750px", x: "0px" },
+      this.container1Ref.current,
       {
-        y: "-80px",
-        width: isDesktop ? "1470px" : "920px",
-        x: isDesktop ? "-110px" : "-70px",
-        ease: "none",
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
         scrollTrigger: {
           trigger: homeRef,
-          start: isDesktop
-            ? `top+=${newHeight + 300} top`
-            : `top+=${newMobileHeight} top`,
-          end: isDesktop
-            ? `top+=${newHeight + 800} top`
-            : `top+=${newMobileHeight + 500} top`,
+          start: `top+=${newHeight + 600}px top`,
           toggleActions: "play none none reverse",
-          scrub: 0.1,
         },
       }
     );
 
+    // fix scrolltrigger refresh bug
+    gsap.fromTo(
+      this.container1Ref.current,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight - 1000}px top`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    // Second section text
     gsap.fromTo(
       this.header1.current,
       { opacity: 0 },
@@ -128,7 +130,7 @@ class HomeSection9 extends Component {
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 700} top`
+            ? `top+=${newHeight + 1300} top`
             : `top+=${newMobileHeight + 400} top`,
           toggleActions: "play none none reverse",
         },
@@ -145,7 +147,7 @@ class HomeSection9 extends Component {
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 700} top`
+            ? `top+=${newHeight + 1300} top`
             : `top+=${newMobileHeight + 400} top`,
           toggleActions: "play none none reverse",
         },
@@ -163,7 +165,7 @@ class HomeSection9 extends Component {
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 800} top`
+            ? `top+=${newHeight + 1500} top`
             : `top+=${newMobileHeight + 500} top`,
           toggleActions: "play none none reverse",
         },
@@ -184,13 +186,14 @@ class HomeSection9 extends Component {
         scrollTrigger: {
           trigger: homeRef,
           start: isDesktop
-            ? `top+=${newHeight + 850} top`
+            ? `top+=${newHeight + 1550} top`
             : `top+=${newMobileHeight + 550} top`,
           toggleActions: "play none none reverse",
         },
       }
     );
 
+    // edge computing animation
     gsap.fromTo(
       this.edgeComputingRef.current,
       {
@@ -202,6 +205,24 @@ class HomeSection9 extends Component {
         scrollTrigger: {
           trigger: homeRef,
           start: `top+=${newHeight + 200}px top`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    // Robot img
+    gsap.fromTo(
+      this.robotRef.current,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.3,
+        ease: "none",
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 300}px top`,
           toggleActions: "play none none reverse",
         },
       }
@@ -219,20 +240,21 @@ class HomeSection9 extends Component {
             />
           </div>
         </div>
+        <div style={{ height: "1300px" }}></div>
         <div className="container-1">
+          {/* First section of text */}
           <div className="inner-1" ref={this.container1Ref}>
-            {/* <div className="header">Portability</div>
+            <div className="header">Portability</div>
             <div className="context">
               Goes where no <br />
               laptop would dare.
-            </div> */}
+            </div>
           </div>
-          <img
-            src={hand}
-            alt="hand holding an ipad"
-            className="img"
-            ref={this.handImgRef}
-          />
+
+          {/* robot img */}
+          <img src={robot} alt="Robot" className="robot" ref={this.robotRef} />
+
+          {/* Second section of text */}
           <div className="inner-2">
             <div className="header" ref={this.header1}>
               Thin, light
@@ -244,13 +266,14 @@ class HomeSection9 extends Component {
               table. And it has up to 10 hours of battery life to keep you going
               all day.3
             </div>
-
             <div className="notes">
               <p ref={this.notes1}>Just over a pound</p>
               <p ref={this.notes2}>All-day batteries</p>
             </div>
           </div>
         </div>
+
+        {/* container 2 */}
         <div className="container-2">
           <div className="header">Connectivity</div>
           <div className="context">
