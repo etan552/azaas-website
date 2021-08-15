@@ -11,7 +11,6 @@ import robotVideo from "../../assets/animation4.webm";
 import robot from "../../assets/robotimg2.webp";
 import robot2 from "../../assets/robotimg8.webp";
 import algorithm from "../../assets/algorithmAnimation.webm";
-import algorithm1 from "../../assets/Algorithm.gif";
 
 class HomeSection2 extends Component {
   section2Img = createRef();
@@ -140,11 +139,11 @@ class HomeSection2 extends Component {
     gsap.fromTo(
       this.robotGifRef.current,
       {
-        minWidth: "100vw",
+        width: "100vw",
         height: "100vh",
       },
       {
-        minWidth: "20vw",
+        width: "20vw",
         height: "20vh",
         scrollTrigger: {
           trigger: homeRef,
@@ -198,7 +197,7 @@ class HomeSection2 extends Component {
     gsap.fromTo(
       this.robotGifRef.current,
       {
-        opacity: 1,
+        opacity: 0.99,
       },
       {
         opacity: 0,
@@ -305,16 +304,12 @@ class HomeSection2 extends Component {
     const { viewType, heights, homeRef } = this.props;
     return (
       <section className="section-2">
-        {/* <img
-          src={robot}
-          alt="robot gif"
-          className="robot-gif"
-          ref={this.robotGifRef}
-        /> */}
+        <div ref={this.robotGifRef} className="hyperB-container">
+          <video className="robot-gif" autoPlay loop muted>
+            <source src={robotVideo} type="video/webm" />
+          </video>
+        </div>
 
-        <video className="robot-gif" ref={this.robotGifRef} autoPlay loop muted>
-          <source src={robotVideo} type="video/webm" />
-        </video>
         <img src={robot} alt="robot" className="robot" ref={this.robotImgRef} />
         <RobotAnimation
           heights={heights}
@@ -336,38 +331,9 @@ class HomeSection2 extends Component {
         >
           <source src={algorithm} type="video/webm" />
         </video>
-        {/* <img
-          src={algorithm}
-          alt=""
-          ref={this.algorithmGif}
-          className="algorithm"
-        /> */}
-        {/* <video
-          className="algorithm"
-          ref={this.algorithmGif}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={algorithm} type="video/webm" />
-        </video> */}
 
-        {/* <div className="background">
-          <div className="background-img" ref={this.backgroundRef}></div>
-          <img
-            src={robotVideo}
-            alt=""
-            // style={{ width: "1100px", height: "600px" }}
-            className="robot-img"
-            ref={this.gifRef}
-          />
-        </div> */}
-
-        {/* <Container1 homeRef={homeRef} viewType={viewType} heights={heights} /> */}
         <Container2 homeRef={homeRef} viewType={viewType} heights={heights} />
         <Container3 homeRef={homeRef} viewType={viewType} heights={heights} />
-
-        {/* <Container4 homeRef={homeRef} viewType={viewType} heights={heights} /> */}
       </section>
     );
   }

@@ -52,7 +52,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/test1" component={RobotAnimation4} />
+            {/* <Route path="/test" component={test} /> */}
             <Route
               path="/"
               render={(props) =>
