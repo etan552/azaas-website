@@ -149,10 +149,8 @@
     width: 100vw;
   }
 
-  .home .section-1 .header {
-    font-size: 40px;
-    letter-spacing: -1px;
-    line-height: 1.05;
+  .home .section-1 .main-img {
+    width: 100%;
   }
 
   .home .section-1 .context {

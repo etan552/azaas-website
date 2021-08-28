@@ -2,6 +2,7 @@ import React, { Component, createRef } from "react";
 import { Link } from "react-router-dom";
 import robotImg from "../../assets/animation1.webp";
 import "../../style/HomeSection1.css";
+import mainImg from "../../assets/mobile/mSection1MainImg.webp";
 
 class MobileHomeSection1 extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class MobileHomeSection1 extends Component {
           ref={this.imgRef1}
         />
         <div>
-          <div className="header">Don't make them think.</div>
+          <img src={mainImg} alt="Don't make them think" className="main-img" />
           <div className="context">
             It’s a magical piece of glass. It’s so fast most PC laptops can’t
             catch up. It has pro cameras that can transform reality. And you can
