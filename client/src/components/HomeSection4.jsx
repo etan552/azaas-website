@@ -1,12 +1,7 @@
 import React, { Component, createRef } from "react";
-import ipadFrame from "../assets/ipadPro-horizontal.webp";
 import gsap from "gsap";
 import "../style/HomeSection4.css";
-import blockChain from "../assets/Blockchain.gif";
-import cloudComputing from "../assets/CloudComputing.gif";
-import dataIntelligence from "../assets/DataIntelligence.gif";
 import RobotAnimation3 from "./RobotAnimation3";
-// import blockchainAnimation from "../assets/blockchainAnimation.webm";
 import blockchainAnimation from "../assets/bc.webm";
 import gifF from "../assets/web gif webm/F.webm";
 import gifJ from "../assets/web gif webm/J.webm";

@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import office from "../../assets/office.webp";
-import office1 from "../../assets/mobileOffice1.webp";
-import office2 from "../../assets/mobileOffice2.webp";
-import office3 from "../../assets/mobileOffice3.webp";
+import gifF from "../../assets/web gif webm/F.webm";
+import gifJ from "../../assets/web gif webm/J.webm";
+import gifG from "../../assets/web gif webm/G.webm";
+import algorithm from "../../assets/mobile/section4/algo.webm";
 
 class MobileHomeSection4 extends Component {
   render() {
     return (
       <div className="section-4">
-        <img src={office} alt="office" className="office-img" />
+        <video className="algorithm" autoPlay loop muted>
+          <source src={algorithm} type="video/webm" />
+        </video>
         <div className="content">
           <div>
             <div className="item">
@@ -21,7 +24,9 @@ class MobileHomeSection4 extends Component {
                 more accurate than ever. And developers will be able to create
                 even more immersive experiences.
               </div>
-              <img src={office1} alt="office" className="slide-1" />
+              <video className="gif-F" autoPlay loop muted>
+                <source src={gifF} type="video/webm" />
+              </video>
             </div>
             <div className="item" ref={this.ref2}>
               <div className="header">Shoot and edit</div>
@@ -33,7 +38,9 @@ class MobileHomeSection4 extends Component {
                 sign or mark it up with Apple Pencil, then send back your notes
                 with a tap.
               </div>
-              <img src={office2} alt="office" className="slide-2" />
+              <video className="gif-J" autoPlay loop muted>
+                <source src={gifJ} type="video/webm" />
+              </video>
             </div>
             <div className="item" ref={this.ref3}>
               <div className="header">TrueDepth camera</div>
@@ -44,7 +51,9 @@ class MobileHomeSection4 extends Component {
                 FaceTime, take Portrait selfies or liven up your Messages
                 conversations by turning yourself into an Animoji.
               </div>
-              <img src={office3} alt="office" className="slide-3" />
+              <video className="gif-G" autoPlay loop muted>
+                <source src={gifG} type="video/webm" />
+              </video>
             </div>
           </div>
 
