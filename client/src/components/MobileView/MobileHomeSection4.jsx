@@ -56,16 +56,6 @@ class MobileHomeSection4 extends Component {
               </video>
             </div>
           </div>
-
-          <div className="container-1">
-            <div>
-              <div className="header">Performance</div>
-              <div className="context">Faster than you can say PC.</div>
-            </div>
-            <div>
-              <img src={office} alt="office" className="img-1" />
-            </div>
-          </div>
         </div>
       </div>
     );

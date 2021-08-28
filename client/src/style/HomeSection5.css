@@ -135,17 +135,33 @@
 @media (max-width: 750px) {
   .home .section-5 {
     width: 87.5%;
-    margin: 0 auto;
+    margin: 20px auto 0;
     height: auto;
+  }
+
+  .home .section-5 video {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 0 10px 2px rgb(202, 202, 202);
+    margin-top: 20px;
+  }
+
+  .home .section-5 .blockchain {
+    box-shadow: unset;
+    width: 100vw;
+    transform: translateX(-6.25%);
   }
 
   .home .section-5 .container-1 {
     max-width: 420px;
     width: 100%;
+    margin-top: 40px;
   }
 
   .home .section-5 .header {
     font-size: 28px;
+    margin: 20px 0 10px;
+    color: var(--main-color);
   }
 
   .home .section-5 .container-2 {

@@ -2,11 +2,19 @@ import React, { Component } from "react";
 import office1 from "../../assets/office1.webp";
 import office2 from "../../assets/office2.webp";
 import office3 from "../../assets/office3.webp";
+import blockGif from "../../assets/mobile/section5/block.webm";
+import gifE from "../../assets/web gif webm/E.webm";
+import gifB from "../../assets/web gif webm/B.webm";
+import gifC from "../../assets/web gif webm/C.webm";
 
 class MobileHomeSection5 extends Component {
   render() {
     return (
       <section className="section-5">
+        <video className="blockchain" autoPlay loop muted>
+          <source src={blockGif} type="video/webm" />
+        </video>
+
         <div className="container-1">
           <div className="header">A12Z Bionic</div>
           <div className="context">
@@ -17,8 +25,9 @@ class MobileHomeSection5 extends Component {
             for the apps and games where it matters most.
           </div>
         </div>
-        <img src={office1} alt="office" className="img-1" ref={this.img1} />
-        <img src={office2} alt="office" className="img-2" ref={this.img2} />
+        <video autoPlay loop muted>
+          <source src={gifE} type="video/webm" />
+        </video>
         <div className="container-2">
           <div className="header">Pro workflow</div>
           <div className="context">
@@ -31,8 +40,9 @@ class MobileHomeSection5 extends Component {
             pro apps.
           </div>
         </div>
-        <img src={office3} alt="office" className="img-3" ref={this.img3} />
-        <img src={office1} alt="office" className="img-4" ref={this.img4} />
+        <video autoPlay loop muted>
+          <source src={gifB} type="video/webm" />
+        </video>
         <div className="container-3">
           <div className="header">Multitasking</div>
           <div className="context">
@@ -43,8 +53,9 @@ class MobileHomeSection5 extends Component {
             and effortless.
           </div>
         </div>
-
-        <img src={office3} alt="office" className="img-5" ref={this.img5} />
+        <video autoPlay loop muted>
+          <source src={gifC} type="video/webm" />
+        </video>
       </section>
     );
   }
