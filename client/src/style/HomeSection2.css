@@ -298,21 +298,28 @@
   .home .section-2 {
     position: relative;
     height: auto;
+    flex-wrap: wrap;
   }
 
   .home .section-2 .container-1 {
     position: relative;
     height: auto;
+    width: 87.5%;
+    padding: 20px 0 30px 0;
+  }
+
+  .home .section-2 .robot {
+    position: relative;
+  }
+
+  .home .section-2 .robot,
+  .home .section-2 .robot-1 {
+    width: 70%;
   }
 
   .home .section-2 .container-1 .header,
   .home .section-2 .container-1 .context {
     color: black;
-  }
-
-  .home .section-2 .container-1 > div {
-    width: 87.5%;
-    padding: 70px 0 50px 0;
   }
 
   .home .section-2 .container-1 .header {
@@ -322,6 +329,7 @@
   .home .section-2 .container-1 .context {
     font-size: 40px;
     margin-top: 18px;
+    color: var(--main-color);
   }
 
   .home .section-2 .shipImg {
@@ -336,12 +344,13 @@
     position: relative;
     opacity: 1;
     height: auto;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .home .section-2 .container-2 .header {
     font-size: 28px;
     letter-spacing: 0px;
+    color: var(--main-color);
   }
 
   .home .section-2 .container-2 .context {
@@ -351,27 +360,25 @@
 
   .home .section-2 .container-3 {
     display: flex;
-    justify-content: space-around;
     position: relative;
     opacity: 1;
     transform: translateY(0);
     width: 87.5%;
     min-width: 320px;
-    margin: 40px auto;
+    margin: 10px auto;
     height: auto;
   }
 
   .home .section-2 .container-3 > div {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
     height: auto;
-    width: 150px;
+    justify-content: center;
   }
 
-  .home .section-2 .container-3 .icon img {
-    width: 40px;
-    height: 40px;
+  .home .section-2 .container-3 .icon video {
+    width: 120px;
+    height: 120px;
   }
 
   .home .section-2 .container-3 .header {
@@ -379,6 +386,7 @@
     font-size: 18px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
+    margin: 10px 0;
   }
 
   .home .section-2 .container-4 {

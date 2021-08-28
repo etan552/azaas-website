@@ -2,7 +2,7 @@ import React, { Component, createRef } from "react";
 import { Link } from "react-router-dom";
 import robotImg from "../../assets/animation1.webp";
 import "../../style/HomeSection1.css";
-import mainImg from "../../assets/mobile/mSection1MainImg.webp";
+import mainImg from "../../assets/mobile/section1/mSection1MainImg.webp";
 
 class MobileHomeSection1 extends Component {
   constructor(props) {
