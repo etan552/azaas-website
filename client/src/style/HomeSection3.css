@@ -115,8 +115,9 @@
 
   .home .section-3 .container-1 {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 0;
     width: 100%;
+    margin-top: 0;
   }
 
   .home .section-3 .container-1 > div {
@@ -136,8 +137,7 @@
   }
 
   .home .section-3 img {
-    height: 400px;
-    margin: 0 auto;
+    width: 70%;
   }
 
   .home .section-3 .container-2 {

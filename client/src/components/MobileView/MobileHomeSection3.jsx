@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../style/HomeSection3.css";
-import robot from "../../assets/MobileRobotSection3.webp";
-import robot2 from "../../assets/MobileSection3Robot2.webp";
+import robot from "../../assets/mobile/section3/robot.webp";
+import robot1 from "../../assets/mobile/section3/robot1.webp";
 
 class MobileHomeSection3 extends Component {
   render() {
@@ -23,7 +23,7 @@ class MobileHomeSection3 extends Component {
             or video. And combined with studio‑quality mics and four speaker
             audio, you can even set up a multi‑camera filmmaking rig.
           </div>
-          <img src={robot2} alt="robot" />
+          <img src={robot1} alt="robot" />
         </div>
         <div className="container-3">
           <div className="header">LiDAR Scanner</div>

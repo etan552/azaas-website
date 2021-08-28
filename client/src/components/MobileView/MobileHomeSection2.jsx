@@ -13,7 +13,6 @@ class MobileHomeSection2 extends Component {
     return (
       <section className="section-2">
         <img src={robot1} alt="robot standing" className="robot-1" />
-
         <div className="container-1">
           <div className="header">Liquid Retina display</div>
           <div className="context">
@@ -77,10 +76,6 @@ class MobileHomeSection2 extends Component {
             </div>
           </div>
         </div>
-        {/* <div className="container-4">
-          <img src={officeImg} alt="office" />
-          <img src={shipImg} alt="ship" />
-        </div> */}
       </section>
     );
   }
