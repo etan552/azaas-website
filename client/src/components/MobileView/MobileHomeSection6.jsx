@@ -1,25 +1,19 @@
 import React, { Component } from "react";
-import laptop from "../../assets/floatingKeyboard.webp";
+import cloudGif from "../../assets/mobile/section6/cloud.webm";
+import robot from "../../assets/mobile/section6/robot.webp";
 
 class MobileHomeSection6 extends Component {
   render() {
     return (
       <section className="section-6">
+        <video className="cloud-computing" autoPlay loop muted>
+          <source src={cloudGif} type="video/webm" />
+        </video>
         <div className="container-1">
           <div className="header">Magic Keyboard</div>
           <div className="context">Yes, it floats.</div>
         </div>
-        <div className="img-container">
-          <img src={laptop} alt="laptop" className="img-1" />
-          <div className="notes">
-            <p className="note1" ref={this.note1}>
-              Attaches magnetically
-            </p>
-            <p className="note2" ref={this.note2}>
-              floating design
-            </p>
-          </div>
-        </div>
+        <img src={robot} alt="Robot" className="robot" />
         <div className="container-2">
           <div className="header">Magic Keyboard</div>
           <div className="context">

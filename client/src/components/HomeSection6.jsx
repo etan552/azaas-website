@@ -1,6 +1,5 @@
 import React, { Component, createRef } from "react";
 import "../style/HomeSection6.css";
-import laptop from "../assets/floatingKeyboard.webp";
 import gsap from "gsap";
 import RobotAnimation4 from "./RobotAnimation4";
 import cloudComputingAnimation from "../assets/CloudComputing.webm";
