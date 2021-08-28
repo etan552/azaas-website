@@ -240,28 +240,38 @@
 /* mobile view */
 @media (max-width: 750px) {
   .home .section-7 {
-    margin: 100px auto 0;
+    margin: 20px auto 0;
   }
 
   .home .section-7 .top {
-    height: auto;
+    height: auto !important;
     background-color: white;
     padding-bottom: 50px;
   }
 
-  .home .section-7 .top .img-1 {
+  .home .section-7 .top .context {
+    margin-top: 10px;
+  }
+
+  .home .section-7 .top .robot {
     position: relative;
-    top: 0;
-    width: 100vw;
-    height: 400px;
+    width: 55%;
+  }
+
+  .home .section-7 .top .robot-1 {
+    position: relative;
+    width: 100%;
+    background-color: rgb(54, 54, 54);
   }
 
   .home .section-7 .top .container-1 {
+    position: relative;
     flex-wrap: wrap;
     width: 87.5%;
     padding: 40px 7.5% 70px;
     background-color: rgb(24, 24, 24);
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    bottom: unset;
   }
 
   .home .section-7 .top .container-1 > div {
@@ -275,7 +285,7 @@
   .home .section-7 .top .container-2 {
     flex-wrap: wrap;
     width: 87.5%;
-    padding: 60px 0 40px;
+    padding: 20px 0 40px;
   }
 
   .home .section-7 .top .container-2 > div {
@@ -285,6 +295,7 @@
   .home .section-7 .top .container-2 .header,
   .home .section-7 .bottom .container-4 .header {
     font-size: 28px;
+    color: var(--main-color);
   }
 
   .home .section-7 .bottom {
@@ -295,18 +306,23 @@
     color: black;
     height: auto;
     width: 87.5%;
-    margin: 40px auto;
+    margin: 20px auto 40px;
   }
 
   .home .section-7 .bottom .container-3 .header {
     font-size: 19px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .home .section-7 .bottom .container-3 .context {
     font-size: 40px;
     width: 320px;
     letter-spacing: -1px;
+    color: var(--main-color);
+  }
+
+  .home .section-7 .bottom .data-intelligence-mobile {
+    width: 100vw;
   }
 
   .home .section-7 .bottom .img-2 {
@@ -321,6 +337,7 @@
     top: 0;
     flex-wrap: wrap;
     width: 87.5%;
+    opacity: 1;
   }
 
   .home .section-7 .bottom .container-4 .header {
@@ -331,7 +348,7 @@
 
   .home .section-7 .bottom .container-4 .context {
     width: 100%;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
   .home .section-7 .bottom .container-5 {
