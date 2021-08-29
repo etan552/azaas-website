@@ -60,6 +60,7 @@
   letter-spacing: -2px;
   margin-top: 30px;
   line-height: 1.1;
+  color: var(--main-color);
 }
 
 .home .section-9 .robot-hand {
@@ -82,6 +83,7 @@
 .home .section-9 .container-1 .inner-2 .header {
   font-size: 64px;
   letter-spacing: -2px;
+  color: var(--main-color);
 }
 
 .home .section-9 .container-1 .inner-2 .context {
@@ -189,21 +191,29 @@
   .home .section-9 {
     width: 87.5%;
     margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .home .section-9 .edge {
+    width: 100vw;
+    transform: translateX(-6.25%);
   }
 
   .home .section-9 .container-1 {
     position: relative;
     top: 0;
     padding-bottom: 0;
-    height: 1150px;
+    height: auto;
   }
+
   .home .section-9 .container-1,
   .home .section-9 .container-1 .inner-1 {
     width: 100%;
   }
 
   .home .section-9 .container-1 .inner-1 {
-    padding-top: 100px;
+    padding: 40px 0 20px;
+    opacity: 1;
   }
 
   .home .section-9 .container-1 .inner-1 .header {
@@ -212,43 +222,45 @@
 
   .home .section-9 .container-1 .inner-1 .context {
     font-size: 40px;
+    margin-top: 15px;
   }
 
-  .home .section-9 .container-1 .img {
+  .home .section-9 .container-1 .robot-hand {
     position: relative;
-    top: 50px;
-    width: 100%;
+    top: 0;
+    bottom: unset;
   }
 
   .home .section-9 .container-1 .inner-2 {
     position: relative;
-    top: 100px;
+    top: 0;
     width: 100%;
-  }
-
-  .home .section-9 .container-1 .inner-2 .header {
-    font-size: 28px;
+    opacity: 1;
+    left: 0;
+    padding: 10px 0 0;
   }
 
   .home .section-9 .container-1 .inner-2 .header {
     line-height: 1.5;
+    font-size: 28px;
+    color: var(--main-color);
   }
 
-  .home .section-9 .container-1 .inner-2 .img-2 {
-    width: 100%;
-    margin: 30px 0 0;
+  .home .section-9 .container-1 .inner-2 .context {
+    margin-top: 10px;
   }
 
   .home .section-9 .container-1 .inner-2 .notes {
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-top: 0px;
+    width: 100%;
   }
 
   .home .section-9 .container-1 .inner-2 .notes p:first-child,
   .home .section-9 .container-1 .inner-2 .notes p {
     width: 220px;
     padding: 0;
-    text-align: center;
+    text-align: left;
     margin-top: 15px;
   }
 
@@ -261,9 +273,11 @@
   .home .section-9 .container-2 .header {
     width: 100%;
     font-size: 28px;
+    color: var(--main-color);
   }
 
   .home .section-9 .container-2 .context {
     line-height: 1.5;
+    margin-top: 10px;
   }
 }
