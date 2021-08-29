@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "../style/HomeSection8.css";
-import shipImg from "../assets/shipImg.webp";
-import officeImg from "../assets/office2.webp";
 import gifH from "../assets/web gif webm/H.webm";
 import gifI from "../assets/web gif webm/I.webm";
 

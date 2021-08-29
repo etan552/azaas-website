@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import backgroundImg from "../../assets/abstract.webp";
-import office2 from "../../assets/mobileOffice1.webp";
 import robot from "../../assets/mobile/section7/robot.webp";
 import robot1 from "../../assets/mobile/section7/robot1.webp";
 import dataGif from "../../assets/mobile/section7/data.webm";
@@ -67,7 +65,6 @@ class MobileHomeSection7 extends Component {
             <div className="text-1">Easily select and formats text</div>
             <div className="text-2">intelligently adapts to content</div>
           </div>
-          <img src={office2} alt="abstract art" className="img-3" />
         </div>
       </section>
     );

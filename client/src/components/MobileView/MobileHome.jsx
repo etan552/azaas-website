@@ -24,7 +24,7 @@ class MobileHome extends Component {
         <MobileHomeSection5 />
         <MobileHomeSection6 />
         <MobileHomeSection7 />
-        <MobileHomeSection11 />
+        {/* <MobileHomeSection11 /> */}
         <MobileHomeSection8 />
         <MobileHomeSection9 />
         <MobileHomeSection10 />

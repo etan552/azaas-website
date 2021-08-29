@@ -99,8 +99,15 @@
     width: 87.5%;
     margin: 30px auto 0;
   }
-  .home .section-8 .container-1 {
-    margin: 0;
+  .home .section-8 .container-1,
+  .home .section-8 .container-2 {
+    margin: 0 0 40px;
+    height: auto;
+    display: block;
+  }
+  .home .section-8 video {
+    width: 100%;
+    box-shadow: 0 0 10px 2px rgb(202 202 202);
   }
 
   .home .section-8 .container-1 > div,
@@ -109,12 +116,15 @@
     padding: 0;
     width: 100%;
     text-align: center;
+    height: auto;
   }
 
   .home .section-8 .container-1 .header,
   .home .section-8 .container-2 .header {
     font-size: 28px;
     text-align: left;
+    margin: 10px 0;
+    color: var(--main-color);
   }
 
   .home .section-8 .container-1 .context,

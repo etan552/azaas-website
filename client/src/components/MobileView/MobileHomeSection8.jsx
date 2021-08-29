@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import shipImg from "../../assets/shipImg.webp";
 import officeImg from "../../assets/office2.webp";
-
+import gifH from "../../assets/web gif webm/H.webm";
+import gifI from "../../assets/web gif webm/I.webm";
 class MobileHomeSection8 extends Component {
   render() {
     return (
       <section className="section-8">
         <div className="container-1">
+          <video autoPlay loop muted>
+            <source src={gifH} type="video/webm" />
+          </video>
           <div>
             <div className="header">Take notes</div>
             <div className="context">
@@ -17,10 +21,12 @@ class MobileHomeSection8 extends Component {
               of great apps that let you organise, annotate and take your notes
               to the next level.
             </div>
-            <img src={shipImg} alt="ship" className="img" />
           </div>
         </div>
         <div className="container-2">
+          <video className="gif-I" autoPlay loop muted>
+            <source src={gifI} type="video/webm" />
+          </video>
           <div>
             <div className="header">Markup</div>
             <div className="context">
@@ -29,7 +35,6 @@ class MobileHomeSection8 extends Component {
               sign it on your iPad. You can also easily mark up and send a PDF,
               and even draw directly in apps like Keynote.
             </div>
-            <img src={officeImg} alt="office" className="img" />
           </div>
         </div>
       </section>
