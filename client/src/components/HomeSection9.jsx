@@ -1,10 +1,9 @@
 import React, { Component, createRef } from "react";
 import "../style/HomeSection9.css";
-import hand from "../assets/hand.webp";
+import robotHand from "../assets/robotHand.webp";
 import gsap from "gsap";
 import edgeComputingGif from "../assets/edgeComputingGif.gif";
 import robot from "../assets/section9robot.jpg";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 class HomeSection9 extends Component {
   constructor(props) {
@@ -227,6 +226,24 @@ class HomeSection9 extends Component {
         },
       }
     );
+
+    gsap.fromTo(
+      this.robotRef.current,
+      {
+        width: "100vw",
+        y: 0,
+      },
+      {
+        width: "105vw",
+        y: -20,
+        scrollTrigger: {
+          trigger: homeRef,
+          start: `top+=${newHeight + 1000} top`,
+          end: `top+=${newHeight + 1300} top`,
+          scrub: 0.2,
+        },
+      }
+    );
   }
   render() {
     return (
@@ -241,34 +258,42 @@ class HomeSection9 extends Component {
           </div>
         </div>
         <div style={{ height: "1300px" }}></div>
+
         <div className="container-1">
-          {/* First section of text */}
-          <div className="inner-1" ref={this.container1Ref}>
-            <div className="header">Portability</div>
-            <div className="context">
-              Goes where no <br />
-              laptop would dare.
+          <div className="container-inner">
+            {/* First section of text */}
+            <div className="inner-1" ref={this.container1Ref}>
+              <div className="header">Portability</div>
+              <div className="context">
+                Goes where no <br />
+                laptop would dare.
+              </div>
             </div>
-          </div>
 
-          {/* robot img */}
-          <img src={robot} alt="Robot" className="robot" ref={this.robotRef} />
-
-          {/* Second section of text */}
-          <div className="inner-2">
-            <div className="header" ref={this.header1}>
-              Thin, light
-              <br /> and durable
-            </div>
-            <div className="context" ref={this.context1}>
-              iPad Pro is incredibly capable while still being easy to carry
-              with you everywhere — slip it into a backpack or rest it on a tray
-              table. And it has up to 10 hours of battery life to keep you going
-              all day.3
-            </div>
-            <div className="notes">
-              <p ref={this.notes1}>Just over a pound</p>
-              <p ref={this.notes2}>All-day batteries</p>
+            {/* robot img */}
+            {/* <img src={robot} alt="Robot" className="robot" ref={this.robotRef} /> */}
+            <img
+              src={robotHand}
+              alt="Robot hand"
+              ref={this.robotRef}
+              className="robot-hand"
+            />
+            {/* Second section of text */}
+            <div className="inner-2">
+              <div className="header" ref={this.header1}>
+                Thin, light
+                <br /> and durable
+              </div>
+              <div className="context" ref={this.context1}>
+                iPad Pro is incredibly capable while still being easy to carry
+                with you everywhere — slip it into a backpack or rest it on a
+                tray table. And it has up to 10 hours of battery life to keep
+                you going all day.3
+              </div>
+              <div className="notes">
+                <p ref={this.notes1}>Just over a pound</p>
+                <p ref={this.notes2}>All-day batteries</p>
+              </div>
             </div>
           </div>
         </div>

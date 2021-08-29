@@ -5,11 +5,18 @@
 .home .section-9 .container-1 {
   position: sticky;
   bottom: 0;
-  width: 1040px;
   height: 100vh;
-  /* height: calc(100vh / 2 - 274px + 580px); */
   font-weight: 500;
   margin: 0 auto;
+}
+
+.home .section-9 .container-1 .container-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: calc(240px + 100vw * 582 / 2000 - 20px);
+  margin: auto 0;
 }
 
 .home .section-9 > div.video-container {
@@ -40,8 +47,6 @@
 
 .home .section-9 .container-1 .inner-1 {
   position: relative;
-  width: 680px;
-  padding-top: calc(15vh);
   z-index: 5;
   opacity: 0;
 }
@@ -57,21 +62,21 @@
   line-height: 1.1;
 }
 
-.home .section-9 .container-1 .robot {
+.home .section-9 .robot-hand {
   position: absolute;
-  top: 0;
   bottom: 0;
-  right: 0;
-  height: 95vh;
-  margin: auto 0;
+  left: 0;
+  width: 100vw;
 }
 
 .home .section-9 .container-1 .inner-2 {
   position: absolute;
-  top: calc(100vh / 2 - 274px + 70px);
-  left: calc(1040px - 95vh / 1200 * 767 - 400px - 20px) !important;
+  top: calc(-90px + 100vw * 582 / 4000 - 3vw);
+  left: -400px;
+  right: 0;
   width: 400px;
   text-align: left;
+  margin: 0 auto;
 }
 
 .home .section-9 .container-1 .inner-2 .header {
@@ -87,7 +92,7 @@
 }
 
 .home .section-9 .container-1 .inner-2 .notes {
-  margin-top: 25px;
+  margin-top: 65px;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: -1.5px;
