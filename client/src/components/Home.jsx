@@ -14,6 +14,7 @@ import HomeSection8 from "./HomeSection8";
 import HomeSection9 from "./HomeSection9";
 import HomeSection10 from "./HomeSection10";
 import Background from "./Background";
+import HomeSection11 from "./HomeSection11";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +102,11 @@ class Home extends Component {
           viewType={viewType}
         />
         <HomeSection10
+          heights={heights}
+          homeRef={this.homeRef.current}
+          viewType={viewType}
+        />
+        <HomeSection11
           heights={heights}
           homeRef={this.homeRef.current}
           viewType={viewType}
